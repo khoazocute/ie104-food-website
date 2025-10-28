@@ -13,34 +13,49 @@
 
 </head>
 <body>
-    <header>
-
+    <header class="header">
+        <!-- LOGO -->
         <div class="header__logo">
             <a href="#">
-                <img src="./imgs/logo.png" alt="logo">
+                <img src="./imgs/main-logo.png" alt="logo">
             </a>
         </div>
-
-        <div class="header__mainnav">
-            <nav>
-              <ul class="nav-links">
+    
+        <!-- MENU -->
+        <nav class="header__nav">
+            <ul class="nav-links">
                 <li class="active"><a href="#">Trang Chủ</a></li>
                 <li><a href="#intro">Giới Thiệu</a></li>
                 <li><a href="#menu">Thực Đơn</a></li>
                 <li><a href="#contact">Liên Hệ</a></li>
-                <li><a href="#question">Câu Hỏi Thường Gặp</a></li>
-              </ul>
-            </nav>
-        </div>
+                <li><a href="#faq">Câu Hỏi Thường Gặp</a></li>
+            </ul>
+        </nav>
+    
+        <!-- RIGHT SIDE -->
+        <div class="header__right">
 
-        <div class="header__right"> 
-            <button class="button button-login">Đăng Nhập</button>
-            <button class="button button-signup">Đăng Ký</button>
+            <a href="#" class="header__item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cửa hàng</span>
+            </a>
+        
+            <a href="" class="header__item">
+                <i class="fa-solid fa-user"></i>
+                <span>Đăng nhập</span>
+            </a>
+        
         </div>
-
     </header>
 
+    <!-- NÚT GIỎ HÀNG CỐ ĐỊNH -->
+    <div class="floating-cart">
+        <a href="#">
+        <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+    </div>
 
+    
 
 
 
