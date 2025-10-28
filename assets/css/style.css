@@ -26,10 +26,35 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* LOGO */
+/* HEADER LEFT */
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .header__logo img {
     width: 68px;
     height: 60px;
+}
+
+/* CART ICON */
+.header__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header__cart:hover {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
 }
 
 /* NAV */
@@ -83,44 +108,7 @@ body {
     box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
 }
 
-/* ========================= NÚT GIỎ HÀNG CỐ ĐỊNH ========================= */
-/* ===== GIỎ HÀNG CỐ ĐỊNH GÓC PHẢI ===== */
-.floating-cart {
-    position: fixed;
-    bottom: 28px;
-    right: 35px;
-    z-index: 100; 
-  }
-  
-  .floating-cart a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background-color: #fff;  
-    color: #000;             
-    font-size: 23px;
-    text-decoration: none;
-    border: 1.5px solid #000;
-    transition: all 0.3s ease;
-  }
-  
-  .floating-cart a:hover {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  @media (max-width: 768px) {
-    .floating-cart a {
-      width: 48px;
-      height: 48px;
-      font-size: 20px;
-      right: 20px;
-      bottom: 22px;
-    }
-  }
+
 
 
 
