@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Sign Up - Food Dash</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        /* Simple inline styles for tabs (optional, or move to pages.css) */
+        
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        
+        .tab-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #FA812F;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-buttons button.active {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header__logo">
+            <a href="../homepage.html">
+                <img src="../imgs/logo.png" alt="logo" />
+            </a>
+        </div>
+
+        <div class="header__mainnav">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../homepage.html">Home</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__right">
+            <button class="button button-login" onclick="showTab('login')">Login</button>
+            <button class="button button-signup" onclick="showTab('signup')">Sign Up</button>
+        </div>
+    </header>
+
+    <!-- AUTH CONTENT -->
+    <section class="auth-container">
+        <div class="tab-buttons">
+            <button id="tab-login" class="active" onclick="showTab('login')">Login</button>
+            <button id="tab-signup" onclick="showTab('signup')">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login" class="tab-content">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button class="button button-login">Login</button>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signup" class="tab-content" style="display:none;">
+            <h2>Create an Account</h2>
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button class="button button-signup">Sign Up</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__column">
+                <h2>FOOD DASH</h2>
+                <p>Food Dash ©2025 All Rights Reserved</p>
+                <p>By - Your Name</p>
+                <h3>Follow Us On</h3>
+                <div class="footer__icon">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__column">
+                <h3>Menu</h3>
+                <ul class="footer__links">
+                    <li><a href="../homepage.html">Home</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__column">
+                <h3>Information</h3>
+                <ul class="footer__links">
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Quality</a></li>
+                    <li><a href="#">Make A Choice</a></li>
+                    <li><a href="#">Fast Delivery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__column">
+                <h3>Contact</h3>
+                <ul class="footer__links">
+                    <li>
+                        <a href="tel:+123456789"><i class="fas fa-phone"></i><span>+123456789</span></a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@fooddash.com"><i class="fas fa-envelope"></i><span>info@fooddash.com</span></a>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-map-marker-alt"></i><span>12, Maharashtra, India</span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple toggle between login and signup forms
+        function showTab(tab) {
+            const login = document.getElementById("login");
+            const signup = document.getElementById("signup");
+            const tabLogin = document.getElementById("tab-login");
+            const tabSignup = document.getElementById("tab-signup");
+
+            if (tab === "login") {
+                login.style.display = "block";
+                signup.style.display = "none";
+                tabLogin.classList.add("active");
+                tabSignup.classList.remove("active");
+            } else {
+                login.style.display = "none";
+                signup.style.display = "block";
+                tabLogin.classList.remove("active");
+                tabSignup.classList.add("active");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
