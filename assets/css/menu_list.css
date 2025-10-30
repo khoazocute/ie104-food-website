@@ -1,0 +1,352 @@
+/* --- Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FCEFE2;
+    margin: 0;
+    padding: 5px;
+    justify-content: center;
+}
+
+.button {
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 999px;
+    /* bo tròn dạng pill */
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    padding: 8px 20px;
+    margin: 10px auto;
+    background-color: #FEF3E2;
+    border: 1.5px solid #FAB12F;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 5rem;
+}
+
+/* --- Header Logo --- */
+.header__logo img {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+}
+
+/* --- Header Nav --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+.header__mainnav .active:hover {
+    color: #FA812F;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #FA812F;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 0;
+    transition: color 0.3s;
+
+}
+
+.nav-links li a:hover {
+    color: #986746;
+}
+
+.nav-links {
+    margin-left: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* --- Header Right --- */
+.header__right {
+    display: flex;
+    gap: 16px;
+}
+
+.button-login {
+    background-color: white;
+    color: #1F1000;
+    border: 1.5px solid #1F1000;
+}
+
+.button-login:hover {
+    background-color: #1F1000;
+    color: #FFF7EB;
+    border: 1.5px solid #1F1000;
+}
+
+.button-signup {
+    background-color: white;
+    color: #1F1000;
+    border: 1.5px solid #1F1000;
+}
+
+.button-signup:hover {
+    background-color: #1F1000;
+    color: #FFF7EB;
+    border: 1.5px solid #1F1000;
+}
+.active {
+    color: #FA812F;
+    margin-left: 20px;
+}
+/* --- SLOGAN --- */
+.slogan {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slogan img {
+    width: 20%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.slogan__text {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 900;
+    font-size: 2vw;
+    line-height: 1.1;
+    color: #f6863b;
+    margin-bottom: 30px;
+}
+
+
+/* Khối CHỨA CÁC NÚT */
+.menu_nav {
+    display: flex; 
+    justify-content: center; /* Căn giữa 4 nút */
+    gap: 20px;/*ảng cách giữa 4 nút */
+    margin: 50px auto; /* Đặt khối này ở giữa trang */
+    align-items: center;
+}
+
+/* --- Kiểu dáng Chung cho Nút (Đảm bảo đồng bộ) --- */
+.filter-button {
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px; 
+    background-color: white;
+    border: none; 
+    
+    /* Box-shadow đồng bộ: Viền trắng (inner shadow) + đổ bóng xám nhạt (outer shadow) */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08), 
+                0 0 0 3px white; /* Giảm độ dày của viền trắng */
+    
+    color: #444; 
+    
+    /* Thêm thuộc tính này để tránh text bị lệch khi hover */
+    white-space: nowrap; 
+}
+/* Kiểu dáng Nút ACTIVE (Nếu có) */
+/* Kiểu dáng Nút HOVER (Active) */
+.filter-button:hover {
+    background-color: #FF6C0A; 
+    color: white;
+    
+    /* Đổ bóng cam phải có độ lớn TƯƠNG ĐƯƠNG với bóng tĩnh */
+    box-shadow: 0 5px 10px rgba(255, 108, 10, 0.5), /* Đổ bóng cam */
+                0 0 0 3px #FF6C0A; /* Viền cam tương đương viền trắng */
+}
+
+/* FOOTER */
+footer {
+    background-color: #FEF3E2; 
+    color: #333333; 
+    padding: 40px 0;
+    border-top: 2px dashed #FF6C0A; /* Đường viền cam đứt nét */
+    font-size: 15px;
+}
+
+.footer__container {
+    width:1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Cho phép các cột xuống hàng trên màn hình nhỏ */
+    gap: 20px; 
+}
+
+.footer__column {
+    flex: 1; /* Giúp các cột chia đều không gian */
+    min-width: 150px; 
+}
+
+.footer__column h2,
+.footer__column h3 {
+    color: #FF6C0A; 
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer__column p {
+    margin: 0 0 15px;
+    line-height: 24px;
+}
+
+.footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__links li {
+    margin-bottom: 10px;
+}
+
+.footer__links a, .footer__links span {
+    color: #333333; 
+    text-decoration: none;
+    transition: color 0.3s;
+    align-items: center; 
+}
+
+.footer__links a:hover {
+    color: #FF6C0A; 
+}
+
+.footer__links i {
+    margin-right: 10px; 
+    width: 15px; 
+    text-align: center;
+}
+
+.footer__icon a {
+    color: #333333;
+    margin-right: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer__icon a:hover {
+    color: #FF6C0A;
+}
+
+/* Toàn bộ khối sản phẩm */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;                   /* Khoảng cách giữa các card */
+  padding: 10px;
+  background-color: #fdf2e9;   /* màu nền be nhẹ */
+  justify-items: center;
+}
+
+/* Mỗi thẻ sản phẩm */
+.product-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  width: 100%;
+  max-width: 360px;           /* Giới hạn độ rộng card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* Ảnh món ăn */
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Phần thông tin */
+.product-info {
+  background-color: #d9f4f4;  /* xanh nhạt giống Webflow mẫu */
+  padding: 20px 22px 26px;
+}
+
+/* Hàng chứa tên & giá */
+.name-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.name-price h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.name-price .price {
+  font-weight: 700;
+  font-size: 16px;
+  color: #222;
+}
+
+/* Mô tả món ăn */
+.description {
+  font-size: 15px;
+  color: #446;
+  margin: 10px 0 20px;
+  line-height: 1.5;
+}
+
+/* Nút Add to cart */
+.add-to-cart-btn {
+  width: 100%;
+  background-color: #00a5a5;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 165, 165, 0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #008b8b;
+  transform: scale(1.02);
+}
+
+/* Responsive cho màn nhỏ */
+@media (max-width: 600px) {
+  .product-card img {
+    height: 200px;
+  }
+  .name-price h3 {
+    font-size: 20px;
+  }
+}
