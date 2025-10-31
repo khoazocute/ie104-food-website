@@ -60,6 +60,339 @@
         <div class="banner__content">
             <span>✨ Nóng Hổi & Tươi Ngon</span>
             <h1>Hương Vị Tuyệt Hảo</h1>
+            <p> Trải nghiệm ẩm thực tuyệt vời với những món ăn được chế biến từ nguyên liệu tươi ngon nhất, giao đến tận
+                tay bạn.</p>
+            <div class="banner__nav">
+                <a href="#">
+                    Đặt Món Ngay<i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="">
+                    Giới Thiệu<i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="deal">
+        <div class="discount__title">
+            <img src="./imgs/homepage__fooddiscount-icon.png" alt="icon">
+            <h2>Chương Trình Khuyến Mãi</h2>
+            <p>Thưởng thức hương vị tuyệt hảo với mức giá cực ưu đãi. Nhanh tay đặt món ngay hôm nay!</p>
+        </div>
+        <div class="content">
+            <div class="deal__left">
+                <img src="./imgs/homepage__deal1.png" alt="hamburger hot deal">
+            </div>
+            <div class="deal__cright">
+                <!-- COUNTDOWN -->
+                <div class="deal__timer" id="dealCountdown"><!-- filled by JS --></div>
+
+                <h1 class="deal__title">Combo Burger Phô Mai</h1>
+
+                <div class="deal__price">
+                    <span>$12.99</span>
+                    <span>$18.99</span>
+                    <span>-30%</span>
+                </div>
+
+                <p class="deal__desc">
+                    Thưởng thức burger bò 100% tươi, khoai tây chiên giòn rụm và đồ uống mát lạnh. Bữa ăn hoàn hảo cho
+                    mọi thời điểm!
+                </p>
+
+                <ul class="deal__list">
+                    <li><span class="deal__check">✓</span> Thịt bò tươi 100%</li>
+                    <li><span class="deal__check">✓</span> Khoai tây chiên giòn</li>
+                    <li><span class="deal__check">✓</span> Tặng kèm đồ uống</li>
+                </ul>
+
+                <div class="deal__nav">
+                    <a href="#">Đặt món ngay</a>
+                    <a href="#">Xem thêm</a>
+                </div>
+            </div>
+    </section>
+    </div>
+
+
+
+
+
+
+    <script>
+        // COUNTDOWN: +2 ngày 14 giờ 30 phút 45 giây kể từ hiện tại
+        document.addEventListener('DOMContentLoaded', function () {
+            const target = Date.now()
+                + (2 * 24 * 60 * 60 * 1000)
+                + (14 * 60 * 60 * 1000)
+                + (30 * 60 * 1000)
+                + (45 * 1000);
+
+            const box = document.getElementById('dealCountdown');
+            const pad = n => (n < 10 ? '0' + n : '' + n);
+
+            function render(dist) {
+                const d = Math.floor(dist / (1000 * 60 * 60 * 24));
+                const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((dist % (1000 * 60)) / 1000);
+
+                box.innerHTML = `
+                  <div class="deal__timebox">
+                    <span class="deal__time">${pad(d)}</span>
+                    <span class="deal__label">Ngày</span>
+                  </div>
+                  <div class="deal__timebox">
+                    <span class="deal__time">${pad(h)}</span>
+                    <span class="deal__label">Giờ</span>
+                  </div>
+                  <div class="deal__timebox">
+                    <span class="deal__time">${pad(m)}</span>
+                    <span class="deal__label">Phút</span>
+                  </div>
+                  <div class="deal__timebox">
+                    <span class="deal__time">${pad(s)}</span>
+                    <span class="deal__label">Giây</span>
+                  </div>
+                `;
+            }
+
+            function tick() {
+                const dist = target - Date.now();
+                if (dist <= 0) {
+                    clearInterval(tmr);
+                    box.innerHTML = '<strong style="color:#E53935">KHUYẾN MÃI ĐÃ KẾT THÚC</strong>';
+                    return;
+                }
+                render(dist);
+            }
+
+            const tmr = setInterval(tick, 1000);
+            tick();
+        });
+    </script>
+
+
+
+
+
+
+    <!-- ========================= MENU ========================= -->
+    <section class="menu">
+        <div class="menu__title">
+            <img src="./imgs/slogan.avif" alt="icon menu">
+            <h2>THỰC ĐƠN CỦA CHÚNG TÔI</h2>
+            <p>Khám phá thực đơn đa dạng của chúng tôi nơi hương vị truyền thống hòa quyện cùng phong cách hiện đại, mang đến trải nghiệm ẩm thực khó quên.</p>
+        </div>
+        <div class="menu__content">
+
+            <div class="menu__item">
+                <img src="./imgs/burger5.avif" alt="Cheesy Delight">
+                <div class="product-info product-info1">
+                    <div class="name-price">
+                        <h3>Cheesy Delight</h3>
+                        <span>$ 8.99 USD</span>
+                    </div>
+
+                    <div class="desc-and-control">
+                        <p>Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
+                    </div>
+
+                    <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
+                </div>
+            </div>
+
+            <div class="menu__item">
+                <img src="./imgs/burger6.avif" alt="Spicy Crunch">
+                <div class="product-info product-info1">
+                    <div class="name-price">
+                        <h3>Spicy Crunch</h3>
+                        <span>$ 12.49 USD</span>
+                    </div>
+                    <div class="desc-and-control">
+                        <p>Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
+                </div>
+            </div>
+
+            <div class="menu__item">
+                <img src="./imgs/burger8.avif" alt="BBQ Bliss">
+                <div class="product-info product-info1">
+                    <div class="name-price">
+                        <h3>BBQ Bliss</h3>
+                        <span>$ 10.75 USD</span>
+                    </div>
+                    <div class="desc-and-control">
+                        <p>Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="menu__footer">
+            <a href="#" class="menu__btn">Xem tất cả</a>
+          </div>
+    </section>
+
+    <!-- ========================= TESTIMONIAL ========================= -->
+    <section class="testimonials">
+        <div class="testimonials__header">
+            <img src="./imgs/homepage__testimonials-love.svg" alt="Love Icon" class="testimonials__icon" />
+            <h2 class="testimonials__title">They Love’s Us</h2>
+            <p class="testimonials__subtitle">
+                From classic favorites to modern culinary creations, our menu is designed to tantalize your taste buds.
+                Every dish is made with the freshest ingredients and an extra dash of love.
+            </p>
+        </div>
+
+        <div class="testimonials__carousel">
+            <div class="testimonials__track" id="testimonials-track">
+                <div class="testimonials__card testimonials__card--purple">
+                    <div class="testimonials__stars">⭐⭐⭐⭐☆</div>
+                    <h3 class="testimonials__heading">Unforgettable Flavors</h3>
+                    <p class="testimonials__text">
+                        Every bite was bursting with flavor. Easily one of the best meals I’ve had in ages!
+                    </p>
+                    <div class="testimonials__author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Larry" />
+                        <div>
+                            <strong>Larry Alexander</strong>
+                            <p>Gold Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--yellow">
+                    <div class="testimonials__stars">⭐⭐⭐⭐☆</div>
+                    <h3 class="testimonials__heading">Simply Delicious</h3>
+                    <p class="testimonials__text">
+                        The flavors were rich and comforting. You can taste the love in every dish.
+                    </p>
+                    <div class="testimonials__author">
+                        <img src="https://randomuser.me/api/portraits/men/70.jpg" alt="Daniel" />
+                        <div>
+                            <strong>Daniel Cormir</strong>
+                            <p>Silver Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--pink">
+                    <div class="testimonials__stars">⭐⭐⭐⭐☆</div>
+                    <h3 class="testimonials__heading">Our Go-To Spot</h3>
+                    <p class="testimonials__text">
+                        We come here almost every weekend. Consistently amazing food and service.
+                    </p>
+                    <div class="testimonials__author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Amanda" />
+                        <div>
+                            <strong>Amanda Nunez</strong>
+                            <p>Gold Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--orange">
+                    <div class="testimonials__stars">⭐⭐⭐⭐⭐</div>
+                    <h3 class="testimonials__heading">Top-Notch Service</h3>
+                    <p class="testimonials__text">
+                        The staff were friendly and attentive. Great vibes and even better food!
+                    </p>
+                    <div class="testimonials__author">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Mark" />
+                        <div>
+                            <strong>Mark Velasquez</strong>
+                            <p>Premium Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const track = document.getElementById('testimonials-track');
+        track.innerHTML += track.innerHTML; // nhân đôi
+
+        let pos = 0;
+        function animate() {
+            pos -= 5; // tốc độ
+            if (Math.abs(pos) >= track.scrollWidth / 2) {
+                pos = 0; // quay lại đầu
+            }
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
+
+
+    <!-- ========================= GALLERY ========================= -->
+
+<section class="gallery-section">
+    <img src="./imgs/chef-hat.png" alt="Chef Hat" class="chef-icon">
+    <h2>A Feast for Your Eyes</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+        <img src="./imgs/slider4.jpg" alt="Salad dish">
+        </div>
+        <div class="gallery-item">
+        <img src="./imgs/slider2.avif" alt="Couple eating">
+        </div>
+        <div class="gallery-item">
+        <img src="./imgs/slider3.webp" alt="Green dish">
+        </div>
+    </div>
+</section>
+
+<!-- =========================  ========================= -->
+
+<section class="hero-section banner-section">
+    <div class="hero-image left-image">
+        <img src="./imgs/mini_banner.avif"alt="">
+        </div>
+
+    <div class="hero-content">
+        <div class="logo-text">
+            <img src="./imgs/icon2.jpg" alt="">
+    
+        </div>
+        <h2>Don't Wait - Order Now!</h2>
+        <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready for pick-up.</p>
+        <button class="btn-order">
+            Order Now <span>→</span>
+        </button>
+    </div>
+
+    <div class="hero-image right-image">
+        <img src="./imgs/mini_banner2.avif" alt="">
+
+    <!-- ========================= BANNER ========================= -->
+    <section class="banner">
+        <div class="banner__content">
+            <span>✨ Nóng Hổi & Tươi Ngon</span>
+            <h1>Hương Vị Tuyệt Hảo</h1>
             <p> Trải nghiệm ẩm thực tuyệt vời với những món ăn được chế biến từ nguyên liệu tươi ngon nhất, giao đến tận tay bạn.</p>
             <div class="banner__nav">
                 <a href="#">
@@ -71,6 +404,7 @@
             </div>
         </div>
     </section>
+
 
 
         <!-- ========================= FOOTER ========================= -->
