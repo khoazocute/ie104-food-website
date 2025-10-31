@@ -1,0 +1,786 @@
+/* --- Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FEF3E2;
+    margin: 0;
+    padding: 5px;
+    justify-content: center;
+}
+
+.button {
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 999px;
+    /* bo tròn dạng pill */
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    padding: 8px 20px;
+    margin: 10px auto;
+    background-color: #FEF3E2;
+    border: 1.5px solid #FAB12F;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 5rem;
+    
+}
+
+/* --- Header Logo --- */
+.header__logo img {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 68px;
+    padding: 10px 12px;
+    margin: 15px auto;
+    background-color: #FEF3E2;
+    border: 1.5px solid #FAB12F;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+}
+
+/* HEADER LEFT */
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__logo img {
+    width: 68px;
+    height: 60px;
+}
+
+/* CART ICON */
+.header__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header__cart:hover {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
+}
+
+/* NAV */
+.header__nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.header__nav a:hover {
+    color: #FA812F;
+}
+
+.header__nav .active1 a {
+    color: #FA812F;
+}
+
+/* PHẦN BÊN PHẢI HEADER */
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1.5px solid #1F1000;
+    background-color: white;
+    text-decoration: none;
+    color: #1F1000;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.header__item:hover {
+    background-color: #1F1000;
+    color: #FFF7EB;
+    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 68px;
+    padding: 10px 12px;
+    margin: 15px auto;
+    background-color: #FEF3E2;
+    border: 1.5px solid #FAB12F;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+}
+
+/* HEADER LEFT */
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__logo img {
+    width: 68px;
+    height: 60px;
+}
+
+/* CART ICON */
+.header__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header__cart:hover {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
+}
+
+/* NAV */
+.header__nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.header__nav a:hover {
+    color: #FA812F;
+}
+
+.header__nav .active a {
+    color: #FA812F;
+}
+
+/* PHẦN BÊN PHẢI HEADER */
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1.5px solid #1F1000;
+    background-color: white;
+    text-decoration: none;
+    color: #1F1000;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.header__item:hover {
+    background-color: #1F1000;
+    color: #FFF7EB;
+    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
+}
+
+
+/* --- SLOGAN --- */
+.slogan {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+
+}
+
+.slogan img {
+    width: 20%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.slogan__text {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 900;
+    font-size: 2vw;
+    line-height: 1.1;
+    color: #f6863b;
+    margin-bottom: 30px;
+}
+
+
+/* Khối CHỨA CÁC NÚT */
+.menu_nav {
+    display: flex; 
+    justify-content: center; /* Căn giữa 4 nút */
+    gap: 20px;/*ảng cách giữa 4 nút */
+    margin: 50px auto; /* Đặt khối này ở giữa trang */
+    align-items: center;
+}
+
+/* --- Kiểu dáng Chung cho Nút (Đảm bảo đồng bộ) --- */
+.filter-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px; 
+    background-color: white;
+    border: none; 
+    border: 1px solid #000;
+    /* Box-shadow đồng bộ: Viền trắng (inner shadow) + đổ bóng xám nhạt (outer shadow) */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+               
+}
+/* Kiểu dáng Nút ACTIVE (Nếu có) */
+/* Kiểu dáng Nút HOVER (Active) */
+.filter-button:hover {
+    background-color: #FA812F; 
+    color: white;
+    
+    /* Đổ bóng cam phải có độ lớn TƯƠNG ĐƯƠNG với bóng tĩnh */
+    box-shadow: 0 5px 10px rgba(255, 108, 10, 0.5), /* Đổ bóng cam */
+                0 0 0 3px #FF6C0A; /* Viền cam tương đương viền trắng */
+}
+
+.filter-button1 {
+    background-color: #FA812F; 
+    color: white;
+}
+/* FOOTER */
+footer {
+    background-color: #FEF3E2; 
+    color: #333333; 
+    padding: 40px 0;
+    border-top: 2px dashed #FF6C0A; /* Đường viền cam đứt nét */
+    font-size: 15px;
+}
+
+.footer__container {
+    width:1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Cho phép các cột xuống hàng trên màn hình nhỏ */
+    gap: 20px; 
+}
+
+.footer__column {
+    flex: 1; /* Giúp các cột chia đều không gian */
+    min-width: 150px; 
+}
+
+.footer__column h2,
+.footer__column h3 {
+    color: #FF6C0A; 
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer__column p {
+    margin: 0 0 15px;
+    line-height: 24px;
+}
+
+.footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__links li {
+    margin-bottom: 10px;
+}
+
+.footer__links a, .footer__links span {
+    color: #333333; 
+    text-decoration: none;
+    transition: color 0.3s;
+    align-items: center; 
+}
+
+.footer__links a:hover {
+    color: #FF6C0A; 
+}
+
+.footer__links i {
+    margin-right: 10px; 
+    width: 15px; 
+    text-align: center;
+}
+
+.footer__icon a {
+    color: #333333;
+    margin-right: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer__icon a:hover {
+    color: #FF6C0A;
+}
+/* --- PRODUCT LIST --- */
+/* Toàn bộ khối sản phẩm */
+.products-grid {
+    display: grid; /* Sử dụng CSS Grid để tạo lưới */
+    grid-template-columns: repeat(3, minmax(360px, 400px)); /* 3 cột, mỗi cột tối thiểu 300px, tối đa 360px */
+    
+    /* Căn giữa 3 cột bên trong container */
+    justify-content: center; 
+    max-width: 1300px; 
+    margin: 0 auto; 
+    
+    /* Khoảng cách giữa các card */
+    gap: 18px; 
+
+    padding: 30px;
+    background-color: #fdf2e9; 
+    
+    /* Có thể bỏ qua: justify-items: center; */
+}
+/* Mỗi thẻ sản phẩm */  
+.product-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    height:100%;
+    width: 100%;
+    max-width: 400px;           /* Giới hạn độ rộng card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #000;
+}
+
+.product-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* Ảnh món ăn */
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Phần thông tin */
+.product-info {
+    padding: 20px 22px 26px;
+}
+
+/* Hàng chứa tên & giá */
+.name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.name-price h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+.name-price .price {
+    font-weight: 700;
+    font-size: 16px;
+    color: #222;
+}
+
+/* Mô tả món ăn */
+.description {
+    font-size: 15px;
+    color: #446;
+    margin: 10px 0 20px;
+    line-height: 1.5;
+}
+
+/* Nút Add to cart */
+.add-to-cart-btn {
+    width: 100%;
+    /**background-color: #00a5a5;*/
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 165, 165, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border: 1px solid #000;
+    margin-top: 15px;
+}
+.btn1 {
+    background-color: rgb(232, 121, 10);
+}
+
+.btn3 {
+     background-color: #00a5a5;
+}
+
+.btn2 {
+    background-color: #660a60;
+}
+
+.product-info1 {
+   background-color: #FCEFE2;  /* xanh nhạt giống Webflow mẫu */ 
+  padding: 20px 22px 26px;
+}   
+.product-info2 {
+  background-color: #ead2e8; /* xanh nhạt giống Webflow mẫu */ 
+  padding: 20px 22px 26px;
+}  
+
+.product-info3 {
+  background-color: #d9f4f4; /* xanh nhạt giống Webflow mẫu */ 
+  padding: 20px 22px 26px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #d2dcde;
+  transform: scale(1.02);
+}
+
+/* Đảm bảo mô tả và điều khiển số lượng nằm ngang hàng và giãn ra */
+.desc-and-control {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; /* Đẩy mô tả ra trái, quantity ra phải */
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+}
+
+/* Giới hạn mô tả để nhường chỗ cho khối điều khiển số lượng */
+.description {
+    max-width: 65%; 
+    margin: 0; 
+    font-size: 0.95rem; 
+    color: #555;
+}
+
+/* Trường nhập số lượng */
+.quantity-input {
+    width: 20px;
+    text-align: center; 
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    
+    /* 🌟 CHỈNH SỬA: Đặt line-height bằng chiều cao khối cha */
+    line-height: 25px; 
+    
+    /* 🌟 QUAN TRỌNG: Đảm bảo padding mặc định của trình duyệt bị xóa */
+    padding: 0; 
+    
+    /* 🌟 BỔ SUNG: Xóa bỏ margin nếu có */
+    margin: 0; 
+}
+/* Khối điều khiển số lượng (Container) */
+.quantity-control {
+    display: flex;
+    align-items: stretch;
+    
+    /* 🌟 CHỈNH SỬA: Thay viền cứng bằng màu sắc và đổ bóng */
+    border: 1px solid #e0e0e0; /* Viền nhạt, mềm mại hơn */
+    border-radius: 12px; /* Bo góc nhiều hơn cho hình dạng bầu dục */
+    
+    height: 25px; 
+    overflow: hidden; /* Cắt phần tử con bị tràn ra ngoài viền bo */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ */
+}
+
+/* Nút cộng/trừ */
+.quantity-btn {
+    /* 🌟 CHỈNH SỬA: Thêm màu nền và hiệu ứng tương tác */
+    background: #f7f7f7; /* Nền xám nhạt */
+    color: #333; /* Màu chữ đậm */
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 25px;
+    outline: none;
+    padding: 0;
+    transition: background-color 0.2s; /* Hiệu ứng chuyển màu mượt mà */
+}
+
+.quantity-btn:hover {
+    background-color: #e9e9e9; /* Nền tối hơn khi di chuột */
+}
+
+/* 🌟 Tùy chọn: Đặt viền phân cách mỏng giữa input và nút */
+.minus-btn {
+    border-right: 1px solid #e0e0e0; 
+}
+.plus-btn {
+    border-left: 1px solid #e0e0e0; 
+}
+
+/* Responsive cho màn nhỏ */
+@media (max-width: 600px) {
+  .product-card img {
+    height: 200px;
+  }
+  .name-price h3 {
+    font-size: 20px;
+  }
+}
+
+/* --- GALLERY SECTION --- */   
+
+
+.gallery-section {
+  padding: 40px 0;
+}
+
+.chef-icon {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 80px;
+    height: auto;
+    filter: invert(57%) sepia(91%) saturate(1864%) hue-rotate(0deg) brightness(101%) contrast(102%);
+}
+.gallery-section h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 900;
+    font-size: 3vw;
+    line-height: 1.1;
+    color: #f6863b;
+    margin-bottom: 50px;
+}
+
+/* --- Dãy ảnh --- */
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+  transition: all 0.4s ease;
+}
+
+/* --- Ảnh cơ bản --- */
+.gallery-item {
+  flex: 1; /* các ảnh chia đều */
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.5s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* --- Khi di chuột vào ảnh nào --- */
+.gallery-item:hover {
+  flex: 3; /* ảnh này dài ra (chiếm gấp 3 không gian) */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* phóng nhẹ nhưng vẫn đúng tỉ lệ */
+}
+
+/* --- Các ảnh khác sẽ tự thu nhỏ lại --- */
+.gallery-item:not(:hover) {
+  flex: 0.8;
+}
+
+/* ============================= */
+/* KHỐI HERO (VÙNG BANNER CHÍNH) */
+/* ============================= */
+.hero-section {
+  position: relative;           /* Cho phép các phần tử con (ảnh) định vị tuyệt đối bên trong */
+  width: 100%;                  /* Chiếm toàn bộ chiều ngang màn hình */
+  padding: 96px 24px 140px;     /* Tạo khoảng trống bên trong: trên 96px, hai bên 24px, dưới 140px */
+  background: #FEF3E2;          /* Màu nền be sáng nhẹ */
+  overflow: hidden;             /* Ẩn các phần bị tràn ra ngoài (ảnh nghiêng không làm vỡ bố cục) */
+  text-align: center;           /* Căn giữa toàn bộ nội dung bên trong theo chiều ngang */
+}
+
+/* ============================= */
+/* NỘI DUNG TRUNG TÂM (CHỮ + NÚT) */
+/* ============================= */
+.hero-content {
+  max-width: 760px;             /* Giới hạn độ rộng tối đa của nội dung để không kéo dài quá */
+  margin: 0 auto;               /* Căn giữa khối nội dung theo chiều ngang */
+}
+
+/* Dòng chứa logo và chữ Unidine */
+.logo-text {
+  display: inline-flex;          /* Hiển thị icon và chữ nằm cùng 1 hàng */
+  align-items: center;           /* Căn giữa icon và chữ theo trục dọc */
+  gap: 10px;                     /* Khoảng cách giữa icon và chữ */
+  margin-bottom: 14px;           /* Khoảng cách dưới logo */
+  font-weight: 700;              /* Độ đậm chữ */
+  color: #1d1d1d;                /* Màu chữ đen nhạt */
+  font-size: 18px;               /* Cỡ chữ */
+}
+
+/* Tiêu đề lớn chính giữa */
+.hero-content h2 {
+  font-size: 3rem;               /* Kích thước chữ lớn (~48px) */
+  line-height: 1.1;              /* Giảm khoảng cách giữa các dòng tiêu đề */
+  color: #2c160f;                /* Màu nâu đậm, dễ đọc trên nền be */
+  margin: 10px 0 18px;           /* Khoảng cách trên/dưới tiêu đề */
+  font-weight: 900;              /* Chữ rất đậm để tạo điểm nhấn */
+}
+
+/* Đoạn mô tả nhỏ dưới tiêu đề */
+.hero-content p {
+  font-size: clamp(14px, 1.4vw, 18px); /* Tự động thay đổi kích thước chữ theo độ rộng màn hình */
+  color: #5c4941;             /* Màu chữ xám-nâu mềm hơn tiêu đề */
+  margin: 0 auto;             /* Căn giữa văn bản */
+  max-width: 720px;           /* Giới hạn độ rộng để dòng chữ không quá dài */
+}
+
+/* ============================= */
+/* NÚT ORDER NOW                 */
+/* ============================= */
+.btn-order {
+  margin-top: 28px;              /* Khoảng cách trên nút với đoạn văn */
+  background: linear-gradient(180deg,#FF8A3D 0%,#f75b07 100%); /* Hiệu ứng chuyển màu cam */
+  color: #fff;                   /* Chữ màu trắng */
+  border: 0;                     /* Bỏ viền */
+  padding: 16px 34px;            /* Đệm bên trong nút (cao & rộng) */
+  border-radius: 999px;          /* Bo tròn tối đa — tạo nút hình viên thuốc */
+  font-size: 18px;               /* Kích thước chữ nút */
+  font-weight: 800;              /* Chữ đậm */
+  cursor: pointer;               /* Khi di chuột vào biến thành bàn tay */
+  box-shadow: 0 10px 24px rgba(247, 91, 7, .35); /* Tạo bóng giúp nút nổi lên */
+  transition: transform .15s ease, filter .15s ease; /* Hiệu ứng mượt khi hover */
+}
+
+/* Hiệu ứng khi rê chuột vào nút */
+.btn-order:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(247,91,7,0.45);
+}
+
+/* ============================= */
+/* ẢNH TRANG TRÍ NGHIÊNG (TRÁI & PHẢI) */
+/* ============================= */
+.hero-image {
+  position: absolute;            /* Đặt vị trí tuyệt đối trong .hero-section */            
+}
+
+/* Định dạng chung cho hình ảnh */
+.hero-image img {
+  display: block;                /* Loại bỏ khoảng trắng dư quanh ảnh */
+  width: 200px;                  /* Chiều rộng ảnh (bạn có thể tăng/giảm để phù hợp) */
+  height: 200px;                 /* Chiều cao ảnh */
+  object-fit: cover;             /* Cắt ảnh để vừa khung mà không bị méo */
+  border-radius: 24px;           /* Bo tròn góc ảnh */
+  box-shadow: 0 18px 40px rgba(0,0,0,.15); /* Bóng mờ giúp ảnh nổi khối */
+}
+
+/* Ảnh bên TRÁI */
+.left-image {
+  left: 6%;                      /* Khoảng cách từ mép trái màn hình */
+  top: 35%;                      /* Vị trí theo chiều dọc (tính từ trên xuống) */
+  transform: translateY(-50%) rotate(-11deg); /* Dịch lên 1 nửa chiều cao và xoay nhẹ -11 độ */
+}
+
+/* Ảnh bên PHẢI */
+.right-image {
+  right: 6%;                     /* Khoảng cách từ mép phải màn hình */
+  top: 65%;                        /* ⚠️ Bạn cần nhập giá trị %, ví dụ top: 40%; */
+  transform: translateY(-50%) rotate(11deg);  /* Dịch lên 1 nửa và xoay nghiêng 11 độ */
+}
+
+
+.hero-image:hover img {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================= */
+/* RESPONSIVE BANNER (TỰ THU NHỎ) */
+/* ============================= */
+@media (max-width: 1200px) {
+  .hero-image img { width: 240px; height: 240px; } /* Khi màn hình nhỏ hơn 1200px: ảnh to hơn */
+  .left-image { left: 2%; }  /* Dịch ảnh trái vào gần giữa hơn */
+  .right-image { right: 2%; } /* Dịch ảnh phải vào gần giữa hơn */
+}
+
+@media (max-width: 900px) {
+  .hero-section { padding-bottom: 80px; }  /* Giảm khoảng cách dưới để banner gọn hơn */
+  .hero-image { opacity: .15; }            /* Làm mờ ảnh để không che chữ */
+  .hero-image img { width: 200px; height: 200px; } /* Giữ ảnh nhỏ gọn trên mobile */
+}
