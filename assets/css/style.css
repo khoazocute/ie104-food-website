@@ -5,7 +5,9 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap');
+
+    font-family: 'Be Vietnam Pro', sans-serif;
     background-color: #FCEFE2;
     color: #333;
 }
@@ -112,6 +114,98 @@ body {
 
 
 
+/* ============================ BANNER ============================= */
+.banner {
+    --banner-img: url('/ie104-food-website/imgs/homepage__banner3.jpg');
+    position: relative;
+    width: 98%;
+    min-height: 600px;
+    margin: 16px auto 28px;
+    border-radius: 28px;
+    background:
+      var(--banner-img) center / cover no-repeat;
+    box-shadow: 0 8px 30px rgba(31,16,0,.10);
+  }
+  
+  .banner__content {
+    position: relative;                    
+    height: 100%;
+    max-width: 720px;                      
+    padding: 100px 56px;              
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: left;
+    color: #FFF7EB;                     
+  }
+  
+  /* badge */
+  .banner__content > span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FAB12F; 
+  }
+  
+  /* title + text */
+  .banner__content h1 {
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  
+  .banner__content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #F4EDE4;
+    text-shadow: 0 1px 8px rgba(0,0,0,.35);
+    margin-bottom: 8px;
+  }
+  
+  .banner__nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .banner__nav a:first-child {
+    background: #FA812F;
+    color: #FFF7EB;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1.5px solid #C85E11;
+    transition: all 0.3s ease;
+  }
+
+  .banner__nav a:first-child:hover {
+    background: #E17124;
+  }
+  
+  .banner__nav a:last-child {
+    background: #FFFFFF;
+    color: #1F1000;
+    border: 1.5px solid #1F1000;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .banner__nav a:last-child:hover {
+    background-color: #1F1000;
+    color: #FFF7EB;
+    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
+  }
+  
+  /* icon spacing */
+  .banner__nav i {
+    margin-left: 8px; 
+    }
+  
+    
 
 
 
