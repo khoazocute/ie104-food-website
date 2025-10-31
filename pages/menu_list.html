@@ -7,34 +7,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+        <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Menu_List</title>
 </head>
 <body>
-    <header>
-        <div class="header__logo">
-            <a href="#">
-                <img src="../imgs/logo.png" alt="logo">
+    <header class="header">
+
+        <div class="header__left">
+            <a href="#" class="header__logo">
+                <img src="../imgs/main-logo.png" alt="logo">
             </a>
-        </div>  
-
-        <div class="header__mainnav">
-            <nav>
-              <ul class="nav-links">
-                <li class="active"><a href="#">Trang Chủ</a></li>
-                <li class ="active"><a href="#intro">Giới Thiệu</a></li>
-                <li class="active"><a href="#menu">Thực Đơn</a></li>
-                <li class="active"><a href="#contact">Liên Hệ</a></li>
-                <li class="active" ><a href="#question">Câu Hỏi Thường Gặp</a></li>
-              </ul>
-            </nav>
+             <a href="#" class="header__cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
         </div>
+    
+        <!-- MENU -->
+        <nav class="header__nav">
+            <ul class="nav-links">
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#intro">Giới Thiệu</a></li>
+                <li class="active1"><a href="#menu">Thực Đơn</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+                <li><a href="#faq">Câu Hỏi Thường Gặp</a></li>
+            </ul>
+        </nav>
+    
+        <!-- RIGHT SIDE -->
+        <div class="header__right">
 
-        <div class="header__right"> 
-            <button class="button button-login">Đăng Nhập</button>
-            <button class="button button-signup">Đăng Ký</button>
+            <a href="#" class="header__item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cửa hàng</span>
+            </a>
+        
+            <a href="" class="header__item">
+                <i class="fa-solid fa-user"></i>
+                <span>Đăng nhập</span>
+            </a>
+        
         </div>
-
     </header>
+
 
     <slogan class = "slogan__container">
         <div class="slogan">
@@ -49,112 +64,423 @@
         
         <div class="category-filter-menu Menu_Container Menu_List">
             <div class="menu_nav">
-                <button class="filter-button">Full Menu</button>
-                <button class="filter-button ">Burgers</button>
-                <button class="filter-button">Pizza</button>
-                <button class="filter-button">Subway</button>
+                <button class="filter-button filter-button1" onclick="window.location.href='full_menu.html'">Full Menu</button>
+                <button class="filter-button filter-button2" onclick="window.location.href='burgers.html'">Burgers</button>
+                <button class="filter-button filter-button3" onclick="window.location.href='pizza.html'">Pizza</button>
+                <button class="filter-button filter-button4" onclick="window.location.href='subway.html'">Món ăn kèm</button>
+                <button class="filter-button filter-button5" onclick="window.location.href='desserts.html'">Combo</button>
             </div>
         </div>
 
         <div class="products-grid">
             
-            <div class="product-card">
-                <img src="../imgs/burger1.avif" alt="Cheesy Delight">
-                <div class="product-info">
-                    <div class="name-price">
-                        <h3>Cheesy Delight</h3>
-                        <span class="price">$ 8.99 USD</span>
-                    </div>
+           <div class="product-card ">
+            <img src="../imgs/combo3.jpg" alt="Cheesy Delight">
+            <div class="product-info product-info1">
+                <div class="name-price">
+                    <h3>Cheesy Delight</h3>
+                    <span class="price">$ 8.99 USD</span>
+                </div>
+                
+                <div class="desc-and-control">
                     <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
-                    <button class="add-to-cart-btn">Add to cart 🛒</button>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                </div>
+                
+                <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="../imgs/burger2.jpg" alt="Spicy Crunch">
-                <div class="product-info">
+                <img src="../imgs/combo6.jpg" alt="Spicy Crunch">
+                <div class="product-info product-info1">
                     <div class="name-price">
                         <h3>Spicy Crunch</h3>
                         <span class="price">$ 12.49 USD</span>
                     </div>
-                    <p class="description">Juicy beef, tender chicken, flavorful turkey, or rich lamb.</p>
-                    <button class="add-to-cart-btn">Add to cart 🛒</button>
+                    <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="../imgs/burger3.jpg" alt="BBQ Bliss">
-                <div class="product-info">
+                <img src="../imgs/combo4.jpg" alt="BBQ Bliss">
+                <div class="product-info product-info1">
                     <div class="name-price">
                         <h3>BBQ Bliss</h3>  
                         <span class="price">$ 10.75 USD</span>
                     </div>
-                    <p class="description">Beef, chicken, turkey, or lamb for your perfect burger.</p>
-                    <button class="add-to-cart-btn">Add to cart 🛒</button>
-                </div>
-            </div>
-            
-                  <div class="product-card">
-                <img src="../imgs/burger2.jpg" alt="Spicy Crunch">
-                <div class="product-info">
-                    <div class="name-price">
-                        <h3>Spicy Crunch</h3>
-                        <span class="price">$ 12.49 USD</span>
-                    </div>
-                    <p class="description">Juicy beef, tender chicken, flavorful turkey, or rich lamb.</p>
-                    <button class="add-to-cart-btn">Add to cart 🛒</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="../imgs/burger1.avif" alt="Cheesy Delight">
-                <div class="product-info">
-                    <div class="name-price">
-                        <h3>Cheesy Delight</h3>
-                        <span class="price">$ 8.99 USD</span>
-                    </div>
+                    <div class="desc-and-control">
                     <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
-                    <button class="add-to-cart-btn">Add to cart 🛒</button>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="../imgs/burger2.jpg" alt="Spicy Crunch">
-                <div class="product-info">
+            <img src="../imgs/burger4.avif" alt="Cheesy Delight">
+            <div class="product-info product-info1">
+                <div class="name-price">
+                    <h3>Cheesy Delight</h3>
+                    <span class="price">$ 8.99 USD</span>
+                </div>
+                
+                <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                </div>
+                
+                <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../imgs/burger2.avif" alt="Spicy Crunch">
+                <div class="product-info product-info1">
                     <div class="name-price">
                         <h3>Spicy Crunch</h3>
                         <span class="price">$ 12.49 USD</span>
                     </div>
-                    <p class="description">Juicy beef, tender chicken, flavorful turkey, or rich lamb.</p>
-                    <button class="add-to-cart-btn">Add to cart 🛒</button>
+                    <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="../imgs/burger3.jpg" alt="BBQ Bliss">
-                <div class="product-info">
+                <img src="../imgs/burger3.avif" alt="BBQ Bliss">
+                <div class="product-info product-info1">
                     <div class="name-price">
                         <h3>BBQ Bliss</h3>  
                         <span class="price">$ 10.75 USD</span>
                     </div>
-                    <p class="description">Beef, chicken, turkey, or lamb for your perfect burger.</p>
-                    <button class="add-to-cart-btn">Add to cart 🛒</button>
+                    <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
                 </div>
-            </div>
+            </div>  
             
-                  <div class="product-card">
-                <img src="../imgs/burger2.jpg" alt="Spicy Crunch">
-                <div class="product-info">
+            <div class="product-card">
+                <img src="../imgs/pizzza1.avif" alt="Spicy Crunch">
+                <div class="product-info product-info2">
                     <div class="name-price">
                         <h3>Spicy Crunch</h3>
                         <span class="price">$ 12.49 USD</span>
                     </div>
-                    <p class="description">Juicy beef, tender chicken, flavorful turkey, or rich lamb.</p>
-                    <button class="add-to-cart-btn">Add to cart 🛒</button>
+                     <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn2">Add to cart 🛒</button>
                 </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../imgs/pizza22.avif" alt="Cheesy Delight">
+                <div class="product-info product-info2">
+                    <div class="name-price">
+                        <h3>Cheesy Delight</h3>
+                        <span class="price">$ 8.99 USD</span>
+                    </div>
+                     <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn2">Add to cart 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../imgs/pizza3.avif" alt="Spicy Crunch">
+                <div class="product-info product-info2">
+                    <div class="name-price">
+                        <h3>Spicy Crunch</h3>
+                        <span class="price">$ 12.49 USD</span>
+                    </div>
+                     <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn2">Add to cart 🛒</button>
+                </div>
+            </div>
+
+             <div class="product-card">
+                <img src="../imgs/pizzza1.avif" alt="Spicy Crunch">
+                <div class="product-info product-info2">
+                    <div class="name-price">
+                        <h3>Spicy Crunch</h3>
+                        <span class="price">$ 12.49 USD</span>
+                    </div>
+                     <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn2">Add to cart 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../imgs/pizza22.avif" alt="Cheesy Delight">
+                <div class="product-info product-info2">
+                    <div class="name-price">
+                        <h3>Cheesy Delight</h3>
+                        <span class="price">$ 8.99 USD</span>
+                    </div>
+                     <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn2">Add to cart 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../imgs/pizza3.avif" alt="Spicy Crunch">
+                <div class="product-info product-info2">
+                    <div class="name-price">
+                        <h3>Spicy Crunch</h3>
+                        <span class="price">$ 12.49 USD</span>
+                    </div>
+                     <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn2">Add to cart 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../imgs/mon_an_kem1.jpg" alt="BBQ Bliss">
+                <div class="product-info product-info3">
+                    <div class="name-price">
+                        <h3>BBQ Bliss</h3>  
+                        <span class="price">$ 10.75 USD</span>
+                    </div>
+                     <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" >
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn3">Add to cart 🛒</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="../imgs/mon_an_kem2.jpg" alt="Spicy Crunch">
+                <div class="product-info product-info3">
+                    <div class="name-price">
+                        <h3>Spicy Crunch</h3>
+                        <span class="price">$ 12.49 USD</span>
+                    </div>
+                     <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn3">Add to cart 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../imgs/mon_an_kem3.jpg" alt="Spicy Crunch">
+                <div class="product-info product-info3">
+                    <div class="name-price">
+                        <h3>Spicy Crunch</h3>
+                        <span class="price">$ 12.49 USD</span>
+                    </div>
+                    <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn3">Add to cart 🛒</button>
+                </div>
+            </div>
+
+              <div class="product-card">
+                <img src="../imgs/mon_an_kem5.jpg" alt="BBQ Bliss">
+                <div class="product-info product-info3">
+                    <div class="name-price">
+                        <h3>BBQ Bliss</h3>  
+                        <span class="price">$ 10.75 USD</span>
+                    </div>
+                     <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn3">Add to cart 🛒</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="../imgs/mon_an_kem4.jpg" alt="Spicy Crunch">
+                <div class="product-info product-info3">
+                    <div class="name-price">
+                        <h3>Spicy Crunch</h3>
+                        <span class="price">$ 12.49 USD</span>
+                    </div>
+                     <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn3">Add to cart 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../imgs/mon_an_kem6.jpg" alt="Spicy Crunch">
+                <div class="product-info product-info3">
+                    <div class="name-price">
+                        <h3>Spicy Crunch</h3>
+                        <span class="price">$ 12.49 USD</span>
+                    </div>
+                    <div class="desc-and-control">
+                    <p class="description">Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                    
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    </div>
+                    <button class="add-to-cart-btn btn3">Add to cart 🛒</button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <img src="../imgs/chef-hat.png" alt="Chef Hat" class="chef-icon">
+        <h2>A Feast for Your Eyes</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+            <img src="../imgs/slider4.jpg" alt="Salad dish">
+            </div>
+            <div class="gallery-item">
+            <img src="../imgs/slider2.avif" alt="Couple eating">
+            </div>
+            <div class="gallery-item">
+            <img src="../imgs/slider3.webp" alt="Green dish">
             </div>
         </div>
     </section>
+
+    <section class="hero-section banner-section">
+        <div class="hero-image left-image">
+            <img src="../imgs/mini_banner.avif"alt="">
+            </div>
+
+        <div class="hero-content">
+            <div class="logo-text">
+                <img src="../imgs/icon2.jpg" alt="">
+        
+            </div>
+            <h2>Don't Wait - Order Now!</h2>
+            <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready for pick-up.</p>
+            <button class="btn-order">
+                Order Now <span>→</span>
+            </button>
+        </div>
+
+        <div class="hero-image right-image">
+            <img src="../imgs/mini_banner2.avif" alt="">
+
+            </div>
+    </section>
+
     <footer>
         <div class="footer__container">
             <div class="footer__column">
