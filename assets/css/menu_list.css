@@ -305,9 +305,11 @@ header {
                 0 0 0 3px #FF6C0A; /* Viền cam tương đương viền trắng */
 }
 
-.filter-button1 {
-    background-color: #FA812F; 
-    color: white;
+.filter-button a.active {
+    background-color: #F87D39; /* Màu cam nổi bật */
+    color: white;             /* Màu chữ trắng */
+    border-color: #F87D39;    /* Viền cùng màu nền */
+    font-weight: bold;        /* Chữ đậm hơn */
 }
 /* FOOTER */
 footer {
@@ -415,10 +417,6 @@ footer {
     border: 1px solid #000;
 }
 
-.product-card:hover {
-    transform: translateY(-9px);
-    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
-}
 
 /* Ảnh món ăn */
 .product-card img {
@@ -428,6 +426,10 @@ footer {
     display: block;
 }
 
+.product-card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
 /* Phần thông tin */
 .product-info {
     padding: 20px 22px 26px;
