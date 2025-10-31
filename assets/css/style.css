@@ -6,7 +6,6 @@
 
 body {
     @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap');
-
     font-family: 'Be Vietnam Pro', sans-serif;
     background-color: #FCEFE2;
     color: #333;
@@ -21,7 +20,7 @@ body {
     width: 80%;
     height: 68px;
     padding: 10px 12px;
-    margin: 15px auto;
+    margin: 15px auto 45px;
     background-color: #FEF3E2;
     border: 1.5px solid #FAB12F;
     border-radius: 50px;
@@ -116,27 +115,26 @@ body {
 
 /* ============================ BANNER ============================= */
 .banner {
-    --banner-img: url('/ie104-food-website/imgs/homepage__banner3.jpg');
-    position: relative;
+    position: relative; 
+    background-image: url('/ie104-food-website/imgs/homepage__banner1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
     width: 98%;
-    min-height: 600px;
+    min-height: 700px;
     margin: 16px auto 28px;
     border-radius: 28px;
-    background:
-      var(--banner-img) center / cover no-repeat;
-    box-shadow: 0 8px 30px rgba(31,16,0,.10);
   }
   
   .banner__content {
-    position: relative;                    
+    position: absolute;                    
     height: 100%;
     max-width: 720px;                      
-    padding: 100px 56px;              
+    left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    text-align: left;
     color: #FFF7EB;                     
   }
   
