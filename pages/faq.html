@@ -2,79 +2,206 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAQ - Food Dash</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/pages.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff6eb;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .faq-section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .faq-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            padding: 18px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+        }
+        
+        .faq-question:hover {
+            background: #fff0de;
+        }
+        
+        .faq-answer {
+            padding: 0 20px 20px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question {
+            background: #fff0de;
+        }
+        
+        .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <header class="header">
 
-    <!-- HEADER -->
-    <header>
-        <div class="header__logo">
-            <a href="../homepage.html">
-                <img src="../imgs/logo.png" alt="logo" />
+        <div class="header__left">
+            <a href="#" class="header__logo">
+                <img src="../imgs/main-logo.png" alt="logo">
+            </a>
+            <a href="#" class="header__cart">
+                <i class="fa-solid fa-cart-shopping"></i>
             </a>
         </div>
 
-        <div class="header__mainnav">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../homepage.html">Home</a></li>
-                    <li><a href="#intro">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li class="active"><a href="faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
+        <!-- MENU -->
+        <nav class="header__nav">
+            <ul class="nav-links">
+                <li><a href="../homepage.html">Trang Chủ</a></li>
+                <li><a href="./about.html">Giới Thiệu</a></li>
+                <li><a href="./menu_list.html">Thực Đơn</a></li>
+                <li><a href="./contact.html">Liên Hệ</a></li>
+                <li><a href="./faq.html">Câu Hỏi Thường Gặp</a></li>
+            </ul>
+        </nav>
 
+        <!-- RIGHT SIDE -->
         <div class="header__right">
-            <button class="button button-login" onclick="window.location='auth.html'">Login</button>
-            <button class="button button-signup" onclick="window.location='auth.html'">Sign Up</button>
-            <i class="fa-solid fa-cart-shopping" id="cart-btn" style="cursor:pointer;margin-left:10px;"></i>
+
+            <a href="#" class="header__item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cửa hàng</span>
+            </a>
+
+            <a href="" class="header__item">
+                <i class="fa-solid fa-user"></i>
+                <span>Đăng nhập</span>
+            </a>
+
         </div>
     </header>
 
-    <!-- PAGE CONTENT -->
-    <section class="faq-container">
-        <h2>Frequently Asked Questions</h2>
+    <main>
+        <section class="faq-section">
+            <h2>Câu hỏi thường gặp</h2>
 
-        <div class="faq-item">
-            <h4>❓ How do I place an order?</h4>
-            <p>Select items from the menu, add them to your cart, then proceed to checkout.</p>
-        </div>
+            <div class="faq-item active">
+                <button type="button" class="faq-question">
+        Giao hàng thường mất bao lâu?
+        <span class="arrow">▼</span>
+      </button>
+                <div class="faq-answer">
+                    Thời gian giao hàng trung bình từ 30–45 phút, tùy theo vị trí của bạn. Chúng tôi luôn đóng gói cẩn thận để món ăn giữ được độ nóng và ngon. Mục tiêu của chúng tôi là giao đến bạn nhanh chóng mà vẫn đảm bảo chất lượng. Hãy thưởng thức món ăn yêu thích
+                    ngay tại nhà!
+                </div>
+            </div>
 
-        <div class="faq-item">
-            <h4>❓ Can I cancel my order?</h4>
-            <p>You can cancel your order before it is confirmed by the restaurant.</p>
-        </div>
+            <div class="faq-item">
+                <button type="button" class="faq-question">
+        Nguyên liệu của bạn có tươi và được lấy tại địa phương không?
+        <span class="arrow">▼</span>
+      </button>
+                <div class="faq-answer">
+                    Có! Chúng tôi hợp tác với các trang trại và nhà cung cấp uy tín tại địa phương để đảm bảo tất cả nguyên liệu đều tươi mới, sạch và có nguồn gốc rõ ràng.
+                </div>
+            </div>
 
-        <div class="faq-item">
-            <h4>❓ How long does delivery take?</h4>
-            <p>Typically 20–30 minutes depending on your location.</p>
-        </div>
-    </section>
+            <div class="faq-item">
+                <button type="button" class="faq-question">
+        Tôi có thể tùy chỉnh đơn hàng của mình không?
+        <span class="arrow">▼</span>
+      </button>
+                <div class="faq-answer">
+                    Hoàn toàn có thể! Bạn có thể chọn thêm hoặc bỏ bớt topping, sốt, hoặc điều chỉnh khẩu phần tùy ý trước khi đặt hàng.
+                </div>
+            </div>
 
-    <!-- POPUP CART -->
-    <div id="cart-popup" class="cart-overlay">
-        <div class="cart-box">
-            <h3>Shopping Cart</h3>
-            <p>No items in your cart.</p>
-            <button class="button button-login" id="close-cart">Close</button>
-        </div>
-    </div>
+            <div class="faq-item">
+                <button type="button" class="faq-question">
+        Tôi có thể thanh toán bằng những hình thức nào?
+        <span class="arrow">▼</span>
+      </button>
+                <div class="faq-answer">
+                    Chúng tôi chấp nhận thanh toán bằng thẻ tín dụng, ví điện tử, và tiền mặt khi nhận hàng. Bạn có thể chọn hình thức phù hợp khi thanh toán.
+                </div>
+            </div>
 
-    <!-- FOOTER -->
-    <!-- identical footer as in contact.html -->
+            <div class="faq-item">
+                <button type="button" class="faq-question">
+        Làm thế nào để theo dõi đơn hàng của tôi?
+        <span class="arrow">▼</span>
+      </button>
+                <div class="faq-answer">
+                    Sau khi đặt hàng, bạn sẽ nhận được đường dẫn theo dõi qua email hoặc tin nhắn SMS. Bạn có thể xem trạng thái đơn hàng theo thời gian thực cho đến khi giao thành công.
+                </div>
+            </div>
+        </section>
+    </main>
+
+
     <footer>
         <div class="footer__container">
             <div class="footer__column">
                 <h2>FOOD DASH</h2>
-                <p>Food Dash ©2025 All Rights Reserved</p>
+                <p>Food Dash &copy;2025 All Rights Reserved</p>
                 <p>By - Your Name</p>
                 <h3>Follow Us On</h3>
                 <div class="footer__icon">
@@ -82,16 +209,16 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
 
             <div class="footer__column">
                 <h3>Menu</h3>
                 <ul class="footer__links">
-                    <li><a href="../homepage.html">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Offers</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Service</a></li>
                     <li><a href="#">About Us</a></li>
                 </ul>
             </div>
@@ -110,20 +237,51 @@
                 <h3>Contact</h3>
                 <ul class="footer__links">
                     <li>
-                        <a href="tel:+123456789"><i class="fas fa-phone"></i><span>+123456789</span></a>
+                        <a href="tel:+123456789">
+                            <i class="fas fa-phone"></i>
+                            <span>+123456789</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="mailto:info@fooddash.com"><i class="fas fa-envelope"></i><span>info@fooddash.com</span></a>
+                        <a href="mailto:info@fooddash.com">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@fooddash.com</span>
+                        </a>
                     </li>
                     <li>
-                        <span><i class="fas fa-map-marker-alt"></i><span>12, Maharashtra, India</span></span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>12, Maharashtra, Indian</span>
+                        </span>
                     </li>
                 </ul>
             </div>
         </div>
     </footer>
 
-    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/include.js"></script>
+
+    <script>
+        window.addEventListener("load", function() {
+            const faqItems = document.querySelectorAll(".faq-item");
+
+            faqItems.forEach(item => {
+                const button = item.querySelector(".faq-question");
+
+                button.addEventListener("click", () => {
+                    const isActive = item.classList.contains("active");
+
+                    // Đóng tất cả
+                    faqItems.forEach(i => i.classList.remove("active"));
+
+                    // Mở lại nếu chưa mở
+                    if (!isActive) {
+                        item.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
