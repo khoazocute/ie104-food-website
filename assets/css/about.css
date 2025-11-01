@@ -151,7 +151,6 @@ html {
   
   /* ========================= HERO ========================= */
   .hero {
-    background: var(--bg);
     padding: clamp(40px, 6vw, 80px) 18px;
   }
   
@@ -223,11 +222,10 @@ html {
   }
   
   /* Nút chính – cam + bóng đặc rơi xuống */
-  .hero__nav a:first-child {
+  .hero__nav a {
     background: var(--orange);
     color: #FFF7EB;
     border: 1.5px solid var(--orange-dk);
-    box-shadow: 0 10px 0 var(--orange-dk);
   }
   .hero__nav a:first-child:hover {
     transform: translateY(-2px);
@@ -236,18 +234,6 @@ html {
   .hero__nav a:first-child:active {
     transform: translateY(0);
     box-shadow: 0 8px 0 var(--orange-dk);
-  }
-  
-  /* Nút phụ – viền đen theo header */
-  .hero__nav a:last-child {
-    background: #FFFFFF;
-    color: var(--ink);
-    border: 1.5px solid var(--ink);
-  }
-  .hero__nav a:last-child:hover {
-    background: var(--ink);
-    color: #FFF7EB;
-    transform: translateY(-2px);
   }
   
   /* icon spacing */
@@ -302,7 +288,7 @@ html {
   .badge-avatars img:nth-child(3) { left: 40px; }
 
   
-  /* ========== RIGHT: collage fit trong column ========== */
+  /* hero right*/
 .hero__right {
     position: relative;
     /* chiều cao tuỳ column; có thể tăng/giảm con số này */
@@ -321,12 +307,11 @@ html {
   /* base cho ảnh: luôn theo % bề rộng cột phải */
   .collage__img {
     position: absolute;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3;
+    max-width: 80%;
+    height: 400px;
     object-fit: cover;
     border-radius: 22px;
-    border: 6px solid #fff;
+    border: 1px solid black;
     box-shadow: 0 20px 50px rgba(31,16,0,.18);
     transition: transform .35s ease, box-shadow .35s ease;
   }
@@ -352,10 +337,10 @@ html {
   /* Sticker giữ theo % để không vỡ bố cục */
   .collage__sticker {
     position: absolute;
-    width: 14%;
+    width: 20%;
     min-width: 64px;             /* đừng nhỏ quá ở màn hẹp */
     left: 10%;
-    bottom: -2%;
+    bottom: -20%;
     transform: rotate(-8deg);
     z-index: 3;
   }
