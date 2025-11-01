@@ -135,11 +135,10 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    color: #FFF7EB;                     
-  }
-  
-  /* badge */
-  .banner__content > span {
+    color: #FFF7EB;
+}
+
+.banner__content>span {
     font-size: 18px;
     font-weight: 600;
     color: #FAB12F; 
@@ -204,6 +203,60 @@ body {
     }
   
     
+
+
+/* badge */
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    width: auto;
+    /* (mặc định) */
+    inline-size: fit-content;
+    /* hiện đại */
+
+
+    white-space: nowrap;
+    /* tránh xuống dòng -> khung ôm đúng chữ */
+    padding: 8px 14px 8px 10px;
+    border-radius: 999px;
+    color: #fff;
+    background: rgba(0, 0, 0, .26);
+    border: 1px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+}
+
+.badge-avatars {
+    position: relative;
+    width: 70px;
+    /* đủ chứa 3 avatar chồng */
+    height: 28px;
+}
+
+.badge-avatars img {
+    position: absolute;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, .7);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+}
+
+.badge-avatars img:nth-child(1) {
+    left: 0;
+}
+
+.badge-avatars img:nth-child(2) {
+    left: 20px;
+}
+
+.badge-avatars img:nth-child(3) {
+    left: 40px;
+}
 
 
 
@@ -886,125 +939,199 @@ body {
 /* KHỐI HERO (VÙNG BANNER CHÍNH) */
 /* ============================= */
 .hero-section {
-    position: relative;           /* Cho phép các phần tử con (ảnh) định vị tuyệt đối bên trong */
-    width: 100%;                  /* Chiếm toàn bộ chiều ngang màn hình */
-    padding: 96px 24px 140px;     /* Tạo khoảng trống bên trong: trên 96px, hai bên 24px, dưới 140px */
-    background: #FEF3E2;          /* Màu nền be sáng nhẹ */
-    overflow: hidden;             /* Ẩn các phần bị tràn ra ngoài (ảnh nghiêng không làm vỡ bố cục) */
-    text-align: center;           /* Căn giữa toàn bộ nội dung bên trong theo chiều ngang */
-  }
-  
-  /* ============================= */
-  /* NỘI DUNG TRUNG TÂM (CHỮ + NÚT) */
-  /* ============================= */
-  .hero-content {
-    max-width: 760px;             /* Giới hạn độ rộng tối đa của nội dung để không kéo dài quá */
-    margin: 0 auto;               /* Căn giữa khối nội dung theo chiều ngang */
-  }
-  
-  /* Dòng chứa logo và chữ Unidine */
-  .logo-text {
-    display: inline-flex;          /* Hiển thị icon và chữ nằm cùng 1 hàng */
-    align-items: center;           /* Căn giữa icon và chữ theo trục dọc */
-    gap: 10px;                     /* Khoảng cách giữa icon và chữ */
-    margin-bottom: 14px;           /* Khoảng cách dưới logo */
-    font-weight: 700;              /* Độ đậm chữ */
-    color: #1d1d1d;                /* Màu chữ đen nhạt */
-    font-size: 18px;               /* Cỡ chữ */
-  }
-  
-  /* Tiêu đề lớn chính giữa */
-  .hero-content h2 {
-    font-size: 3rem;               /* Kích thước chữ lớn (~48px) */
-    line-height: 1.1;              /* Giảm khoảng cách giữa các dòng tiêu đề */
-    color: #2c160f;                /* Màu nâu đậm, dễ đọc trên nền be */
-    margin: 10px 0 18px;           /* Khoảng cách trên/dưới tiêu đề */
-    font-weight: 900;              /* Chữ rất đậm để tạo điểm nhấn */
-  }
-  
-  /* Đoạn mô tả nhỏ dưới tiêu đề */
-  .hero-content p {
-    font-size: clamp(14px, 1.4vw, 18px); /* Tự động thay đổi kích thước chữ theo độ rộng màn hình */
-    color: #5c4941;             /* Màu chữ xám-nâu mềm hơn tiêu đề */
-    margin: 0 auto;             /* Căn giữa văn bản */
-    max-width: 720px;           /* Giới hạn độ rộng để dòng chữ không quá dài */
-  }
-  
-  /* ============================= */
-  /* NÚT ORDER NOW                 */
-  /* ============================= */
-  .btn-order {
-    margin-top: 28px;              /* Khoảng cách trên nút với đoạn văn */
-    background: linear-gradient(180deg,#FF8A3D 0%,#f75b07 100%); /* Hiệu ứng chuyển màu cam */
-    color: #fff;                   /* Chữ màu trắng */
-    border: 0;                     /* Bỏ viền */
-    padding: 16px 34px;            /* Đệm bên trong nút (cao & rộng) */
-    border-radius: 999px;          /* Bo tròn tối đa — tạo nút hình viên thuốc */
-    font-size: 18px;               /* Kích thước chữ nút */
-    font-weight: 800;              /* Chữ đậm */
-    cursor: pointer;               /* Khi di chuột vào biến thành bàn tay */
-    box-shadow: 0 10px 24px rgba(247, 91, 7, .35); /* Tạo bóng giúp nút nổi lên */
-    transition: transform .15s ease, filter .15s ease; /* Hiệu ứng mượt khi hover */
-  }
-  
-  /* Hiệu ứng khi rê chuột vào nút */
-  .btn-order:hover {
+    position: relative;
+    /* Cho phép các phần tử con (ảnh) định vị tuyệt đối bên trong */
+    width: 100%;
+    /* Chiếm toàn bộ chiều ngang màn hình */
+    padding: 96px 24px 140px;
+    /* Tạo khoảng trống bên trong: trên 96px, hai bên 24px, dưới 140px */
+    background: #FEF3E2;
+    /* Màu nền be sáng nhẹ */
+    overflow: hidden;
+    /* Ẩn các phần bị tràn ra ngoài (ảnh nghiêng không làm vỡ bố cục) */
+    text-align: center;
+    /* Căn giữa toàn bộ nội dung bên trong theo chiều ngang */
+}
+
+/* ============================= */
+/* NỘI DUNG TRUNG TÂM (CHỮ + NÚT) */
+/* ============================= */
+.hero-content {
+    max-width: 760px;
+    /* Giới hạn độ rộng tối đa của nội dung để không kéo dài quá */
+    margin: 0 auto;
+    /* Căn giữa khối nội dung theo chiều ngang */
+}
+
+/* Dòng chứa logo và chữ Unidine */
+.logo-text {
+    display: inline-flex;
+    /* Hiển thị icon và chữ nằm cùng 1 hàng */
+    align-items: center;
+    /* Căn giữa icon và chữ theo trục dọc */
+    gap: 10px;
+    /* Khoảng cách giữa icon và chữ */
+    margin-bottom: 14px;
+    /* Khoảng cách dưới logo */
+    font-weight: 700;
+    /* Độ đậm chữ */
+    color: #1d1d1d;
+    /* Màu chữ đen nhạt */
+    font-size: 18px;
+    /* Cỡ chữ */
+}
+
+/* Tiêu đề lớn chính giữa */
+.hero-content h2 {
+    font-size: 3rem;
+    /* Kích thước chữ lớn (~48px) */
+    line-height: 1.1;
+    /* Giảm khoảng cách giữa các dòng tiêu đề */
+    color: #2c160f;
+    /* Màu nâu đậm, dễ đọc trên nền be */
+    margin: 10px 0 18px;
+    /* Khoảng cách trên/dưới tiêu đề */
+    font-weight: 900;
+    /* Chữ rất đậm để tạo điểm nhấn */
+}
+
+/* Đoạn mô tả nhỏ dưới tiêu đề */
+.hero-content p {
+    font-size: clamp(14px, 1.4vw, 18px);
+    /* Tự động thay đổi kích thước chữ theo độ rộng màn hình */
+    color: #5c4941;
+    /* Màu chữ xám-nâu mềm hơn tiêu đề */
+    margin: 0 auto;
+    /* Căn giữa văn bản */
+    max-width: 720px;
+    /* Giới hạn độ rộng để dòng chữ không quá dài */
+}
+
+/* ============================= */
+/* NÚT ORDER NOW                 */
+/* ============================= */
+.btn-order {
+    margin-top: 28px;
+    /* Khoảng cách trên nút với đoạn văn */
+    background: linear-gradient(180deg, #FF8A3D 0%, #f75b07 100%);
+    /* Hiệu ứng chuyển màu cam */
+    color: #fff;
+    /* Chữ màu trắng */
+    border: 0;
+    /* Bỏ viền */
+    padding: 16px 34px;
+    /* Đệm bên trong nút (cao & rộng) */
+    border-radius: 999px;
+    /* Bo tròn tối đa — tạo nút hình viên thuốc */
+    font-size: 18px;
+    /* Kích thước chữ nút */
+    font-weight: 800;
+    /* Chữ đậm */
+    cursor: pointer;
+    /* Khi di chuột vào biến thành bàn tay */
+    box-shadow: 0 10px 24px rgba(247, 91, 7, .35);
+    /* Tạo bóng giúp nút nổi lên */
+    transition: transform .15s ease, filter .15s ease;
+    /* Hiệu ứng mượt khi hover */
+}
+
+/* Hiệu ứng khi rê chuột vào nút */
+.btn-order:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 28px rgba(247,91,7,0.45);
-  }
-  
-  /* ============================= */
-  /* ẢNH TRANG TRÍ NGHIÊNG (TRÁI & PHẢI) */
-  /* ============================= */
-  .hero-image {
-    position: absolute;            /* Đặt vị trí tuyệt đối trong .hero-section */            
-  }
-  
-  /* Định dạng chung cho hình ảnh */
-  .hero-image img {
-    display: block;                /* Loại bỏ khoảng trắng dư quanh ảnh */
-    width: 200px;                  /* Chiều rộng ảnh (bạn có thể tăng/giảm để phù hợp) */
-    height: 200px;                 /* Chiều cao ảnh */
-    object-fit: cover;             /* Cắt ảnh để vừa khung mà không bị méo */
-    border-radius: 24px;           /* Bo tròn góc ảnh */
-    box-shadow: 0 18px 40px rgba(0,0,0,.15); /* Bóng mờ giúp ảnh nổi khối */
-  }
-  
-  /* Ảnh bên TRÁI */
-  .left-image {
-    left: 6%;                      /* Khoảng cách từ mép trái màn hình */
-    top: 35%;                      /* Vị trí theo chiều dọc (tính từ trên xuống) */
-    transform: translateY(-50%) rotate(-11deg); /* Dịch lên 1 nửa chiều cao và xoay nhẹ -11 độ */
-  }
-  
-  /* Ảnh bên PHẢI */
-  .right-image {
-    right: 6%;                     /* Khoảng cách từ mép phải màn hình */
-    top: 65%;                        /* ⚠️ Bạn cần nhập giá trị %, ví dụ top: 40%; */
-    transform: translateY(-50%) rotate(11deg);  /* Dịch lên 1 nửa và xoay nghiêng 11 độ */
-  }
-  
-  
-  .hero-image:hover img {
+    box-shadow: 0 12px 28px rgba(247, 91, 7, 0.45);
+}
+
+/* ============================= */
+/* ẢNH TRANG TRÍ NGHIÊNG (TRÁI & PHẢI) */
+/* ============================= */
+.hero-image {
+    position: absolute;
+    /* Đặt vị trí tuyệt đối trong .hero-section */
+}
+
+/* Định dạng chung cho hình ảnh */
+.hero-image img {
+    display: block;
+    /* Loại bỏ khoảng trắng dư quanh ảnh */
+    width: 200px;
+    /* Chiều rộng ảnh (bạn có thể tăng/giảm để phù hợp) */
+    height: 200px;
+    /* Chiều cao ảnh */
+    object-fit: cover;
+    /* Cắt ảnh để vừa khung mà không bị méo */
+    border-radius: 24px;
+    /* Bo tròn góc ảnh */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .15);
+    /* Bóng mờ giúp ảnh nổi khối */
+}
+
+/* Ảnh bên TRÁI */
+.left-image {
+    left: 6%;
+    /* Khoảng cách từ mép trái màn hình */
+    top: 35%;
+    /* Vị trí theo chiều dọc (tính từ trên xuống) */
+    transform: translateY(-50%) rotate(-11deg);
+    /* Dịch lên 1 nửa chiều cao và xoay nhẹ -11 độ */
+}
+
+/* Ảnh bên PHẢI */
+.right-image {
+    right: 6%;
+    /* Khoảng cách từ mép phải màn hình */
+    top: 65%;
+    /* ⚠️ Bạn cần nhập giá trị %, ví dụ top: 40%; */
+    transform: translateY(-50%) rotate(11deg);
+    /* Dịch lên 1 nửa và xoay nghiêng 11 độ */
+}
+
+
+.hero-image:hover img {
     transform: translateY(-8px) scale(1.05);
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* ============================= */
-  /* RESPONSIVE BANNER (TỰ THU NHỎ) */
-  /* ============================= */
-  @media (max-width: 1200px) {
-    .hero-image img { width: 240px; height: 240px; } /* Khi màn hình nhỏ hơn 1200px: ảnh to hơn */
-    .left-image { left: 2%; }  /* Dịch ảnh trái vào gần giữa hơn */
-    .right-image { right: 2%; } /* Dịch ảnh phải vào gần giữa hơn */
-  }
-  
-  @media (max-width: 900px) {
-    .hero-section { padding-bottom: 80px; }  /* Giảm khoảng cách dưới để banner gọn hơn */
-    .hero-image { opacity: .15; }            /* Làm mờ ảnh để không che chữ */
-    .hero-image img { width: 200px; height: 200px; } /* Giữ ảnh nhỏ gọn trên mobile */
-  }
-  
+}
+
+/* ============================= */
+/* RESPONSIVE BANNER (TỰ THU NHỎ) */
+/* ============================= */
+@media (max-width: 1200px) {
+    .hero-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+    /* Khi màn hình nhỏ hơn 1200px: ảnh to hơn */
+    .left-image {
+        left: 2%;
+    }
+
+    /* Dịch ảnh trái vào gần giữa hơn */
+    .right-image {
+        right: 2%;
+    }
+
+    /* Dịch ảnh phải vào gần giữa hơn */
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        padding-bottom: 80px;
+    }
+
+    /* Giảm khoảng cách dưới để banner gọn hơn */
+    .hero-image {
+        opacity: .15;
+    }
+
+    /* Làm mờ ảnh để không che chữ */
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Giữ ảnh nhỏ gọn trên mobile */
+}
+
 
 /* ========================= FOOTER ========================= */
 
