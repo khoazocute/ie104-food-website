@@ -31,10 +31,10 @@
         <nav class="header__nav">
             <ul class="nav-links">
                 <li class="active"><a href="#">Trang Chủ</a></li>
-                <li><a href="#intro">Giới Thiệu</a></li>
+                <li><a href="./pages/about.html">Giới Thiệu</a></li>
                 <li><a href="./pages/menu_list.html">Thực Đơn</a></li>
-                <li><a href="#contact">Liên Hệ</a></li>
-                <li><a href="#faq">Câu Hỏi Thường Gặp</a></li>
+                <li><a href="./pages/contact.html">Liên Hệ</a></li>
+                <li><a href="./pages/faq.html">Câu Hỏi Thường Gặp</a></li>
             </ul>
         </nav>
 
@@ -74,13 +74,13 @@
 
             <div class="hero__badge">
                 <div class="badge-avatars">
-                  <img src="./imgs/about__team1.jpg" alt="" />
-                  <img src="./imgs/about__team1.jpg" alt="" />
-                  <img src="./imgs/about__team1.jpg" alt="" />
+                    <img src="./imgs/homepage__user1.jpg" alt="" />
+                    <img src="./imgs/homepage__user2.webp" alt="" />
+                    <img src="./imgs/homepage__user3.jpg" alt="" />
                 </div>
-                <span> Loved by 2.6k users with 4.9 rating ✨</span>
+                <span>Hơn 2,6K người dùng yêu thích với lượt đánh giá 4.9 / 5✨</span>
             </div>
-            
+
         </div>
     </section>
 
@@ -101,8 +101,8 @@
                 <h1 class="deal__title">Combo Burger Phô Mai</h1>
 
                 <div class="deal__price">
-                    <span>$12.99</span>
-                    <span>$18.99</span>
+                    <span>105.000 ₫</span>
+                    <span>150.000 ₫</span>
                     <span>-30%</span>
                 </div>
 
@@ -193,20 +193,22 @@
         <div class="menu__title">
             <img src="./imgs/slogan.avif" alt="icon menu">
             <h2>THỰC ĐƠN CỦA CHÚNG TÔI</h2>
-            <p>Khám phá thực đơn đa dạng của chúng tôi nơi hương vị truyền thống hòa quyện cùng phong cách hiện đại, mang đến trải nghiệm ẩm thực khó quên.</p>
+            <p>Khám phá thực đơn đa dạng của chúng tôi nơi hương vị truyền thống hòa quyện cùng phong cách hiện đại,
+                mang đến trải nghiệm ẩm thực khó quên.</p>
         </div>
-        <div class="menu__content">
+        <div class="products-grid">
 
-            <div class="menu__item">
-                <img src="./imgs/burger5.avif" alt="Cheesy Delight">
+            <div class="product-card ">
+                <img src="../imgs/combo3.jpg" alt="Cheesy Delight">
                 <div class="product-info product-info1">
                     <div class="name-price">
-                        <h3>Cheesy Delight</h3>
-                        <span>$ 8.99 USD</span>
+                        <h3>Combo Tiệc Gà & Mì Ý</h3>
+                        <span class="price">190.000 VND</span>
                     </div>
 
                     <div class="desc-and-control">
-                        <p>Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                        <p class="description">Gồm 2 miếng gà rán giòn, 1-2 burger cỡ lớn, 1 suất mì Ý xốt thịt, khoai
+                            tây chiên, 3 ly nước ngọt.</p>
 
                         <div class="quantity-control">
                             <button class="quantity-btn minus-btn">-</button>
@@ -215,19 +217,20 @@
                         </div>
                     </div>
 
-                    <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
+                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng 🛒</button>
                 </div>
             </div>
 
-            <div class="menu__item">
-                <img src="./imgs/burger6.avif" alt="Spicy Crunch">
-                <div class="product-info product-info1">
+            <div class="product-card">
+                <img src="../imgs/pizzza1.avif" alt="Spicy Crunch">
+                <div class="product-info product-info2">
                     <div class="name-price">
-                        <h3>Spicy Crunch</h3>
-                        <span>$ 12.49 USD</span>
+                        <h3>Pizza Thập Cẩm</h3>
+                        <span class="price">100.000 VND</span>
                     </div>
                     <div class="desc-and-control">
-                        <p>Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                        <p class="description">Pizza với lớp phô mai tan chảy, phủ nhiều loại topping đa dạng như xúc
+                            xích, ô-liu, các loại rau.</p>
 
                         <div class="quantity-control">
                             <button class="quantity-btn minus-btn">-</button>
@@ -235,19 +238,20 @@
                             <button class="quantity-btn plus-btn">+</button>
                         </div>
                     </div>
-                    <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
+                    <button class="add-to-cart-btn btn2">Thêm vào giỏ hàng 🛒</button>
                 </div>
             </div>
 
-            <div class="menu__item">
-                <img src="./imgs/burger8.avif" alt="BBQ Bliss">
+            <div class="product-card">
+                <img src="../imgs/burger5.avif" alt="Spicy Crunch">
                 <div class="product-info product-info1">
                     <div class="name-price">
-                        <h3>BBQ Bliss</h3>
-                        <span>$ 10.75 USD</span>
+                        <h3>Burger Bò Nướng</h3>
+                        <span class="price">80.000 VND</span>
                     </div>
                     <div class="desc-and-control">
-                        <p>Ground beef, grilled chicken, spicy turkey, or savory lamb.</p>
+                        <p class="description">Burger với thịt bò, phô mai, xà lách tươi, và đặc biệt là lớp salad bắp
+                            cải/rau củ.</p>
 
                         <div class="quantity-control">
                             <button class="quantity-btn minus-btn">-</button>
@@ -255,85 +259,76 @@
                             <button class="quantity-btn plus-btn">+</button>
                         </div>
                     </div>
-                    <button class="add-to-cart-btn btn1">Add to cart 🛒</button>
+                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng 🛒</button>
                 </div>
             </div>
-            
         </div>
+
         <div class="menu__footer">
             <a href="#" class="menu__btn">Xem tất cả</a>
-          </div>
+        </div>
     </section>
 
     <!-- ========================= TESTIMONIAL ========================= -->
     <section class="testimonials">
         <div class="testimonials__header">
-            <img src="./imgs/homepage__testimonials-love.svg" alt="Love Icon" class="testimonials__icon" />
-            <h2 class="testimonials__title">They Love’s Us</h2>
-            <p class="testimonials__subtitle">
-                From classic favorites to modern culinary creations, our menu is designed to tantalize your taste buds.
-                Every dish is made with the freshest ingredients and an extra dash of love.
+            <img src="./imgs/homepage__testimonials-love.svg" alt="Love Icon" />
+            <h2 class="testimonials__title">Đánh giá từ khách hàng</h2>
+            <p>Menu cân bằng giữa quen thuộc và đột phá, mang lại trải nghiệm vị giác khó quên. Tươi ngon mỗi ngày, thêm
+                một chút yêu thương.
             </p>
         </div>
 
         <div class="testimonials__carousel">
             <div class="testimonials__track" id="testimonials-track">
                 <div class="testimonials__card testimonials__card--purple">
-                    <div class="testimonials__stars">⭐⭐⭐⭐☆</div>
-                    <h3 class="testimonials__heading">Unforgettable Flavors</h3>
-                    <p class="testimonials__text">
-                        Every bite was bursting with flavor. Easily one of the best meals I’ve had in ages!
-                    </p>
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Hương vị khó quên</h3>
+                    <p>Mỗi miếng đều bùng nổ hương vị — một trong những bữa ăn ngon nhất tôi có trong thời gian dài!</p>
                     <div class="testimonials__author">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Larry" />
+                        <img src="./imgs/homepage__user1.jpg" alt="Larry" />
                         <div>
                             <strong>Larry Alexander</strong>
-                            <p>Gold Customer</p>
+                            <p>Khách hàng Vàng</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonials__card testimonials__card--yellow">
-                    <div class="testimonials__stars">⭐⭐⭐⭐☆</div>
-                    <h3 class="testimonials__heading">Simply Delicious</h3>
-                    <p class="testimonials__text">
-                        The flavors were rich and comforting. You can taste the love in every dish.
-                    </p>
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Ngon chuẩn vị</h3>
+                    <p>Hương vị đậm đà, ấm lòng. Cảm nhận được sự chăm chút trong từng món.</p>
                     <div class="testimonials__author">
-                        <img src="https://randomuser.me/api/portraits/men/70.jpg" alt="Daniel" />
+                        <img src="./imgs/homepage__user2.webp" alt="Daniel" />
                         <div>
                             <strong>Daniel Cormir</strong>
-                            <p>Silver Customer</p>
+                            <p>Khách hàng Bạc</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonials__card testimonials__card--pink">
-                    <div class="testimonials__stars">⭐⭐⭐⭐☆</div>
-                    <h3 class="testimonials__heading">Our Go-To Spot</h3>
-                    <p class="testimonials__text">
-                        We come here almost every weekend. Consistently amazing food and service.
-                    </p>
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Quán ruột của chúng tôi</h3>
+                    <p>Gần như cuối tuần nào chúng tôi cũng ghé. Món ăn và phục vụ luôn xuất sắc, ổn định.</p>
                     <div class="testimonials__author">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Amanda" />
+                        <img src="./imgs/homepage__user3.jpg" alt="Amanda" />
                         <div>
                             <strong>Amanda Nunez</strong>
-                            <p>Gold Customer</p>
+                            <p>Khách hàng Vàng</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonials__card testimonials__card--orange">
-                    <div class="testimonials__stars">⭐⭐⭐⭐⭐</div>
-                    <h3 class="testimonials__heading">Top-Notch Service</h3>
-                    <p class="testimonials__text">
-                        The staff were friendly and attentive. Great vibes and even better food!
-                    </p>
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <h3 class="testimonials__heading">Dịch vụ đỉnh cao</h3>
+                    <p>Nhân viên thân thiện, chu đáo. Không gian dễ chịu, món ăn còn tuyệt hơn!</p>
                     <div class="testimonials__author">
-                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Mark" />
+                        <img src="./imgs/homepage__user4.jpg" alt="Mark" />
                         <div>
                             <strong>Mark Velasquez</strong>
-                            <p>Premium Customer</p>
+                            <p>Khách hàng Cao cấp</p>
                         </div>
                     </div>
                 </div>
@@ -343,7 +338,7 @@
 
     <script>
         const track = document.getElementById('testimonials-track');
-        track.innerHTML += track.innerHTML; // nhân đôi
+        track.innerHTML += track.innerHTML;
 
         let pos = 0;
         function animate() {
@@ -360,26 +355,23 @@
 
 
     <!-- ========================= GALLERY ========================= -->
-
-<section class="gallery-section">
-    <img src="./imgs/chef-hat.png" alt="Chef Hat" class="chef-icon">
-    <h2>A Feast for Your Eyes</h2>
-    <div class="gallery">
-        <div class="gallery-item">
-        <img src="./imgs/slider4.jpg" alt="Salad dish">
+    <section class="gallery-section">
+        <img src="../imgs/chef-hat.png" alt="Chef Hat" class="chef-icon">
+        <h2>A Feast for Your Eyes</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+            <img src="../imgs/slider4.jpg" alt="Salad dish">
+            </div>
+            <div class="gallery-item">
+            <img src="../imgs/slider2.avif" alt="Couple eating">
+            </div>
+            <div class="gallery-item">
+            <img src="../imgs/slider3.webp" alt="Green dish">
+            </div>
         </div>
-        <div class="gallery-item">
-        <img src="./imgs/slider2.avif" alt="Couple eating">
-        </div>
-        <div class="gallery-item">
-        <img src="./imgs/slider3.webp" alt="Green dish">
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- =========================  ========================= -->
-
- <section class="hero-section banner-section">
+    <section class="hero-section banner-section">
         <div class="hero-image left-image">
             <img src="../imgs/mini_banner.avif"alt="">
             </div>
@@ -402,10 +394,7 @@
             </div>
     </section>
 
-    
-
-
-        <!-- ========================= FOOTER ========================= -->
+    <!-- ========================= FOOTER ========================= -->
 
     <footer>
         <div class="footer__container">

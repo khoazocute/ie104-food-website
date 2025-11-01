@@ -115,21 +115,21 @@ body {
 
 /* ============================ BANNER ============================= */
 .banner {
-    position: relative; 
+    position: relative;
     background-image: url('/imgs/homepage__banner1.jpg');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; 
+    background-size: cover;
     width: 98%;
     min-height: 700px;
-    margin: 16px auto 28px;
+    margin: 35px auto 15px;
     border-radius: 28px;
-  }
-  
-  .banner__content {
-    position: absolute;                    
+}
+
+.banner__content {
+    position: absolute;
     height: 100%;
-    max-width: 720px;                      
+    max-width: 720px;
     left: 5%;
     display: flex;
     flex-direction: column;
@@ -141,31 +141,31 @@ body {
 .banner__content>span {
     font-size: 18px;
     font-weight: 600;
-    color: #FAB12F; 
-  }
-  
-  /* title + text */
-  .banner__content h1 {
+    color: #FAB12F;
+}
+
+/* title + text */
+.banner__content h1 {
     font-size: 80px;
     line-height: 1.05;
     font-weight: 800;
     letter-spacing: 2px;
-  }
-  
-  .banner__content p {
+}
+
+.banner__content p {
     font-size: 18px;
     line-height: 1.5;
     color: #F4EDE4;
-    text-shadow: 0 1px 8px rgba(0,0,0,.35);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .35);
     margin-bottom: 8px;
-  }
-  
-  .banner__nav {
+}
+
+.banner__nav {
     display: flex;
     gap: 20px;
-  }
-  
-  .banner__nav a:first-child {
+}
+
+.banner__nav a:first-child {
     background: #FA812F;
     color: #FFF7EB;
     padding: 12px 22px;
@@ -174,13 +174,13 @@ body {
     text-decoration: none;
     border: 1.5px solid #C85E11;
     transition: all 0.3s ease;
-  }
+}
 
-  .banner__nav a:first-child:hover {
+.banner__nav a:first-child:hover {
     background: #E17124;
-  }
-  
-  .banner__nav a:last-child {
+}
+
+.banner__nav a:last-child {
     background: #FFFFFF;
     color: #1F1000;
     border: 1.5px solid #1F1000;
@@ -189,20 +189,20 @@ body {
     font-weight: 700;
     text-decoration: none;
     transition: all 0.3s ease;
-  }
-  
-  .banner__nav a:last-child:hover {
+}
+
+.banner__nav a:last-child:hover {
     background-color: #1F1000;
     color: #FFF7EB;
     box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
-  }
-  
-  /* icon spacing */
-  .banner__nav i {
-    margin-left: 8px; 
-    }
-  
-    
+}
+
+/* icon spacing */
+.banner__nav i {
+    margin-left: 8px;
+}
+
+
 
 
 /* badge */
@@ -301,6 +301,7 @@ body {
 
 /* LEFT IMAGE */
 .deal__left {
+    position: relative;
     flex: 1;
     display: flex;
     align-items: end;
@@ -308,9 +309,18 @@ body {
     padding-left: 100px;
 }
 
+.deal__left::after {
+    content: "";
+    position: absolute;
+    inset: -60px -60px;
+    background: radial-gradient(circle, rgba(250, 177, 47, .35) 0%, rgba(252, 239, 226, 0) 65%);
+    z-index: 1;
+}
+
 .deal__left img {
     width: 100%;
     height: auto;
+    z-index: 3;
 }
 
 /* RIGHT CONTENT */
@@ -485,9 +495,8 @@ body {
 
 /* ================================== MENU ========================================== */
 /* --- SLOGAN --- */
-/* ===== TIÊU ĐỀ (giữ như bạn đang dùng) ===== */
 .menu {
-    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 .menu__title {
@@ -513,62 +522,60 @@ body {
 }
 
 /* ===== KHỐI SẢN PHẨM (FLEX) ===== */
-.menu__content {
-    display: flex;
+.products-grid {
+    display: grid;
+    /* Sử dụng CSS Grid để tạo lưới */
+    grid-template-columns: repeat(3, minmax(360px, 400px));
+    /* 3 cột, mỗi cột tối thiểu 300px, tối đa 360px */
+
+    /* Căn giữa 3 cột bên trong container */
     justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-    /* responsive khi hẹp */
+    max-width: 1300px;
+    margin: 0 auto;
+
+    /* Khoảng cách giữa các card */
+    gap: 18px;
+
     padding: 30px;
     background-color: #fdf2e9;
+
+    /* Có thể bỏ qua: justify-items: center; */
 }
 
-/* CARD mỗi món (dùng class trong HTML của bạn: .menu__item) */
-.menu__item {
+/* Mỗi thẻ sản phẩm */
+.product-card {
     background: #fff;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    height: 100%;
     width: 100%;
-    max-width: 360px;
-    /* đúng mong muốn 3 card đều nhau */
-    display: flex;
-    flex-direction: column;
+    max-width: 400px;
+    /* Giới hạn độ rộng card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #000;
-    transition: transform .3s ease, box-shadow .3s ease;
 }
 
-.menu__item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
 
-/* Ảnh món */
-.menu__item>img {
+/* Ảnh món ăn */
+.product-card img {
     width: 100%;
-    height: 240px;
+    height: 300px;
     object-fit: cover;
     display: block;
 }
 
-/* THÔNG TIN (giữ class cũ của bạn) */
+.product-card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+/* Phần thông tin */
 .product-info {
     padding: 20px 22px 26px;
 }
 
-.product-info1 {
-    background-color: #FCEFE2;
-}
-
-.product-info2 {
-    background-color: #ead2e8;
-}
-
-.product-info3 {
-    background-color: #d9f4f4;
-}
-
-/* Tên + Giá */
+/* Hàng chứa tên & giá */
 .name-price {
     display: flex;
     justify-content: space-between;
@@ -580,12 +587,73 @@ body {
     font-size: 22px;
     font-weight: 700;
     color: #222;
+    margin: 0;
 }
 
-.name-price span {
+.name-price .price {
     font-weight: 700;
     font-size: 16px;
     color: #222;
+}
+
+/* Mô tả món ăn */
+.description {
+    font-size: 15px;
+    color: #446;
+    margin: 10px 0 20px;
+    line-height: 1.5;
+}
+
+/* Nút Add to cart */
+.add-to-cart-btn {
+    width: 100%;
+    /**background-color: #00a5a5;*/
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 165, 165, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border: 1px solid #000;
+    margin-top: 15px;
+}
+
+.btn1 {
+    background-color: rgb(232, 121, 10);
+}
+
+.btn3 {
+    background-color: #00a5a5;
+}
+
+.btn2 {
+    background-color: #660a60;
+}
+
+.product-info1 {
+    background-color: #FCEFE2;
+    /* xanh nhạt giống Webflow mẫu */
+    padding: 20px 22px 26px;
+}
+
+.product-info2 {
+    background-color: #ead2e8;
+    /* xanh nhạt giống Webflow mẫu */
+    padding: 20px 22px 26px;
+}
+
+.product-info3 {
+    background-color: #d9f4f4;
+    /* xanh nhạt giống Webflow mẫu */
+    padding: 20px 22px 26px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #d2dcde;
+    transform: scale(1.02);
 }
 
 /* Mô tả + số lượng (giữ cấu trúc của bạn) */
@@ -783,13 +851,14 @@ body {
 
 
 
-/* ========================= GALLERY ========================= */
-
+/* ========================= TESTIMONIAL ========================= */
 .testimonials {
     text-align: center;
     padding: 80px 20px;
     font-family: "Poppins", sans-serif;
     overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
 }
 
 .testimonials__header {
@@ -797,19 +866,23 @@ body {
     margin: 0 auto 40px;
 }
 
-.testimonials__icon {
-    width: 70px;
+/* ảnh icon trong header */
+.testimonials__header img {
     margin-bottom: 10px;
 }
 
+/* tiêu đề giữ nguyên */
 .testimonials__title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 15px;
+    color: var(--dark);
 }
 
-.testimonials__subtitle {
-    color: #553f36;
+/* đoạn mô tả ngay dưới title trong header */
+.testimonials__header>p {
+    color: var(--text);
+    opacity: 0.9;
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -818,7 +891,6 @@ body {
     position: relative;
     overflow: visible;
 }
-
 
 @keyframes scroll {
     0% {
@@ -836,10 +908,11 @@ body {
     padding: 30px;
     border-radius: 25px;
     text-align: left;
-    background: white;
+    background: var(--white);
     transition: all 0.3s ease;
     transform: translateY(0);
     position: relative;
+    box-shadow: 0 10px 25px rgba(31, 16, 0, 0.06);
 }
 
 /* Hiệu ứng hover tổng quát */
@@ -848,58 +921,64 @@ body {
     cursor: pointer;
 }
 
-/* Bóng theo tông từng màu */
+/* Bóng theo tông từng màu (dựa palette cam-nâu) */
 .testimonials__card--purple:hover {
-    box-shadow: 0 8px 0 #b37be5;
+    box-shadow: 0 8px 0 rgba(123, 97, 255, 0.55);
 }
 
 .testimonials__card--yellow:hover {
-    box-shadow: 0 8px 0 #ffb85a;
+    box-shadow: 0 8px 0 rgba(250, 177, 47, 0.65);
 }
 
 .testimonials__card--pink:hover {
-    box-shadow: 0 8px 0 #f2808e;
+    box-shadow: 0 8px 0 rgba(242, 128, 142, 0.55);
 }
 
 .testimonials__card--orange:hover {
-    box-shadow: 0 8px 0 #ff9f42;
-    transform: scaleX(-2px);
+    box-shadow: 0 8px 0 rgba(240, 138, 0, 0.65);
 }
 
-
+/* Nền từng thẻ (dịu, hợp tông nền kem) */
 .testimonials__card--purple {
-    background-color: #e8d4ff;
+    background-color: #F3E9FF;
 }
 
 .testimonials__card--yellow {
-    background-color: #ffe6c7;
+    background-color: var(--bg-light);
 }
 
+/* #FEF3E2 */
 .testimonials__card--pink {
-    background-color: #ffd0d6;
+    background-color: #FFE4E8;
 }
 
 .testimonials__card--orange {
-    background-color: #ffe2c2;
+    background-color: #FFE8D1;
 }
 
-.testimonials__stars {
+/* hàng sao: là <span> đầu trong card */
+.testimonials__card>span {
     font-size: 1.2rem;
     margin-bottom: 10px;
+    display: inline-block;
 }
 
+/* heading giữ nguyên class */
 .testimonials__heading {
     font-style: italic;
     font-size: 1.25rem;
     margin-bottom: 10px;
+    color: var(--dark);
 }
 
-.testimonials__text {
-    color: #333;
+/* nội dung: là <p> đầu tiên sau heading trong card */
+.testimonials__card>p {
+    color: var(--text);
     font-size: 0.95rem;
     margin-bottom: 20px;
 }
 
+/* tác giả */
 .testimonials__author {
     display: flex;
     align-items: center;
@@ -910,29 +989,33 @@ body {
     width: 45px;
     height: 45px;
     border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(31, 16, 0, 0.12);
 }
 
 .testimonials__author strong {
     display: block;
     font-size: 0.95rem;
+    color: var(--dark);
 }
 
 .testimonials__author p {
     font-size: 0.85rem;
-    color: #555;
+    color: rgba(61, 42, 26, 0.8);
+    /* mượn var(--text) giảm opacity */
 }
 
 .testimonials__track {
     display: flex;
     gap: 20px;
     animation: scroll 15s linear infinite;
+    will-change: transform;
 }
 
 /* Khi rê chuột thì dừng lại */
 .testimonials__track:hover {
     animation-play-state: paused;
 }
-
 
 
 /* ============================= */
