@@ -1,0 +1,171 @@
+:root { 
+  --bg: #fff7ec;
+  --ink: #2f2b1f;
+  --ring: #f4c27d;
+  --accent: #f87d39;
+}
+/*Định nghĩa root*/
+
+/* ----------- Header cart icon ----------- */
+.header__cart {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+#cartBadge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background: #ff6b00;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+
+/* ----------- Modal background ----------- */
+.cart-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  z-index: 9999;
+}
+
+.cart-modal.show {
+  display: block;
+}
+
+/* ----------- Cart popup box ----------- */
+.cart-sheet {
+  width: min(920px, 92vw);
+  margin: 5vh auto;
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 18px;
+  border: 2px solid var(--ring);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  padding: 22px 22px 26px;
+  position: relative;
+}
+
+/* ----------- Close button ----------- */
+.cart-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 26px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* ----------- Title ----------- */
+.cart-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+/* ----------- Table ----------- */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table thead th {
+  text-align: left;
+  background: #fde6c5;
+  color: #573b16;
+  font-weight: 800;
+  padding: 14px 16px;
+  border-radius: 12px;
+}
+
+.cart-row {
+  border-bottom: 1px dashed #ead7bd;
+}
+
+.cart-cell {
+  padding: 14px 10px;
+  vertical-align: middle;
+}
+
+/* ----------- Product info ----------- */
+.pinfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.thumb {
+  width: 62px;
+  height: 62px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 800;
+}
+
+.sku {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ----------- Quantity ----------- */
+.qty {
+  width: 66px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid #e0d7ca;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* ----------- Price ----------- */
+.price {
+  font-weight: 800;
+}
+
+/* ----------- Remove button ----------- */
+.remove {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid #c8b79b;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* ----------- Footer ----------- */
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.total {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* ----------- Checkout button ----------- */
+.cta {
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 18px 28px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ff8f2a, #ff6a00);
+  box-shadow: 0 10px 0 #c04a00 inset;
+}
