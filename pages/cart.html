@@ -1,0 +1,26 @@
+
+    <!-- Cart Modal -->
+<div id="cartModal" class="cart-modal">
+  <div class="cart-sheet" role="dialog" aria-modal="true" aria-label="Cart">
+    <button class="cart-close" title="Close">&times;</button>
+
+    <h2 class="cart-title">Giỏ hàng</h2>
+
+    <table class="cart-table">
+      <thead>
+        <tr>    
+          <th class="cart-cell">Tên sản phẩm</th>
+          <th class="cart-cell">Số lượng</th>
+          <th class="cart-cell">Giá</th>
+          <th class="cart-cell">Thao tác</th>
+        </tr>
+      </thead>
+      <tbody id="cartBody"></tbody>
+    </table>
+
+    <div class="cart-footer">
+      <div class="total">Tổng tiền: <span id="cartTotal">0.00 VND</span></div>
+      <button class="cta" id="checkoutBtn">Tiếp tục thanh toán →</button>
+    </div>
+  </div>
+</div>
