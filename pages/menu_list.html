@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/menu_list.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+        <!-- GOOGLE FONTS -->   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -12,45 +15,9 @@
     <title>Menu_List</title>
 </head>
 <body>
-    <header class="header">
-
-        <div class="header__left">
-            <a href="#" class="header__logo">
-                <img src="../imgs/main-logo.png" alt="logo">
-            </a>
-             <a href="#" class="header__cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-        </div>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
     
-        <!-- MENU -->
-        <nav class="header__nav">
-            <ul class="nav-links">
-                <li><a href="#">Trang Chủ</a></li>
-                <li><a href="#intro">Giới Thiệu</a></li>
-                <li class="active1"><a href="#menu">Thực Đơn</a></li>
-                <li><a href="#contact">Liên Hệ</a></li>
-                <li><a href="#faq">Câu Hỏi Thường Gặp</a></li>
-            </ul>
-        </nav>
-    
-        <!-- RIGHT SIDE -->
-        <div class="header__right">
-
-            <a href="#" class="header__item">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Cửa hàng</span>
-            </a>
-        
-            <a href="" class="header__item">
-                <i class="fa-solid fa-user"></i>
-                <span>Đăng nhập</span>
-            </a>
-        
-        </div>
-    </header>
-
-
     <slogan class = "slogan__container">
         <div class="slogan">
             <img src="../imgs/slogan.avif" alt="">
@@ -382,6 +349,82 @@
         </div>
     </section>
 
+        <!-- ========================= TESTIMONIAL ========================= -->
+    <section class="testimonials">
+        <div class="testimonials__header">
+            <img src="../imgs/homepage__testimonials-love.svg" alt="Love Icon" class="testimonials__icon" />
+            <h2 class="testimonials__title">They Love’s Us</h2>
+            <p class="testimonials__subtitle">
+                From classic favorites to modern culinary creations, our menu is designed to tantalize your taste buds.
+                Every dish is made with the freshest ingredients and an extra dash of love.
+            </p>
+        </div>
+
+        <div class="testimonials__carousel">
+            <div class="testimonials__track" id="testimonials-track">
+                <div class="testimonials__card testimonials__card--purple">
+                    <div class="testimonials__stars">⭐⭐⭐⭐☆</div>
+                    <h3 class="testimonials__heading">Unforgettable Flavors</h3>
+                    <p class="testimonials__text">
+                        Every bite was bursting with flavor. Easily one of the best meals I’ve had in ages!
+                    </p>
+                    <div class="testimonials__author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Larry" />
+                        <div>
+                            <strong>Larry Alexander</strong>
+                            <p>Gold Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--yellow">
+                    <div class="testimonials__stars">⭐⭐⭐⭐☆</div>
+                    <h3 class="testimonials__heading">Simply Delicious</h3>
+                    <p class="testimonials__text">
+                        The flavors were rich and comforting. You can taste the love in every dish.
+                    </p>
+                    <div class="testimonials__author">
+                        <img src="https://randomuser.me/api/portraits/men/70.jpg" alt="Daniel" />
+                        <div>
+                            <strong>Daniel Cormir</strong>
+                            <p>Silver Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--pink">
+                    <div class="testimonials__stars">⭐⭐⭐⭐☆</div>
+                    <h3 class="testimonials__heading">Our Go-To Spot</h3>
+                    <p class="testimonials__text">
+                        We come here almost every weekend. Consistently amazing food and service.
+                    </p>
+                    <div class="testimonials__author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Amanda" />
+                        <div>
+                            <strong>Amanda Nunez</strong>
+                            <p>Gold Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--orange">
+                    <div class="testimonials__stars">⭐⭐⭐⭐⭐</div>
+                    <h3 class="testimonials__heading">Top-Notch Service</h3>
+                    <p class="testimonials__text">
+                        The staff were friendly and attentive. Great vibes and even better food!
+                    </p>
+                    <div class="testimonials__author">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Mark" />
+                        <div>
+                            <strong>Mark Velasquez</strong>
+                            <p>Premium Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="gallery-section">
         <img src="../imgs/chef-hat.png" alt="Chef Hat" class="chef-icon">
         <h2>A Feast for Your Eyes</h2>
@@ -421,66 +464,9 @@
             </div>
     </section>
 
-    <footer>
-        <div class="footer__container">
-            <div class="footer__column">
-                <h2>FOOD DASH</h2>
-                <p>Food Dash &copy;2025 All Rights Reserved</p>
-                <p>By - Your Name</p>
-                <h3>Follow Us On</h3>
-                <div class="footer__icon">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
-
-            <div class="footer__column">
-                <h3>Menu</h3>
-                <ul class="footer__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Offers</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__column">
-                <h3>Information</h3>
-                <ul class="footer__links">
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Quality</a></li>
-                    <li><a href="#">Make A Choice</a></li>
-                    <li><a href="#">Fast Delivery</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__column">
-                <h3>Contact</h3>
-                <ul class="footer__links">
-                    <li>
-                        <a href="tel:+123456789">
-                            <i class="fas fa-phone"></i>
-                            <span>+123456789</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:info@fooddash.com">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@fooddash.com</span>
-                        </a>
-                    </li>
-                    <li>
-                        <span>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>12, Maharashtra, Indian</span>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/include.js"></script>
 </body>
 </html>

@@ -23,3 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+// ========================= TESTIMONIAL ========================= 
+const track = document.getElementById('testimonials-track');
+track.innerHTML += track.innerHTML; // nhân đôi
+
+    let pos = 0;
+    function animate() {
+        pos -= 5; // tốc độ
+        if (Math.abs(pos) >= track.scrollWidth / 2) {
+            pos = 0; // quay lại đầu
+        }
+    track.style.transform = `translateX(${pos}px)`;
+        requestAnimationFrame(animate);
+    }
+animate();
+
