@@ -2,69 +2,207 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - Food Dash</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/pages.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+    <style>
+        body {
+            background-color: #fdf3e0;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .contact-container {
+            max-width: 1000px;
+            margin: 60px auto;
+            background-color: #ff7f32;
+            border-radius: 15px;
+            padding: 30px 40px;
+            display: flex;
+            gap: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 calc(50% - 10px);
+        }
+        
+        .form-group.full {
+            flex: 1 1 100%;
+        }
+        
+        label {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        
+        input,
+        select,
+        textarea {
+            border: none;
+            border-radius: 6px;
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+        
+        textarea {
+            resize: none;
+            min-height: 80px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(90deg, #ffb347, #ffcc33);
+            border: none;
+            padding: 12px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #fff;
+            width: 100%;
+            transition: 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(90deg, #ff9a3c, #ffd633);
+        }
+        
+        .contact-info {
+            flex: 1;
+            border: 2px solid #ffb366;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 800px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <header class="header">
 
-    <!-- HEADER -->
-    <header>
-        <div class="header__logo">
-            <a href="../homepage.html">
-                <img src="../imgs/logo.png" alt="logo" />
+        <div class="header__left">
+            <a href="#" class="header__logo">
+                <img src="../imgs/main-logo.png" alt="logo">
+            </a>
+            <a href="#" class="header__cart">
+                <i class="fa-solid fa-cart-shopping"></i>
             </a>
         </div>
 
-        <div class="header__mainnav">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../homepage.html">Home</a></li>
-                    <li><a href="#intro">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li class="active"><a href="contact.html">Contact</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
+        <!-- MENU -->
+        <nav class="header__nav">
+            <ul class="nav-links">
+                <li><a href="../homepage.html">Trang Chủ</a></li>
+                <li><a href="./about.html">Giới Thiệu</a></li>
+                <li><a href="./menu_list.html">Thực Đơn</a></li>
+                <li><a href="./contact.html">Liên Hệ</a></li>
+                <li><a href="./faq.html">Câu Hỏi Thường Gặp</a></li>
+            </ul>
+        </nav>
 
+        <!-- RIGHT SIDE -->
         <div class="header__right">
-            <button class="button button-login" onclick="window.location='auth.html'">Login</button>
-            <button class="button button-signup" onclick="window.location='auth.html'">Sign Up</button>
-            <i class="fa-solid fa-cart-shopping" id="cart-btn" style="cursor:pointer;margin-left:10px;"></i>
+
+            <a href="#" class="header__item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Cửa hàng</span>
+            </a>
+
+            <a href="" class="header__item">
+                <i class="fa-solid fa-user"></i>
+                <span>Đăng nhập</span>
+            </a>
+
         </div>
     </header>
 
-    <!-- PAGE CONTENT -->
-    <section class="contact-container">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="Your Email" />
-            <textarea rows="5" placeholder="Your Message..."></textarea>
-            <button type="submit" class="button button-login">Send Message</button>
-        </form>
-    </section>
+    <main>
+        <section class="contact-container">
+            <form>
+                <div class="form-group">
+                    <label for="first-name">First Name*</label>
+                    <input type="text" id="first-name" placeholder="Enter your name" required>
+                </div>
 
-    <!-- POPUP CART -->
-    <div id="cart-popup" class="cart-overlay">
-        <div class="cart-box">
-            <h3>Shopping Cart</h3>
-            <p>No items in your cart.</p>
-            <button class="button button-login" id="close-cart">Close</button>
-        </div>
-    </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" placeholder="Enter your name">
+                </div>
 
-    <!-- FOOTER -->
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" placeholder="Enter email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" placeholder="Company/organization">
+                </div>
+
+                <div class="form-group">
+                    <label for="state">Your State</label>
+                    <select id="state">
+                    <option>Select state</option>
+                    <option>California</option>
+                    <option>Texas</option>
+                    <option>Florida</option>
+                    <option>New York</option>
+                </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country*</label>
+                    <select id="country" required>
+                    <option>Select country</option>
+                    <option>United States</option>
+                    <option>Vietnam</option>
+                    <option>Japan</option>
+                    <option>France</option>
+                </select>
+                </div>
+
+                <div class="form-group full">
+                    <textarea placeholder="Write your message..."></textarea>
+                </div>
+
+                <div class="form-group full">
+                    <button type="submit" class="submit-btn">SUBMIT →</button>
+                </div>
+            </form>
+
+            <div class="contact-info"></div>
+        </section>
+    </main>
+
+
     <footer>
         <div class="footer__container">
             <div class="footer__column">
                 <h2>FOOD DASH</h2>
-                <p>Food Dash ©2025 All Rights Reserved</p>
+                <p>Food Dash &copy;2025 All Rights Reserved</p>
                 <p>By - Your Name</p>
                 <h3>Follow Us On</h3>
                 <div class="footer__icon">
@@ -72,16 +210,16 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
 
             <div class="footer__column">
                 <h3>Menu</h3>
                 <ul class="footer__links">
-                    <li><a href="../homepage.html">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Offers</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Service</a></li>
                     <li><a href="#">About Us</a></li>
                 </ul>
             </div>
@@ -100,20 +238,27 @@
                 <h3>Contact</h3>
                 <ul class="footer__links">
                     <li>
-                        <a href="tel:+123456789"><i class="fas fa-phone"></i><span>+123456789</span></a>
+                        <a href="tel:+123456789">
+                            <i class="fas fa-phone"></i>
+                            <span>+123456789</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="mailto:info@fooddash.com"><i class="fas fa-envelope"></i><span>info@fooddash.com</span></a>
+                        <a href="mailto:info@fooddash.com">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@fooddash.com</span>
+                        </a>
                     </li>
                     <li>
-                        <span><i class="fas fa-map-marker-alt"></i><span>12, Maharashtra, India</span></span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>12, Maharashtra, Indian</span>
+                        </span>
                     </li>
                 </ul>
             </div>
         </div>
     </footer>
-
-    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
