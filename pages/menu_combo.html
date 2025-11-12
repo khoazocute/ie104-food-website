@@ -165,6 +165,90 @@
             </div>      
     </section>
 
+    <!-- ========================= TESTIMONIAL ========================= -->
+    <section class="testimonials">
+        <div class="testimonials__header">
+            <img src="../imgs/homepage__testimonials-love.svg" alt="Love Icon" />
+            <h2 class="testimonials__title">Đánh giá từ khách hàng</h2>
+            <p>Menu cân bằng giữa quen thuộc và đột phá, mang lại trải nghiệm vị giác khó quên. Tươi ngon mỗi ngày, thêm
+                một chút yêu thương.
+            </p>
+        </div>
+
+        <div class="testimonials__carousel">
+            <div class="testimonials__track" id="testimonials-track">
+                <div class="testimonials__card testimonials__card--purple">
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Hương vị khó quên</h3>
+                    <p>Mỗi miếng đều bùng nổ hương vị — một trong những bữa ăn ngon nhất tôi có trong thời gian dài!</p>
+                    <div class="testimonials__author">
+                        <img src="../imgs/homepage__user1.jpg" alt="Larry" />
+                        <div>
+                            <strong>Larry Alexander</strong>
+                            <p>Khách hàng Vàng</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--yellow">
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Ngon chuẩn vị</h3>
+                    <p>Hương vị đậm đà, ấm lòng. Cảm nhận được sự chăm chút trong từng món.</p>
+                    <div class="testimonials__author">
+                        <img src="../imgs/homepage__user2.webp" alt="Daniel" />
+                        <div>
+                            <strong>Daniel Cormir</strong>
+                            <p>Khách hàng Bạc</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--pink">
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Quán ruột của chúng tôi</h3>
+                    <p>Gần như cuối tuần nào chúng tôi cũng ghé. Món ăn và phục vụ luôn xuất sắc, ổn định.</p>
+                    <div class="testimonials__author">
+                        <img src="../imgs/homepage__user3.jpg" alt="Amanda" />
+                        <div>
+                            <strong>Amanda Nunez</strong>
+                            <p>Khách hàng Vàng</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--orange">
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <h3 class="testimonials__heading">Dịch vụ đỉnh cao</h3>
+                    <p>Nhân viên thân thiện, chu đáo. Không gian dễ chịu, món ăn còn tuyệt hơn!</p>
+                    <div class="testimonials__author">
+                        <img src="../imgs/homepage__user4.jpg" alt="Mark" />
+                        <div>
+                            <strong>Mark Velasquez</strong>
+                            <p>Khách hàng Cao cấp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const track = document.getElementById('testimonials-track');
+        track.innerHTML += track.innerHTML;
+
+        let pos = 0;
+        function animate() {
+            pos -= 5; // tốc độ
+            if (Math.abs(pos) >= track.scrollWidth / 2) {
+                pos = 0; // quay lại đầu
+            }
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+        
+
     <section class="gallery-section">
         <img src="../imgs/chef-hat.png" alt="Chef Hat" class="chef-icon">
         <h2>A Feast for Your Eyes</h2>
@@ -193,7 +277,7 @@
             </div>
             <h2>Don't Wait - Order Now!</h2>
             <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready for pick-up.</p>
-            <button class="btn-order">
+            <button class="btn-order" onclick="window.location.href='../pages/menu_combo.html'">
                 Order Now <span>→</span>
             </button>
         </div>
@@ -206,8 +290,10 @@
 
     <!-- FOOTER -->
     <div id="footer-placeholder"></div>
-    <script src="../assets/js/main.js"></script>
     <script src="../assets/js/include.js"></script>
     <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/auth-guard.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

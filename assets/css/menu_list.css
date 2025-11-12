@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Plus Jakarta Sans, sans-serif;
     background-color: #FEF3E2;
     margin: 0;
     padding: 5px;
@@ -297,12 +297,11 @@ header {
 /* Kiểu dáng Nút ACTIVE (Nếu có) */
 /* Kiểu dáng Nút HOVER (Active) */
 .filter-button:hover {
-    background-color: #FA812F; 
+    background-color: black; 
     color: white;
     
     /* Đổ bóng cam phải có độ lớn TƯƠNG ĐƯƠNG với bóng tĩnh */
-    box-shadow: 0 5px 10px rgba(255, 108, 10, 0.5), /* Đổ bóng cam */
-                0 0 0 3px #FF6C0A; /* Viền cam tương đương viền trắng */
+    
 }
 
 .filter-button a.active {
