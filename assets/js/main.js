@@ -1,3 +1,4 @@
+
 // main.js — controls the cart popup overlay
 document.addEventListener("DOMContentLoaded", () => {
     const cartBtn = document.getElementById("cart-btn");
