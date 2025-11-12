@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     background-color: #FEF3E2;
     margin: 0;
     padding: 5px;
@@ -21,225 +21,6 @@ body {
     padding: 10px 15px;
     cursor: pointer;
     transition: 0.3s;
-}
-
-/* --- HEADER --- */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1200px;
-    padding: 8px 20px;
-    margin: 10px auto;
-    background-color: #FEF3E2;
-    border: 1.5px solid #FAB12F;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    margin-bottom: 5rem;
-    
-}
-
-/* --- Header Logo --- */
-.header__logo img {
-    border-radius: 50%;
-    width: 65px;
-    height: 65px;
-}
-
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    height: 68px;
-    padding: 10px 12px;
-    margin: 15px auto;
-    background-color: #FEF3E2;
-    border: 1.5px solid #FAB12F;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-
-}
-
-/* HEADER LEFT */
-.header__left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.header__logo img {
-    width: 68px;
-    height: 60px;
-}
-
-/* CART ICON */
-.header__cart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 55px;
-    height: 55px;
-    color: #000;
-    font-size: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.header__cart:hover {
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
-}
-
-/* NAV */
-.header__nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.header__nav a {
-    text-decoration: none;
-    color: #444;
-    font-weight: 600;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.header__nav a:hover {
-    color: #FA812F;
-}
-
-.header__nav .active1 a {
-    color: #FA812F;
-}
-
-/* PHẦN BÊN PHẢI HEADER */
-.header__right {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.header__item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 14px;
-    border-radius: 999px;
-    border: 1.5px solid #1F1000;
-    background-color: white;
-    text-decoration: none;
-    color: #1F1000;
-    font-weight: 600;
-    font-size: 15px;
-    transition: all 0.3s ease;
-}
-
-.header__item:hover {
-    background-color: #1F1000;
-    color: #FFF7EB;
-    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
-}
-
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    height: 68px;
-    padding: 10px 12px;
-    margin: 15px auto;
-    background-color: #FEF3E2;
-    border: 1.5px solid #FAB12F;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-
-}
-
-/* HEADER LEFT */
-.header__left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.header__logo img {
-    width: 68px;
-    height: 60px;
-}
-
-/* CART ICON */
-.header__cart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 55px;
-    height: 55px;
-    color: #000;
-    font-size: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.header__cart:hover {
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
-}
-
-/* NAV */
-.header__nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.header__nav a {
-    text-decoration: none;
-    color: #444;
-    font-weight: 600;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.header__nav a:hover {
-    color: #FA812F;
-}
-
-.header__nav .active a {
-    color: #FA812F;
-}
-
-/* PHẦN BÊN PHẢI HEADER */
-.header__right {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.header__item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 14px;
-    border-radius: 999px;
-    border: 1.5px solid #1F1000;
-    background-color: white;
-    text-decoration: none;
-    color: #1F1000;
-    font-weight: 600;
-    font-size: 15px;
-    transition: all 0.3s ease;
-}
-
-.header__item:hover {
-    background-color: #1F1000;
-    color: #FFF7EB;
-    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
 }
 
 
@@ -297,12 +78,11 @@ header {
 /* Kiểu dáng Nút ACTIVE (Nếu có) */
 /* Kiểu dáng Nút HOVER (Active) */
 .filter-button:hover {
-    background-color: #FA812F; 
+    background-color: black; 
     color: white;
     
     /* Đổ bóng cam phải có độ lớn TƯƠNG ĐƯƠNG với bóng tĩnh */
-    box-shadow: 0 5px 10px rgba(255, 108, 10, 0.5), /* Đổ bóng cam */
-                0 0 0 3px #FF6C0A; /* Viền cam tương đương viền trắng */
+    
 }
 
 .filter-button a.active {
@@ -671,7 +451,6 @@ footer {
   position: relative;           /* Cho phép các phần tử con (ảnh) định vị tuyệt đối bên trong */
   width: 100%;                  /* Chiếm toàn bộ chiều ngang màn hình */
   padding: 96px 24px 140px;     /* Tạo khoảng trống bên trong: trên 96px, hai bên 24px, dưới 140px */
-  background: #FEF3E2;          /* Màu nền be sáng nhẹ */
   overflow: hidden;             /* Ẩn các phần bị tràn ra ngoài (ảnh nghiêng không làm vỡ bố cục) */
   text-align: center;           /* Căn giữa toàn bộ nội dung bên trong theo chiều ngang */
 }

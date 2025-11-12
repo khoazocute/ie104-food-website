@@ -5,112 +5,20 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: #FEF3E2;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #FCEFE2;
     color: #333;
-    background: #FCEFE2;
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* ========================= HEADER ========================= */
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    height: 68px;
-    padding: 10px 12px;
-    margin: 15px auto 45px;
-    background-color: #FEF3E2;
-    border: 1.5px solid #FAB12F;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-
-}
-
-/* HEADER LEFT */
-.header__left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.header__logo img {
-    width: 68px;
-    height: 60px;
-}
-
-/* CART ICON */
-.header__cart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 55px;
-    height: 55px;
-    color: #000;
-    font-size: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.header__cart:hover {
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
-}
-
-/* NAV */
-.header__nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.header__nav a {
-    text-decoration: none;
-    color: #444;
-    font-weight: 600;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.header__nav a:hover {
-    color: #FA812F;
-}
-
-.header__nav .active a {
-    color: #FA812F;
-}
-
-/* PHẦN BÊN PHẢI HEADER */
-.header__right {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.header__item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 14px;
-    border-radius: 999px;
-    border: 1.5px solid #1F1000;
-    background-color: white;
-    text-decoration: none;
-    color: #1F1000;
-    font-weight: 600;
-    font-size: 15px;
-    transition: all 0.3s ease;
-}
-
-.header__item:hover {
-    background-color: #1F1000;
-    color: #FFF7EB;
-    box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
+h2 {
+    font-family: "Sigmar", sans-serif;
+    font-size: 45px;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    color: #2E1800;
 }
 
 /* =============================== CODE PUSH ========================== */
@@ -249,7 +157,6 @@ html {
     margin-left: 6px;
 }
 
-/* Badge (co đúng theo chữ) */
 
 /* badge */
 .hero__badge {
@@ -517,12 +424,6 @@ html {
     margin-bottom: 36px;
 }
 
-.section-title h2 {
-    font-size: 2rem;
-    margin-bottom: 6px;
-    color: #1F1000;
-}
-
 .section-title p {
     max-width: 540px;
     margin: 0 auto;
@@ -741,12 +642,6 @@ html {
 .about__title {
     color: #fff;
     text-align: center;
-}
-
-.about__title h2 {
-    font-size: 2.1rem;
-    margin-bottom: 10px;
-    color: black;
 }
 
 .about__title img {

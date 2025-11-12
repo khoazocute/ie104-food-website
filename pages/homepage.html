@@ -6,53 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junk Food Shop</title>
 
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap" rel="stylesheet">
+
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/menu_list.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/menu_list.css">
 
 </head>
 
 <body>
-    <header class="header">
-
-        <div class="header__left">
-            <a href="#" class="header__logo">
-                <img src="./imgs/main-logo.png" alt="logo">
-            </a>
-            <a href="#" class="header__cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-        </div>
-
-        <!-- MENU -->
-        <nav class="header__nav">
-            <ul class="nav-links">
-                <li class="active"><a href="#">Trang Chủ</a></li>
-                <li><a href="./pages/about.html">Giới Thiệu</a></li>
-                <li><a href="menu_list.html">Thực Đơn</a></li>
-                <li><a href="./pages/contact.html">Liên Hệ</a></li>
-                <li><a href="./pages/faq.html">Câu Hỏi Thường Gặp</a></li>
-            </ul>
-        </nav>
-
-        <!-- RIGHT SIDE -->
-        <div class="header__right">
-
-            <a href="#" class="header__item">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Cửa hàng</span>
-            </a>
-
-            <a href="" class="header__item">
-                <i class="fa-solid fa-user"></i>
-                <span>Đăng nhập</span>
-            </a>
-
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
 
 
@@ -60,23 +29,23 @@
     <section class="banner">
         <div class="banner__content">
             <span>✨ Nóng Hổi & Tươi Ngon</span>
-            <h1>Hương Vị Tuyệt Hảo</h1>
+            <h1>Hương Vị<br>&nbsp;&nbsp;&nbsp;Tuyệt Hảo</h1>
             <p> Trải nghiệm ẩm thực tuyệt vời với những món ăn được chế biến từ nguyên liệu tươi ngon nhất, giao đến tận
                 tay bạn.</p>
             <div class="banner__nav">
-                <a href="#">
-                    Đặt Món Ngay<i class="fas fa-arrow-right"></i>
+                <a href="./menu_list.html">
+                    Đặt Ngay<i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="">
+                <a href="./about.html">
                     Giới Thiệu<i class="fas fa-arrow-right"></i>
                 </a>
             </div>
 
             <div class="hero__badge">
                 <div class="badge-avatars">
-                    <img src="./imgs/homepage__user1.jpg" alt="" />
-                    <img src="./imgs/homepage__user2.webp" alt="" />
-                    <img src="./imgs/homepage__user3.jpg" alt="" />
+                    <img src="../imgs/homepage__user1.jpg" alt="" />
+                    <img src="../imgs/homepage__user2.webp" alt="" />
+                    <img src="../imgs/homepage__user3.jpg" alt="" />
                 </div>
                 <span>Hơn 2,6K người dùng yêu thích với lượt đánh giá 4.9 / 5✨</span>
             </div>
@@ -86,13 +55,13 @@
 
     <section class="deal">
         <div class="discount__title">
-            <img src="./imgs/homepage__fooddiscount-icon.png" alt="icon">
-            <h2>Chương Trình Khuyến Mãi</h2>
+            <img src="../imgs/homepage__fooddiscount-icon.png" alt="icon">
+            <h2>CHƯƠNG TRÌNH KHUYẾN MÃI</h2>
             <p>Thưởng thức hương vị tuyệt hảo với mức giá cực ưu đãi. Nhanh tay đặt món ngay hôm nay!</p>
         </div>
         <div class="content">
             <div class="deal__left">
-                <img src="./imgs/homepage__deal1.png" alt="hamburger hot deal">
+                <img src="../imgs/homepage__deal1.png" alt="hamburger hot deal">
             </div>
             <div class="deal__cright">
                 <!-- COUNTDOWN -->
@@ -118,14 +87,12 @@
                 </ul>
 
                 <div class="deal__nav">
-                    <a href="#">Đặt món ngay</a>
+                    <a href="./menu_list.html">Đặt Ngay</a>
                     <a href="#">Xem thêm</a>
                 </div>
             </div>
     </section>
     </div>
-
-
 
 
 
@@ -184,14 +151,10 @@
     </script>
 
 
-
-
-
-
     <!-- ========================= MENU ========================= -->
     <section class="menu">
         <div class="menu__title">
-            <img src="./imgs/slogan.avif" alt="icon menu">
+            <img src="../imgs/slogan.avif" alt="icon menu">
             <h2>THỰC ĐƠN CỦA CHÚNG TÔI</h2>
             <p>Khám phá thực đơn đa dạng của chúng tôi nơi hương vị truyền thống hòa quyện cùng phong cách hiện đại,
                 mang đến trải nghiệm ẩm thực khó quên.</p>
@@ -265,15 +228,15 @@
         </div>
 
         <div class="menu__footer">
-            <a href="#" class="menu__btn">Xem tất cả</a>
+            <a href="./menu_list.html">Xem Tất Cả</a>
         </div>
     </section>
 
     <!-- ========================= TESTIMONIAL ========================= -->
     <section class="testimonials">
-        <div class="testimonials__header">
-            <img src="./imgs/homepage__testimonials-love.svg" alt="Love Icon" />
-            <h2 class="testimonials__title">Đánh giá từ khách hàng</h2>
+        <div class="testimonials__title">
+            <img src="../imgs/homepage__testimonials-love.svg" alt="Love Icon" />
+            <h2>ĐÁNH GIÁ TỪ KHÁCH HÀNG</h2>
             <p>Menu cân bằng giữa quen thuộc và đột phá, mang lại trải nghiệm vị giác khó quên. Tươi ngon mỗi ngày, thêm
                 một chút yêu thương.
             </p>
@@ -286,7 +249,7 @@
                     <h3 class="testimonials__heading">Hương vị khó quên</h3>
                     <p>Mỗi miếng đều bùng nổ hương vị — một trong những bữa ăn ngon nhất tôi có trong thời gian dài!</p>
                     <div class="testimonials__author">
-                        <img src="./imgs/homepage__user1.jpg" alt="Larry" />
+                        <img src="../imgs/homepage__user1.jpg" alt="Larry" />
                         <div>
                             <strong>Larry Alexander</strong>
                             <p>Khách hàng Vàng</p>
@@ -299,7 +262,7 @@
                     <h3 class="testimonials__heading">Ngon chuẩn vị</h3>
                     <p>Hương vị đậm đà, ấm lòng. Cảm nhận được sự chăm chút trong từng món.</p>
                     <div class="testimonials__author">
-                        <img src="./imgs/homepage__user2.webp" alt="Daniel" />
+                        <img src="../imgs/homepage__user2.webp" alt="Daniel" />
                         <div>
                             <strong>Daniel Cormir</strong>
                             <p>Khách hàng Bạc</p>
@@ -312,7 +275,7 @@
                     <h3 class="testimonials__heading">Quán ruột của chúng tôi</h3>
                     <p>Gần như cuối tuần nào chúng tôi cũng ghé. Món ăn và phục vụ luôn xuất sắc, ổn định.</p>
                     <div class="testimonials__author">
-                        <img src="./imgs/homepage__user3.jpg" alt="Amanda" />
+                        <img src="../imgs/homepage__user3.jpg" alt="Amanda" />
                         <div>
                             <strong>Amanda Nunez</strong>
                             <p>Khách hàng Vàng</p>
@@ -325,7 +288,7 @@
                     <h3 class="testimonials__heading">Dịch vụ đỉnh cao</h3>
                     <p>Nhân viên thân thiện, chu đáo. Không gian dễ chịu, món ăn còn tuyệt hơn!</p>
                     <div class="testimonials__author">
-                        <img src="./imgs/homepage__user4.jpg" alt="Mark" />
+                        <img src="../imgs/homepage__user4.jpg" alt="Mark" />
                         <div>
                             <strong>Mark Velasquez</strong>
                             <p>Khách hàng Cao cấp</p>
@@ -351,8 +314,6 @@
         }
         animate();
     </script>
-
-
 
     <!-- ========================= GALLERY ========================= -->
     <section class="gallery-section">
@@ -383,7 +344,7 @@
             </div>
             <h2>Don't Wait - Order Now!</h2>
             <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready for pick-up.</p>
-            <button class="btn-order">
+            <button " class="btn-order" onclick="window.location.href='./menu_list.html'">
                 Order Now <span>→</span>
             </button>
         </div>
@@ -394,69 +355,22 @@
             </div>
     </section>
 
-    <!-- ========================= FOOTER ========================= -->
+    <div id="footer-placeholder"></div>
+    <script src="../assets/js/include.js"></script>  
+    <script src="../assets/js/cart.js"></script>
 
-    <footer>
-        <div class="footer__container">
-            <div class="footer__column">
-                <h2>FOOD DASH</h2>
-                <p>Food Dash &copy;2025 All Rights Reserved</p>
-                <p>By - Your Name</p>
-                <h3>Follow Us On</h3>
-                <div class="footer__icon">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
-
-            <div class="footer__column">
-                <h3>Menu</h3>
-                <ul class="footer__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Offers</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__column">
-                <h3>Information</h3>
-                <ul class="footer__links">
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Quality</a></li>
-                    <li><a href="#">Make A Choice</a></li>
-                    <li><a href="#">Fast Delivery</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__column">
-                <h3>Contact</h3>
-                <ul class="footer__links">
-                    <li>
-                        <a href="tel:+123456789">
-                            <i class="fas fa-phone"></i>
-                            <span>+123456789</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:info@fooddash.com">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@fooddash.com</span>
-                        </a>
-                    </li>
-                    <li>
-                        <span>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>12, Maharashtra, Indian</span>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <script src="../assets/js/auth-guard.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/auth.js"></script>
+<script>
+  // Kiểm tra đăng nhập: chỉ redirect nếu chưa đăng nhập
+  // Chạy trong window.onload để đảm bảo mọi script đều đã load xong
+  window.addEventListener("load", () => {
+    if (!isLoggedIn()) {
+      window.location.href = "./auth.html";
+    }
+  });
+</script>
 </body>
 
 </html>

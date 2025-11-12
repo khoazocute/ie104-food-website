@@ -49,7 +49,7 @@
     if (!badge) {
       badge = document.createElement("span");
       badge.id = "cartBadge";
-      badge.textContent = "0";
+  
       cartIcon.appendChild(badge);
     }
   }
