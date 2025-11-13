@@ -21,23 +21,25 @@
     <!-- HEADER -->
     <div id="header-placeholder"></div>
     
-    <slogan class = "slogan__container">
-        <div class="slogan">
-            <img src="../imgs/slogan.avif" alt="">
+    <section class="slogan">
+        <div class="slogan__img">
+            <img src="../imgs/slogan.avif" alt="Fresh plant-forward food icon">
         </div>
+    
+        <h1>
+            Fresh, plant-forward,<br>
+            earth-friendly food.
+        </h1>
+    </section>
 
-        <div class="slogan slogan__text">
-            <h1>Fresh, plant-forward, earth <br>friendly food.<br></h1>
-        </div>
-    </slogan>
     <section class="menu-items-section">
         
         <div class="category-filter-menu Menu_Container Menu_List">
             <div class="menu_nav">
-                <button style="background-color: #F87D39"; class="filter-button filter-button1" onclick="window.location.href='menu_list.html'">Full Menu</button>
+                <button class="filter-button filter-button1 active" onclick="window.location.href='menu_list.html'">Full Menu</button>
                 <button class="filter-button filter-button2" onclick="window.location.href='menu_burgers.html'">Burger</button>
                 <button class="filter-button filter-button3" onclick="window.location.href='menu_pizza.html'">Pizza</button>
-                <button class="filter-button filter-button4" onclick="window.location.href='menu_monankem.html'">Món ăn kèm</button>
+                <button class="filter-button filter-button4" onclick="window.location.href='menu_monankem.html'">Ăn kèm</button>
                 <button class="filter-button filter-button5" onclick="window.location.href='menu_combo.html'">Combo</button>
             </div>
         </div>
@@ -353,10 +355,10 @@
     </section>
 
      <!-- ========================= TESTIMONIAL ========================= -->
-    <section class="testimonials">
-        <div class="testimonials__header">
+     <section class="testimonials">
+        <div class="testimonials__title">
             <img src="../imgs/homepage__testimonials-love.svg" alt="Love Icon" />
-            <h2 class="testimonials__title">Đánh giá từ khách hàng</h2>
+            <h2>ĐÁNH GIÁ TỪ KHÁCH HÀNG</h2>
             <p>Menu cân bằng giữa quen thuộc và đột phá, mang lại trải nghiệm vị giác khó quên. Tươi ngon mỗi ngày, thêm
                 một chút yêu thương.
             </p>
@@ -418,7 +420,6 @@
             </div>
         </div>
     </section>
-
     <script>
         const track = document.getElementById('testimonials-track');
         track.innerHTML += track.innerHTML;
