@@ -86,11 +86,11 @@ h2 {
 }
 
 .header__nav a:hover {
-    color: #FA812F;
+    color: #FF6C0A;
 }
 
 .header__nav .active a {
-    color: #FA812F;
+    color: #FF6C0A;
 }
 
 
@@ -188,7 +188,7 @@ h2 {
 }
 
 .banner__nav>a:first-of-type {
-    background: #FA812F;
+    background: #FF6C0A;
     color: #FFF7EB;
     border: 1.5px solid #C85E11;
     transition: all 0.3s ease;
@@ -435,7 +435,7 @@ h2 {
 }
 
 .deal__check {
-    color: #FA812F;
+    color: #FF6C0A;
     font-weight: 800;
 }
 
@@ -454,7 +454,7 @@ h2 {
 }
 
 .deal__nav > a:first-of-type {
-    background: #FA812F;
+    background: #FF6C0A;
     color: #FFF7EB;
     border: 1.5px solid #C85E11;
     transition: all 0.3s ease;
@@ -467,13 +467,13 @@ h2 {
 
 /* nút 2 = viền cam */
 .deal__nav > a:last-of-type  {
-    border: 1.5px solid #FA812F;
-    color: #FA812F;
+    border: 1.5px solid #FF6C0A;
+    color: #FF6C0A;
     transition: all 0.3s ease;
 }
 
 .deal__nav > a:last-of-type:hover {
-    background: #FA812F;
+    background: #FF6C0A;
     color: #FFF7EB;
 }
 
@@ -518,225 +518,6 @@ h2 {
     font-weight: 400;
 }
 
-/* ===== KHỐI SẢN PHẨM (FLEX) ===== */
-.products-grid {
-    display: grid;
-    /* Sử dụng CSS Grid để tạo lưới */
-    grid-template-columns: repeat(3, minmax(360px, 400px));
-    /* 3 cột, mỗi cột tối thiểu 300px, tối đa 360px */
-
-    /* Căn giữa 3 cột bên trong container */
-    justify-content: center;
-    max-width: 1300px;
-    margin: 0 auto;
-
-    /* Khoảng cách giữa các card */
-    gap: 18px;
-
-    padding: 30px;
-    background-color: #fdf2e9;
-
-    /* Có thể bỏ qua: justify-items: center; */
-}
-
-/* Mỗi thẻ sản phẩm */
-.product-card {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    width: 100%;
-    max-width: 400px;
-    /* Giới hạn độ rộng card */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #000;
-}
-
-
-/* Ảnh món ăn */
-.product-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-}
-
-.product-card img:hover {
-    transform: scale(1.05);
-    transition: transform 0.4s ease;
-}
-
-/* Phần thông tin */
-.product-info {
-    padding: 20px 22px 26px;
-}
-
-/* Hàng chứa tên & giá */
-.name-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.name-price h3 {
-    font-size: 22px;
-    font-weight: 700;
-    color: #222;
-    margin: 0;
-}
-
-.name-price .price {
-    font-weight: 700;
-    font-size: 16px;
-    color: #222;
-}
-
-/* Mô tả món ăn */
-.description {
-    font-size: 15px;
-    color: #446;
-    margin: 10px 0 20px;
-    line-height: 1.5;
-}
-
-/* Nút Add to cart */
-.add-to-cart-btn {
-    width: 100%;
-    /**background-color: #00a5a5;*/
-    color: #fff;
-    border: none;
-    border-radius: 40px;
-    padding: 14px 0;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 6px 12px rgba(0, 165, 165, 0.3);
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    border: 1px solid #000;
-    margin-top: 15px;
-}
-
-.btn1 {
-    background-color: rgb(232, 121, 10);
-}
-
-.btn3 {
-    background-color: #00a5a5;
-}
-
-.btn2 {
-    background-color: #660a60;
-}
-
-.product-info1 {
-    background-color: #FCEFE2;
-    /* xanh nhạt giống Webflow mẫu */
-    padding: 20px 22px 26px;
-}
-
-.product-info2 {
-    background-color: #ead2e8;
-    /* xanh nhạt giống Webflow mẫu */
-    padding: 20px 22px 26px;
-}
-
-.product-info3 {
-    background-color: #d9f4f4;
-    /* xanh nhạt giống Webflow mẫu */
-    padding: 20px 22px 26px;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #d2dcde;
-    transform: scale(1.02);
-}
-
-/* Mô tả + số lượng (giữ cấu trúc của bạn) */
-.desc-and-control {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5px 0;
-}
-
-.desc-and-control p {
-    max-width: 65%;
-    margin: 0;
-    font-size: .95rem;
-    color: #555;
-    line-height: 1.5;
-}
-
-/* Quantity */
-.quantity-control {
-    display: flex;
-    align-items: stretch;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    height: 25px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
-}
-
-.quantity-btn {
-    background: #f7f7f7;
-    color: #333;
-    border: none;
-    font-size: .8rem;
-    font-weight: 700;
-    cursor: pointer;
-    width: 25px;
-    transition: background-color .2s;
-}
-
-.quantity-btn:hover {
-    background: #e9e9e9;
-}
-
-.minus-btn {
-    border-right: 1px solid #e0e0e0;
-}
-
-.plus-btn {
-    border-left: 1px solid #e0e0e0;
-}
-
-.quantity-input {
-    width: 20px;
-    text-align: center;
-    border: none;
-    font-size: .9rem;
-    font-weight: 500;
-    line-height: 25px;
-    padding: 0;
-    margin: 0;
-}
-
-/* Nút Add to cart */
-.add-to-cart-btn {
-    width: 100%;
-    border: 1px solid #000;
-    border-radius: 40px;
-    padding: 14px 0;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all .25s ease;
-    margin-top: 15px;
-}
-
-.btn1 {
-    background-color: #FA812F;
-    color: #FFF7EB;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #d96f22;
-    transform: scale(1.02);
-}
-
 /* ===== NÚT “XEM TẤT CẢ” Ở CUỐI ===== */
 .menu__footer {
     display: flex;
@@ -750,7 +531,7 @@ h2 {
     font-weight: 700;
     font-size: 18px;
     text-decoration: none;
-    background: #FA812F;
+    background: #FF6C0A;
     color: #FFF7EB;
     border: 1.5px solid #C85E11;
     transition: all 0.3s ease;
@@ -1041,7 +822,7 @@ h2 {
     font-weight: 700;
     font-size: 18px;
     text-decoration: none;
-    background: #FA812F;
+    background: #FF6C0A;
     color: #FFF7EB;
     border: 1.5px solid #C85E11;
     transition: all 0.3s ease;

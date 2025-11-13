@@ -8,48 +8,33 @@
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: #FEF3E2;
+    color: #333;
     margin: 0;
     padding: 5px;
     justify-content: center;
 }
 
-.button {
-    font-weight: 600;
-    font-size: 16px;
-    border-radius: 999px;
-    /* bo tròn dạng pill */
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-
 /* --- SLOGAN --- */
 .slogan {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-
+  margin: 0 auto 48px;
+  text-align: center;
+  padding: 24px 0;
 }
 
-.slogan img {
-    width: 20%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 20px;
+.slogan__img img {
+  width: 180px;
+  height: auto;
+  border-radius: 20px;
 }
 
-.slogan__text {
-    text-align: center;
-    margin-top: 20px;
-    font-family: 'Luckiest Guy', cursive;
-    font-weight: 900;
-    font-size: 2vw;
-    line-height: 1.1;
-    color: #f6863b;
-    margin-bottom: 30px;
+.slogan h1 {
+  font-size: 64px;
+  font-family: "Sigmar", sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-top: 16px;
 }
-
 
 /* Khối CHỨA CÁC NÚT */
 .menu_nav {
@@ -62,35 +47,27 @@ body {
 
 /* --- Kiểu dáng Chung cho Nút (Đảm bảo đồng bộ) --- */
 .filter-button {
-    padding: 10px 20px;
+    padding: 16px 40px;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 30px; 
+    border-radius: 999px;
     background-color: white;
-    border: none; 
     border: 1px solid #000;
-    /* Box-shadow đồng bộ: Viền trắng (inner shadow) + đổ bóng xám nhạt (outer shadow) */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-               
-}
-/* Kiểu dáng Nút ACTIVE (Nếu có) */
-/* Kiểu dáng Nút HOVER (Active) */
-.filter-button:hover {
-    background-color: black; 
-    color: white;
-    
-    /* Đổ bóng cam phải có độ lớn TƯƠNG ĐƯƠNG với bóng tĩnh */
-    
+    transition: all 0.3s ease;     
 }
 
-.filter-button a.active {
-    background-color: #F87D39; /* Màu cam nổi bật */
-    color: white;             /* Màu chữ trắng */
-    border-color: #F87D39;    /* Viền cùng màu nền */
-    font-weight: bold;        /* Chữ đậm hơn */
+.filter-button:hover {
+    background-color: #2E1800; 
+    color: #FFF7EB;    
 }
+
+.filter-button.active {
+  background-color: #2E1800; 
+  color: #FFF7EB;
+}
+
 /* FOOTER */
 footer {
     background-color: #FEF3E2; 
@@ -180,7 +157,6 @@ footer {
     gap: 18px; 
 
     padding: 30px;
-    background-color: #fdf2e9; 
     
     /* Có thể bỏ qua: justify-items: center; */
 }
@@ -247,48 +223,60 @@ footer {
 /* Nút Add to cart */
 .add-to-cart-btn {
     width: 100%;
-    /**background-color: #00a5a5;*/
-    color: #fff;
-    border: none;
+    color: #FFF7EB;
     border-radius: 40px;
     padding: 14px 0;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 6px 12px rgba(0, 165, 165, 0.3);
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    border: 1px solid #000;
+    transition: all 0.3s ease;
     margin-top: 15px;
 }
+
 .btn1 {
-    background-color: rgb(232, 121, 10);
+    background-color: #FF6C0A;
+    border: 1.5px solid #C85E11;
+}
+
+.btn1:hover {
+  box-shadow: 0 6px 0 #C85E11;
+  transform: scale(1.02);
+}
+
+.btn2 {
+  background-color: #6A09C7;
+  border: 1.5px solid #4C1085;
+}
+
+.btn2:hover {
+  box-shadow: 0 6px 0 #4C1085;
+  transform: scale(1.02);
 }
 
 .btn3 {
      background-color: #00a5a5;
+     border: 1.5px solid #008484;
 }
 
-.btn2 {
-    background-color: #660a60;
+.btn3:hover {
+  box-shadow: 0 6px 0 #008484;
+  transform: scale(1.02);
 }
+
 
 .product-info1 {
-   background-color: #FCEFE2;  /* xanh nhạt giống Webflow mẫu */ 
+  background-color: #FFE8D1;  
   padding: 20px 22px 26px;
-}   
+}
+
 .product-info2 {
-  background-color: #ead2e8; /* xanh nhạt giống Webflow mẫu */ 
+  background-color: #ead2e8; 
   padding: 20px 22px 26px;
 }  
 
 .product-info3 {
   background-color: #d9f4f4; /* xanh nhạt giống Webflow mẫu */ 
   padding: 20px 22px 26px;
-}
-
-.add-to-cart-btn:hover {
-  background-color: #d2dcde;
-  transform: scale(1.02);
 }
 
 /* Đảm bảo mô tả và điều khiển số lượng nằm ngang hàng và giãn ra */
