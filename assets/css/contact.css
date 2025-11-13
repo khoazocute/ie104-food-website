@@ -96,7 +96,6 @@ textarea {
     border: 2px solid #ffb366;
     border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.1);
-    max-width: 350px;
     border-radius: 15px;
     overflow: hidden;
     /* Quan trọng để giữ hình ảnh trong bo góc */
@@ -137,7 +136,7 @@ textarea {
     min-width: 250px;
     border-radius: 12px;
     padding: 25px;
-    text-align: left;
+    text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
     color: #2e2e2e;
