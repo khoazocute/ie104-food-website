@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junk Food Shop</title>
 
+     <!-- GOOGLE FONT -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap" rel="stylesheet">
+
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -15,46 +20,9 @@
 </head>
 
 <body>
-    <header class="header">
 
-        <div class="header__left">
-            <a href="#" class="header__logo">
-                <img src="../imgs/main-logo.png" alt="logo">
-            </a>
-            <a href="#" class="header__cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-        </div>
-
-        <!-- MENU -->
-        <nav class="header__nav">
-            <ul class="nav-links">
-                <li class="active"><a href="#">Trang Chủ</a></li>
-                <li><a href="./pages/about.html">Giới Thiệu</a></li>
-                <li><a href="./pages/menu_list.html">Thực Đơn</a></li>
-                <li><a href="./pages/contact.html">Liên Hệ</a></li>
-                <li><a href="./pages/faq.html">Câu Hỏi Thường Gặp</a></li>
-            </ul>
-        </nav>
-
-        <!-- RIGHT SIDE -->
-        <div class="header__right">
-
-            <a href="#" class="header__item">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Cửa hàng</span>
-            </a>
-
-            <a href="" class="header__item">
-                <i class="fa-solid fa-user"></i>
-                <span>Đăng nhập</span>
-            </a>
-
-        </div>
-    </header>
-
-
-
+    <!--Header-->
+    <div id="header-placeholder"></div>
 
     <!-- ==============================code push ========================= -->
     <section class="hero">
@@ -67,7 +35,7 @@
                     tận
                     tay bạn.</p>
                 <div class="hero__nav">
-                    <a href="#">
+                    <a href="../pages/menu_list.html">
                         Đặt Món Ngay<i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -589,7 +557,7 @@
             <h2>Don't Wait - Order Now!</h2>
             <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready
                 for pick-up.</p>
-            <button class="btn-order">
+            <button class="btn-order" onclick="window.location.href='../pages/menu_list.html'">
                 Order Now <span>→</span>
             </button>
         </div>
@@ -601,71 +569,13 @@
     </section>
 
 
-
-
     <!-- ========================= FOOTER ========================= -->
-
-    <footer>
-        <div class="footer__container">
-            <div class="footer__column">
-                <h2>FOOD DASH</h2>
-                <p>Food Dash &copy;2025 All Rights Reserved</p>
-                <p>By - Your Name</p>
-                <h3>Follow Us On</h3>
-                <div class="footer__icon">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
-
-            <div class="footer__column">
-                <h3>Menu</h3>
-                <ul class="footer__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Offers</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__column">
-                <h3>Information</h3>
-                <ul class="footer__links">
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Quality</a></li>
-                    <li><a href="#">Make A Choice</a></li>
-                    <li><a href="#">Fast Delivery</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__column">
-                <h3>Contact</h3>
-                <ul class="footer__links">
-                    <li>
-                        <a href="tel:+123456789">
-                            <i class="fas fa-phone"></i>
-                            <span>+123456789</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:info@fooddash.com">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@fooddash.com</span>
-                        </a>
-                    </li>
-                    <li>
-                        <span>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>12, Maharashtra, Indian</span>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/auth-guard.js"></script>
+    <script src="../assets/js/auth.js"></script>      
 </body>
 
 </html>
