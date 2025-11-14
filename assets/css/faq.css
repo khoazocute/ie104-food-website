@@ -16,6 +16,11 @@ body {
     margin-bottom: 10px;
 }
 
+.faq-header img {
+    width: 200px; 
+    height: 200px;
+}
+
 .faq-logo {
     max-width: 800px;
     margin: 60px auto;

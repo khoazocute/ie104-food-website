@@ -1,41 +1,48 @@
-
-// main.js — controls the cart popup overlay
 document.addEventListener("DOMContentLoaded", () => {
-    const cartBtn = document.getElementById("cart-btn");
-    const cartPopup = document.getElementById("cart-popup");
-    const closeCart = document.getElementById("close-cart");
-
-    if (!cartBtn || !cartPopup) return; // safety check
-
-    // When the cart icon is clicked -> show overlay
-    cartBtn.addEventListener("click", () => {
-        cartPopup.style.display = "flex";
-    });
-
-    // When "close" button clicked -> hide overlay
-    closeCart.addEventListener("click", () => {
-        cartPopup.style.display = "none";
-    });
-
-    // Optional: click outside the box closes the cart
-    cartPopup.addEventListener("click", (e) => {
-        if (e.target === cartPopup) {
-            cartPopup.style.display = "none";
+    
+    // ========================= TESTIMONIAL ========================= 
+    const track = document.getElementById('testimonials-track');
+    
+    if (track) {
+        if (track.children.length > 0 && !track.classList.contains('js-cloned')) {
+            const originalContent = track.innerHTML;
+            
+            track.innerHTML += originalContent; 
+            track.innerHTML += originalContent; 
+            track.innerHTML += originalContent; 
+    
+            track.classList.add('animate');
+            track.classList.add('js-cloned'); 
         }
-    });
-});
-// ========================= TESTIMONIAL ========================= 
-const track = document.getElementById('testimonials-track');
-track.innerHTML += track.innerHTML; // nhân đôi
-
-    let pos = 0;
-    function animate() {
-        pos -= 5; // tốc độ
-        if (Math.abs(pos) >= track.scrollWidth / 2) {
-            pos = 0; // quay lại đầu
-        }
-    track.style.transform = `translateX(${pos}px)`;
-        requestAnimationFrame(animate);
     }
-animate();
 
+    // ========================= MOBILE MENU =========================
+
+    function setupMobileMenu() {
+        var mobileBtn = document.getElementById('mobileMenuBtn');
+        var mobileNav = document.getElementById('mobileNav');
+
+        if (mobileBtn && mobileNav) {
+            
+            if (mobileBtn.dataset.listenerAttached !== 'true') { 
+                
+                mobileBtn.addEventListener('click', function (e) {
+                    e.preventDefault(); 
+                    mobileNav.classList.toggle('is-open'); 
+                });
+                
+                mobileBtn.dataset.listenerAttached = 'true';
+            }
+        }
+    }
+
+
+    setupMobileMenu();
+
+    document.addEventListener('includeLoaded', (e) => {
+        if (e.detail.id === 'header-placeholder') {
+            setupMobileMenu();
+        }
+    });
+
+}); 
