@@ -342,7 +342,7 @@
             </div>
             <h2>Don't Wait - Order Now!</h2>
             <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready for pick-up.</p>
-            <button " class="btn-order" onclick="window.location.href='./menu_list.html'">
+            <button class="btn-order" onclick="window.location.href='./menu_list.html'">
                 Order Now <span>→</span>
             </button>
         </div>
@@ -354,6 +354,19 @@
     </section>
 
     <div id="footer-placeholder"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var mobileBtn = document.getElementById('mobileMenuBtn');
+          var mobileNav = document.getElementById('mobileNav');
+      
+          if (mobileBtn && mobileNav) {
+            mobileBtn.addEventListener('click', function () {
+              mobileNav.classList.toggle('is-open');
+            });
+          }
+        });
+      </script>
+
     <script src="../assets/js/include.js"></script>  
     <script src="../assets/js/cart.js"></script>
 

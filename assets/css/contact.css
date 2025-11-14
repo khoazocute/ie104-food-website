@@ -1,174 +1,195 @@
 /* === PHẦN CHUNG === */
-
-body {
-    background-color: #fdf3e0;
-    /* nền kem */
-    font-family: 'Poppins', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    color: #2e2e2e;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #FCEFE2;
+    color: #333;
 }
 
 
 /* --- KHUNG CHÍNH --- */
+.contact-container {
+    margin: 60px 0;
+    padding: 0 80px;
+}
 
-.contact-box {
-    display: flex;
-    flex-direction: column;
+.contact-header {
+    width: 60%;
+    margin: 0 auto;
     text-align: center;
 }
 
-.contact-container {
-    max-width: 1000px;
-    margin: 60px auto;
-    background-color: #ffedd1;
-    border-radius: 15px;
-    padding: 30px 40px;
-    display: flex;
-    gap: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.contact-header h1 {
+    font-size: 80px;
+    font-family: "Sigmar", sans-serif;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 24px 0 16px;
+}
+
+.contact-header p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 .contact-form {
+    background-color: #FFEDD1;
+    margin: 50px 0;
+    border-radius: 30px;
+    padding: 40px;
     display: flex;
-    text-align: left;
+    gap: 40px;
+    border: 1.5px solid #FAB12F;
 }
 
-form {
-    flex: 2;
+/* ==== FORM BÊN TRÁI ==== */
+.form-list {
+    flex: 1;
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-direction: column;
+    gap: 25px; 
+}
+
+.form-flexbox {
+    display: flex;
+    gap: 20px;
 }
 
 .form-group {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    flex: 1 1 calc(50% - 10px);
+    gap: 10px;
 }
 
-.form-group.full {
-    flex: 1 1 100%;
-}
-
-label {
+/* ==== INPUT / SELECT / TEXTAREA ==== */
+.form-group label {
     font-weight: 600;
     color: #331602;
-    margin-bottom: 5px;
+    font-size: 16px;
 }
 
-input,
-select,
-textarea {
-    border: none;
-    border-radius: 6px;
-    padding: 10px 12px;
-    font-size: 14px;
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border: 1px solid #F3C58A;
+    border-radius: 12px;
+    padding: 14px 12px;
+    font-size: 16px;
+    background-color: #FFF7EB;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-textarea {
-    resize: none;
-    min-height: 80px;
+.form-group textarea {
+    min-height: 230px;
+    resize: vertical;
+    line-height: 1.4;
 }
 
 .submit-btn {
-    background: linear-gradient(90deg, #ffb347, #ffcc33);
-    border: none;
-    padding: 12px;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #fff;
-    width: 100%;
-    transition: 0.3s;
+    padding: 16px 40px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    background: #FF6C0A;
+    color: #FFF7EB;
+    border: 1.5px solid #C85E11;
+    transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
-    background: linear-gradient(90deg, #ff9a3c, #ffd633);
+    box-shadow: 0 6px 0 #C85E11;
+    transform: scale(1.02);
 }
 
-.form-list {
-    padding-right: 20px;
+.contact-form img {
+    width: 600px;
+    height: auto;
+    border-radius: 30px;
 }
 
+/* INFOR */
 .contact-info {
-    flex: 1;
-    border: 2px solid #ffb366;
-    border-radius: 16px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    /* Quan trọng để giữ hình ảnh trong bo góc */
-}
-
-@media (max-width: 800px) {
-    .contact-container {
-        flex-direction: column;
-    }
-}
-
-.contact-container {
-    max-width: 1000px;
-    margin: 60px auto;
-    /* background: linear-gradient(rgba(255, 166, 77, 0.9), rgba(255, 166, 77, 0.9)), url("../assets/imgs/contact-bg.jpg") center/cover no-repeat; */
-    border-radius: 15px;
-    padding: 30px 40px;
-    display: flex;
-    gap: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-
-/* --- 3 Ô THÔNG TIN DƯỚI --- */
-
-.contact-info-cards {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 10px auto 80px;
-    width: 90%;
-    max-width: 1100px;
+    gap: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .info-card {
     flex: 1;
-    min-width: 250px;
-    border-radius: 12px;
-    padding: 25px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 24px;
+    padding: 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
     color: #2e2e2e;
-}
-
-.info-card:hover {
-    transform: translateY(-4px);
+    transition: all 0.3s ease;
 }
 
 .info-card i {
     font-size: 26px;
-    margin-bottom: 10px;
+    padding: 16px 24px;
+    border-radius: 999px;
+    color: white;
+    transition: all 0.3s ease;
 }
 
+.info-card.email i {
+    background-color: #FF6C0A;
+    border: 1.5px solid #C85E11;
+}
 
-/* Màu pastel dịu */
+.info-card.email:hover i{
+    box-shadow: 0 6px 0 #C85E11;
+    transform: scale(1.02);
+}
+
+.info-card.call i {
+    background-color: #6A09C7;
+    border: 1.5px solid #4C1085;
+}
+
+.info-card.call:hover i{
+    box-shadow: 0 6px 0 #4C1085;
+    transform: scale(1.02);
+}
+
+.info-card.location i {
+    background-color: #00a5a5;
+    border: 1.5px solid #008484;
+}
+
+.info-card.location:hover i {
+    box-shadow: 0 6px 0 #008484;
+    transform: scale(1.02);
+}
 
 .info-card.email {
-    background-color: #ffe8cc;
-}
-
-.info-card.location {
-    background-color: #ede3ff;
+    background-color: #FFE8D1;
+    border: 1.5px solid #C85E11;
 }
 
 .info-card.call {
-    background-color: #d6faf8;
+    background-color: #ead2e8;
+    border: 1.5px solid #4C1085;
+}
+
+.info-card.location {
+    background-color: #d9f4f4;
+    border: 1.5px solid #008484;
 }
 
 .info-card h3 {
-    margin: 8px 0;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .info-card a {
@@ -183,7 +204,7 @@ textarea {
 
 
 /* --- RESPONSIVE --- */
-
+/* 
 @media (max-width: 768px) {
     .contact-content {
         flex-direction: column;
@@ -218,4 +239,4 @@ textarea {
     .info-card {
         min-width: 100%;
     }
-}
+} */
