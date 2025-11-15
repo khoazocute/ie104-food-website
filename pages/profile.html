@@ -165,43 +165,13 @@
 
             <!-- Đơn hàng -->
             <div class="tab" id="tab-orders">
-                <h2>Đơn hàng gần đây</h2>
+                <h2>Đơn hàng của bạn</h2>
 
-                <div class="card table-wrapper">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Mã</th>
-                            <th>Ngày</th>
-                            <th>Trạng thái</th>
-                            <th>Món đã đặt</th>
-                            <th>Tổng</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>#FD-1209</td>
-                            <td>02/11/2025</td>
-                            <td><span class="badge success">Hoàn tất</span></td>
-                            <td>Burger phô mai, Khoai tây (L)</td>
-                            <td>189.000đ</td>
-                        </tr>
-                        <tr>
-                            <td>#FD-1208</td>
-                            <td>01/11/2025</td>
-                            <td><span class="badge warning">Đang giao</span></td>
-                            <td>Pizza hải sản (M), 2 Nước ngọt</td>
-                            <td>129.000đ</td>
-                        </tr>
-                        <tr>
-                            <td>#FD-1207</td>
-                            <td>30/10/2025</td>
-                            <td><span class="badge danger">Đã huỷ</span></td>
-                            <td>Gà rán (combo 3 miếng)</td>
-                            <td>250.000đ</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div class="card">
+                    <p style="margin-bottom: 20px; color: #666;">Xem chi tiết tất cả các đơn hàng của bạn, bao gồm trạng thái, địa chỉ giao hàng, và các mặt hàng được đặt.</p>
+                    <a href="./order-history.html" class="btn primary" style="display: inline-block;">
+                        <i class="fa-solid fa-receipt"></i> Xem lịch sử đơn hàng
+                    </a>
                 </div>
             </div>
 
@@ -313,13 +283,28 @@
                 if (name === 'logout') {
                     var confirmLogout = confirm('Bạn có chắc chắn muốn đăng xuất?');
                     if (confirmLogout) {
-                        alert('Giả lập: Đã đăng xuất!');
+                        try { localStorage.removeItem('currentUser'); } catch (e) {}
+                        try { sessionStorage.removeItem('currentUser'); } catch (e) {}
+                        // Redirect to login page
+                        window.location.href = './auth.html';
                     }
                 } else {
                     showTab(name);
                 }
             });
         });
+
+        // Hook the logout button inside the Logout tab (if present)
+        var logoutBtnInside = document.querySelector('#tab-logout .btn.danger');
+        if (logoutBtnInside) {
+            logoutBtnInside.addEventListener('click', function () {
+                var ok = confirm('Bạn có chắc chắn muốn đăng xuất?');
+                if (!ok) return;
+                try { localStorage.removeItem('currentUser'); } catch (e) {}
+                try { sessionStorage.removeItem('currentUser'); } catch (e) {}
+                window.location.href = './auth.html';
+            });
+        }
     </script>
 
     <!-- ========================= FOOTER ========================= -->
