@@ -1,4 +1,18 @@
-// Tệp: include.js
+// Hàm này sẽ được gọi sau khi header được tải
+function setActiveNavLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.header__nav a');
+
+    navLinks.forEach(link => {
+        if (link.pathname === currentPath) {
+            link.parentElement.classList.add('active');
+        } else {
+            link.parentElement.classList.remove('active');
+        }
+    });
+}
+
+
 // Hàm tải nội dung từ URL và chèn vào phần tử có ID tương ứng.
 
 function loadAndInjectContent(url, targetId) {
@@ -32,17 +46,18 @@ function loadAndInjectContent(url, targetId) {
         // Chèn nội dung vào placeholder
         targetElement.innerHTML = htmlContent;
         
+        if (targetId === 'header-placeholder') {
+            setActiveNavLink();
+        }
+
         // Đảm bảo tất cả các link trong injected content vẫn có thể click bình thường
         // (xóa bất kỳ event handler toàn cục nào có thể chặn link)
         const linksInInjected = targetElement.querySelectorAll('a[href]');
         linksInInjected.forEach(link => {
-            // Bỏ qua các anchor (#) hoặc không có href
             if (!link.href || link.href === '#') return;
-            // Đảm bảo link có thể click bình thường (không bị preventDefault)
             link.style.cursor = 'pointer';
         });
 
-        // Phát sự kiện thông báo đã chèn xong
         try { 
             document.dispatchEvent(new CustomEvent('includeLoaded', { detail: { id: targetId, url: usedUrl } })); 
         } catch (e) {}
@@ -68,7 +83,6 @@ function loadAndInjectContent(url, targetId) {
     });
 }
 
-// Chạy khi DOM đã load
 document.addEventListener('DOMContentLoaded', () => {
     loadAndInjectContent('header.html', 'header-placeholder');
     loadAndInjectContent('footer.html', 'footer-placeholder');

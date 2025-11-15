@@ -233,21 +233,6 @@
         </div>
     </section>
 
-    <script>
-        const track = document.getElementById('testimonials-track');
-        track.innerHTML += track.innerHTML;
-
-        let pos = 0;
-        function animate() {
-            pos -= 5; // tốc độ
-            if (Math.abs(pos) >= track.scrollWidth / 2) {
-                pos = 0; // quay lại đầu
-            }
-            track.style.transform = `translateX(${pos}px)`;
-            requestAnimationFrame(animate);
-        }
-        animate();
-    </script>
         
 
     <section class="gallery-section">
