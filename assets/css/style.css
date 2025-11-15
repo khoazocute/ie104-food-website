@@ -767,83 +767,152 @@ h2 {
     animation-play-state: paused;
 }
 
+
 /* ========================= FOOTER ========================= */
-
 footer {
-    background-color: #FEF3E2;
-    color: #333333;
-    padding: 40px 0;
-    border-top: 2px dashed #FF6C0A;
+    background-color: #2E1800;        /* nâu đậm */
+    color: #FFF7EB;
+    padding: 40px 0 24px;
     font-size: 15px;
-}
-
-.footer__container {
+    overflow: hidden;
+  }
+  
+  /* Khối chứa 4 cột */
+  .footer__container {
     width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
-}
-
-.footer__column {
+    gap: 24px;
+  }
+  
+  /* ===== CỘT CHUNG ===== */
+  .footer__column {
     flex: 1;
-    min-width: 150px;
-}
-
-.footer__column h2,
-.footer__column h3 {
-    color: #FF6C0A;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.footer__column p {
-    margin: 0 0 15px;
-    line-height: 24px;
-}
-
-.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 190px;
+  }
+  
+  .footer__column p {
+    margin: 0 0 8px;
+    line-height: 1.6;
+    color: rgba(255, 247, 235, 0.85);
+  }
+  
+  /* ===== CỘT 1: LOGO + TEXT ===== */
+  .footer__brand a {
+    display: inline-block;
+  }
+  
+  .footer__brand img {
+    width: 120px;
+    height: auto;
+    border-radius: 18px;
+    background: rgba(34, 17, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .footer__brand a:hover img {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0 18px 4px rgba(250, 129, 47, 0.55);
+  }
+  
+  /* ===== TIÊU ĐỀ CỘT ===== */
+  .footer__column h3 {
+    color: #FFF7EB;
+    margin: 0 0 14px;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  
+  /* ===== LIST LINK (CHUYỂN HƯỚNG + HỖ TRỢ) ===== */
+  .footer__links ul,
+  .footer__contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.footer__links li {
-    margin-bottom: 10px;
-}
-
-.footer__links a,
-.footer__links span {
-    color: #333333;
-    text-decoration: none;
-    transition: color 0.3s;
+  }
+  
+  .footer__links a,
+  .footer__contact a,
+  .footer__contact li > span {
+    display: inline-flex;
     align-items: center;
-}
-
-.footer__links a:hover {
-    color: #FF6C0A;
-}
-
-.footer__links i {
-    margin-right: 10px;
-    width: 15px;
-    text-align: center;
-}
-
-.footer__icon a {
-    color: #333333;
-    margin-right: 15px;
-    font-size: 18px;
+    gap: 8px;
+    color: rgba(255, 247, 235, 0.9);
     text-decoration: none;
-}
+    font-size: 14px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .footer__links a:hover,
+  .footer__contact a:hover {
+    color: #FA812F;
+    letter-spacing: 0.04em;
+    transform: translateX(2px);
+  }
+  
+  .footer__links a:hover::after,
+  .footer__contact a:hover::after {
+    width: 100%;
+  }
+  
 
-.footer__icon a:hover {
-    color: #FF6C0A;
-}
-
+  
+  /* ===== SOCIAL ICON (NÚT TRÒN) ===== */
+  .footer__socials {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer__socials a {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background: rgba(200, 94, 17, 0.35);
+    color: #FFF7EB;
+    border: 1px solid #C85E11;
+    box-shadow: 0 0 0 rgba(250, 129, 47, 0);
+    transition: background 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+  }
+  
+  /* hover icon: phóng to + phát sáng cam */
+  .footer__socials a:hover {
+    background: #FA812F;
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 0 16px 4px rgba(250, 129, 47, 0.65);
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .footer__container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .footer__column {
+      min-width: 100%;
+    }
+  }
 
 
 
