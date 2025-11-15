@@ -451,9 +451,7 @@ html {
     /* Quan trọng để đường sóng không tràn ra ngoài */
 }
 
-.stats-hero-section h3 {
-    font-size: 2.5rem;
-    font-weight: 700;
+.stats-hero-section h2 {
     margin-bottom: 40px;
     color: var(--white);
 }

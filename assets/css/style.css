@@ -768,154 +768,160 @@ h2 {
 }
 
 
-/* ========================= FOOTER ========================= */
 footer {
-    background-color: #2E1800;        /* nâu đậm */
+    background-color: #2E1800;    
     color: #FFF7EB;
-    padding: 40px 0 24px;
-    font-size: 15px;
+    padding: 40px 0;
+    font-size: 16px; 
     overflow: hidden;
-  }
-  
-  /* Khối chứa 4 cột */
-  .footer__container {
-    width: 1200px;
+}
+
+/* Khối chứa 4 cột */
+.footer__container {
+    width: 1300px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 24px;
-  }
-  
-  /* ===== CỘT CHUNG ===== */
-  .footer__column {
-    flex: 1;
+    gap: 40px; 
+}
+
+.footer__column {
+    flex: 1; 
+    min-width: 190px; 
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    min-width: 190px;
-  }
-  
-  .footer__column p {
-    margin: 0 0 8px;
+    gap: 16px; 
+}
+
+/* --- Typography (Tiêu đề & Chữ) --- */
+.footer__column h3 {
+    color: #FFF7EB;
+    font-weight: 800;
+    font-size: 18px; /* Chữ to: 18px */
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.footer__column p {
     line-height: 1.6;
-    color: rgba(255, 247, 235, 0.85);
-  }
-  
-  /* ===== CỘT 1: LOGO + TEXT ===== */
-  .footer__brand a {
-    display: inline-block;
-  }
-  
-  .footer__brand img {
-    width: 120px;
+    color: #FFF7EB;
+    font-size: 16px;
+}
+
+/* --- Cột 1: Brand & Socials --- */
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;  
+}
+
+.footer__brand img {
+    width: 140px;
     height: auto;
     border-radius: 18px;
     background: rgba(34, 17, 0, 0.7);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .footer__brand a:hover img {
+    transition: all 0.3s ease; /* Yêu cầu của bạn */
+}
+
+.footer__brand a:hover img {
     transform: translateY(-3px) scale(1.03);
     box-shadow: 0 0 18px 4px rgba(250, 129, 47, 0.55);
-  }
-  
-  /* ===== TIÊU ĐỀ CỘT ===== */
-  .footer__column h3 {
-    color: #FFF7EB;
-    margin: 0 0 14px;
-    font-weight: 800;
-    font-size: 15px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-  
-  /* ===== LIST LINK (CHUYỂN HƯỚNG + HỖ TRỢ) ===== */
-  .footer__links ul,
-  .footer__contact ul {
+}
+
+.footer__socials {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer__links a,
-  .footer__contact a,
-  .footer__contact li > span {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: rgba(255, 247, 235, 0.9);
-    text-decoration: none;
-    font-size: 14px;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-  
-  .footer__links a:hover,
-  .footer__contact a:hover {
-    color: #FA812F;
-    letter-spacing: 0.04em;
-    transform: translateX(2px);
-  }
-  
-  .footer__links a:hover::after,
-  .footer__contact a:hover::after {
-    width: 100%;
-  }
-  
+    gap: 20px;
+}
 
-  
-  /* ===== SOCIAL ICON (NÚT TRÒN) ===== */
-  .footer__socials {
-    margin-top: 14px;
+/* Khối bọc các icon, dùng flex để dàn hàng ngang */
+.footer__icon {
     display: flex;
-    gap: 10px;
-  }
-  
-  .footer__socials a {
-    width: 36px;
-    height: 36px;
-    border-radius: 999px;
-    display: inline-flex;
+    flex-wrap: wrap; /* Cho phép rớt hàng nếu không đủ chỗ */
+    gap: 12px; 
+}
+
+.footer__socials a {
+    display: flex; 
     align-items: center;
     justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     font-size: 16px;
     background: rgba(200, 94, 17, 0.35);
     color: #FFF7EB;
     border: 1px solid #C85E11;
     box-shadow: 0 0 0 rgba(250, 129, 47, 0);
-    transition: background 0.25s ease,
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-  }
-  
-  /* hover icon: phóng to + phát sáng cam */
-  .footer__socials a:hover {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng hover cho nút tròn */
+.footer__socials a:hover {
     background: #FA812F;
     transform: scale(1.1) translateY(-2px);
     box-shadow: 0 0 16px 4px rgba(250, 129, 47, 0.65);
-  }
-  
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 900px) {
-    .footer__container {
-      flex-direction: column;
-      gap: 20px;
-    }
-  
-    .footer__column {
-      min-width: 100%;
-    }
-  }
+}
 
+.footer__links ul,
+.footer__contact ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
+.footer__links a,
+.footer__contact a,
+.footer__contact li > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+    color: rgba(255, 247, 235, 0.9);
+    text-decoration: none;
+    font-size: 16px; 
+    position: relative;
+    transition: all 0.3s ease; /* Yêu cầu của bạn */
+}
 
+/* Căn icon trong list */
+.footer__links i,
+.footer__contact i {
+    width: 18px;
+    text-align: center;
+}
+
+.footer__links a:hover,
+.footer__contact a:hover {
+    color: #FA812F;
+    letter-spacing: 0.04em;
+    transform: translateX(2px);
+}
+
+/* Các dòng không phải link (Địa chỉ, Giờ mở cửa) */
+.footer__contact li > span {
+    cursor: default;
+}
+
+.footer__bottom {
+    width: 100%;
+    padding-top: 24px; 
+    border-top: 1px solid rgba(255, 247, 235, 0.2);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; /* Cho phép rớt hàng trên mobile */
+    gap: 12px;   
+}
+
+.footer__bottom p {
+    font-size: 14px; 
+    color: rgba(255, 247, 235, 0.7); 
+}
 
 
 
