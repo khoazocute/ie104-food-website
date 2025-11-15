@@ -220,6 +220,20 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeCart();
     });
+
+    //  Nút tiếp tục thanh toán
+    const checkoutBtn = modal.querySelector('#checkoutBtn');
+    if (checkoutBtn) {
+      checkoutBtn.addEventListener('click', () => {
+        if (!cart || cart.length === 0) {
+          alert('Giỏ hàng đang trống. Vui lòng thêm sản phẩm trước khi thanh toán.');
+          return;
+        }
+        // Điều hướng tới trang checkout (trong cùng thư mục pages/ khi trang hiện tại là trong pages)
+        // Dùng đường dẫn tương đối so với trang hiện tại: './checkout.html'
+        window.location.href = './checkout.html';
+      });
+    }
   }
 
   // ===============================

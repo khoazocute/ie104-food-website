@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử đơn hàng</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/order-history.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <main class="order-history-main">
+        <div class="order-history-header">
+            <h1><i class="fa-solid fa-receipt"></i> Lịch sử đơn hàng</h1>
+            <p>Xem chi tiết tất cả các đơn hàng của bạn</p>
+        </div>
+
+        <section class="order-history-container">
+            <div id="ordersContainer" class="orders-list">
+                <div class="empty-state">
+                    <i class="fa-solid fa-inbox"></i>
+                    <p>Bạn chưa có đơn hàng nào</p>
+                    <a href="./menu_list.html" class="btn primary">Khám phá menu</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Order Detail Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Chi tiết đơn hàng</h2>
+            
+            <div class="order-detail">
+                <div class="order-detail-header">
+                    <div>
+                        <p><strong>Mã đơn hàng:</strong> <span id="modalOrderId"></span></p>
+                        <p><strong>Ngày đặt:</strong> <span id="modalOrderDate"></span></p>
+                        <p><strong>Trạng thái:</strong> <span id="modalOrderStatus" class="badge"></span></p>
+                    </div>
+                </div>
+
+                <div class="order-detail-section">
+                    <h3>Thông tin giao hàng</h3>
+                    <p><strong>Người nhận:</strong> <span id="modalFullName"></span></p>
+                    <p><strong>Địa chỉ:</strong> <span id="modalAddress"></span></p>
+                    <p><strong>Số điện thoại:</strong> <span id="modalPhone"></span></p>
+                    <p><strong>Phương thức thanh toán:</strong> <span id="modalPayment"></span></p>
+                    <p id="modalNoteSection" style="display:none;"><strong>Ghi chú:</strong> <span id="modalNote"></span></p>
+                </div>
+
+                <div class="order-detail-section">
+                    <h3>Các mặt hàng</h3>
+                    <div id="modalItemsList" class="items-list"></div>
+                </div>
+
+                <div class="order-detail-footer">
+                    <div class="total-row">
+                        <strong>Tổng cộng:</strong>
+                        <strong id="modalTotal"></strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button id="closeModalBtn" class="btn ghost">Đóng</button>
+                <button id="reorderBtn" class="btn primary">Đặt hàng lại</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/auth-guard.js"></script>
+    <script src="../assets/js/order-history.js"></script>
+</body>
+</html>
