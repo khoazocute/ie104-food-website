@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin tài khoản</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS RIÊNG CHO TRANG ACCOUNT -->
+    <link rel="stylesheet" href="../assets/css/profile.css">
+</head>
+
+<body>
+
+    <!--Header-->
+    <div id="header-placeholder"></div>
+
+    <!-- Main content -->
+    <main class="account">
+        <!-- SIDEBAR -->
+        <aside id="accountSidebar">
+            <div class="usercard">
+                <img src="/imgs/homepage__user4.jpg" alt="avatar">
+                <div>
+                    <h3>Nguyễn Quý</h3>
+                    <p>cedar@example.com</p>
+                </div>
+            </div>
+
+            <nav class="sidenav" id="accountNav">
+                <p class="sidenav-title">Thông tin tài khoản</p>
+                <button data-tab="profile" class="active">
+                    <i class="fa-solid fa-user"></i> Hồ sơ cá nhân
+                </button>
+                <button data-tab="bank">
+                    <i class="fa-solid fa-credit-card"></i> Tài khoản ngân hàng
+                </button>
+                <button data-tab="addresses">
+                    <i class="fa-solid fa-location-dot"></i> Địa chỉ nhận hàng
+                </button>
+                <button data-tab="security">
+                    <i class="fa-solid fa-lock"></i> Đổi mật khẩu
+                </button>
+
+                <div class="sidenav__divider"></div>
+
+                <p class="sidenav-title">Mua hàng</p>
+                <button data-tab="orders">
+                    <i class="fa-solid fa-receipt"></i> Đơn hàng
+                </button>
+
+                <div class="sidenav__divider"></div>
+
+                <button data-tab="logout" class="danger">
+                    <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                </button>
+            </nav>
+        </aside>
+
+        <!-- CONTENT -->
+        <section>
+            <!-- Hồ sơ -->
+            <div class="tab active" id="tab-profile">
+                <h2>Hồ sơ cá nhân</h2>
+
+                <form class="card formgrid">
+                    <label>
+                        <span>Tên đăng nhập</span>
+                        <input type="text" value="quy_nguyen" readonly>
+                    </label>
+                    <label>
+                        <span>Tên hiển thị</span>
+                        <input type="text" value="Nguyễn Quý">
+                    </label>
+                    <label>
+                        <span>Họ</span>
+                        <input type="text" value="Nguyễn">
+                    </label>
+                    <label>
+                        <span>Tên</span>
+                        <input type="text" value="Quý">
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" value="cedar@example.com">
+                    </label>
+                    <label>
+                        <span>Số điện thoại</span>
+                        <input type="tel" placeholder="09xx xxx xxx">
+                    </label>
+                    <label>
+                        <span>Ngày sinh</span>
+                        <input type="date">
+                    </label>
+                    <label>
+                        <span>Giới tính</span>
+                        <select>
+                            <option>Nam</option>
+                            <option>Nữ</option>
+                            <option>Khác</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Căn cước công dân</span>
+                        <input type="text" placeholder="Số căn cước công dân">
+                    </label>
+
+                    <div class="formgrid__actions">
+                        <button type="submit" class="btn primary">
+                            <i class="fa-solid fa-floppy-disk"></i> Lưu thay đổi
+                        </button>
+                        <button type="button" class="btn ghost">Huỷ</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Ngân hàng -->
+            <div class="tab" id="tab-bank">
+                <h2>Tài khoản ngân hàng</h2>
+
+                <form class="card formgrid">
+                    <label>
+                        <span>Ngân hàng</span>
+                        <select>
+                            <option>Chọn ngân hàng</option>
+                            <option>Vietcombank</option>
+                            <option>VietinBank</option>
+                            <option>Techcombank</option>
+                            <option>MB Bank</option>
+                            <option>ACB</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Số tài khoản</span>
+                        <input type="text" placeholder="0123 456 789">
+                    </label>
+                    <label>
+                        <span>Tên chủ tài khoản</span>
+                        <input type="text" placeholder="NGUYEN VAN A">
+                    </label>
+                    <label>
+                        <span>Chi nhánh</span>
+                        <input type="text" placeholder="Chi nhánh mở tài khoản">
+                    </label>
+                    <label class="formgrid__full">
+                        <span>Ghi chú</span>
+                        <textarea rows="3" placeholder="Ghi chú thêm (nếu có)"></textarea>
+                    </label>
+
+                    <div class="formgrid__actions">
+                        <button type="submit" class="btn primary">
+                            <i class="fa-solid fa-floppy-disk"></i> Lưu tài khoản
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Đơn hàng -->
+            <div class="tab" id="tab-orders">
+                <h2>Đơn hàng gần đây</h2>
+
+                <div class="card table-wrapper">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Mã</th>
+                            <th>Ngày</th>
+                            <th>Trạng thái</th>
+                            <th>Món đã đặt</th>
+                            <th>Tổng</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>#FD-1209</td>
+                            <td>02/11/2025</td>
+                            <td><span class="badge success">Hoàn tất</span></td>
+                            <td>Burger phô mai, Khoai tây (L)</td>
+                            <td>189.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>#FD-1208</td>
+                            <td>01/11/2025</td>
+                            <td><span class="badge warning">Đang giao</span></td>
+                            <td>Pizza hải sản (M), 2 Nước ngọt</td>
+                            <td>129.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>#FD-1207</td>
+                            <td>30/10/2025</td>
+                            <td><span class="badge danger">Đã huỷ</span></td>
+                            <td>Gà rán (combo 3 miếng)</td>
+                            <td>250.000đ</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Địa chỉ -->
+            <div class="tab" id="tab-addresses">
+                <h2>Địa chỉ nhận hàng</h2>
+
+                <div class="grid-2">
+                    <div class="card address">
+                        <div class="address-head">
+                            <h3>Nhà</h3>
+                            <span class="badge">Mặc định</span>
+                        </div>
+                        <p>12 Lê Lợi, P. Bến Nghé, Q.1, TP.HCM</p>
+                        <div class="address-actions">
+                            <button class="btn pill small">
+                                <i class="fa-solid fa-pen"></i> Sửa
+                            </button>
+                            <button class="btn ghost small">Xoá</button>
+                        </div>
+                    </div>
+
+                    <div class="card address">
+                        <div class="address-head">
+                            <h3>Công ty</h3>
+                        </div>
+                        <p>Tầng 5, 123 Pasteur, Q.3, TP.HCM</p>
+                        <div class="address-actions">
+                            <button class="btn pill small">
+                                <i class="fa-solid fa-pen"></i> Sửa
+                            </button>
+                            <button class="btn ghost small">Xoá</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn primary" style="margin-top: 16px;">
+                    <i class="fa-solid fa-plus"></i> Thêm địa chỉ
+                </button>
+            </div>
+
+            <!-- Bảo mật -->
+            <div class="tab" id="tab-security">
+                <h2>Đổi mật khẩu</h2>
+
+                <div class="card formgrid">
+                    <label class="formgrid__full">
+                        <span>Mật khẩu hiện tại</span>
+                        <input type="password" placeholder="••••••••">
+                    </label>
+                    <label>
+                        <span>Mật khẩu mới</span>
+                        <input type="password" placeholder="Ít nhất 8 ký tự">
+                    </label>
+                    <label>
+                        <span>Nhập lại mật khẩu</span>
+                        <input type="password" placeholder="Nhập lại mật khẩu">
+                    </label>
+
+                    <div class="formgrid__actions">
+                        <button class="btn primary">
+                            <i class="fa-solid fa-lock"></i> Cập nhật
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Đăng xuất -->
+            <div class="tab" id="tab-logout">
+                <div class="card">
+                    <h3>Bạn muốn đăng xuất?</h3>
+                    <p>Nhấn “Đăng xuất” để kết thúc phiên làm việc hiện tại.</p>
+                    <button class="btn danger">
+                        <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JS tab -->
+    <script>
+        var navButtons = document.querySelectorAll('#accountNav [data-tab]');
+        var tabs = document.querySelectorAll('.tab');
+
+        function showTab(name) {
+            tabs.forEach(function (tab) {
+                if (tab.id === 'tab-' + name) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            navButtons.forEach(function (btn) {
+                if (btn.getAttribute('data-tab') === name) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        navButtons.forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                var name = btn.getAttribute('data-tab');
+
+                if (name === 'logout') {
+                    var confirmLogout = confirm('Bạn có chắc chắn muốn đăng xuất?');
+                    if (confirmLogout) {
+                        alert('Giả lập: Đã đăng xuất!');
+                    }
+                } else {
+                    showTab(name);
+                }
+            });
+        });
+    </script>
+
+    <!-- ========================= FOOTER ========================= -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/auth-guard.js"></script>
+    <script src="../assets/js/auth.js"></script>
+</body>
+
+</html>

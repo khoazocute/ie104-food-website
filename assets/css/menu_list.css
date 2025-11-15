@@ -8,48 +8,33 @@
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: #FEF3E2;
+    color: #333;
     margin: 0;
     padding: 5px;
     justify-content: center;
 }
 
-.button {
-    font-weight: 600;
-    font-size: 16px;
-    border-radius: 999px;
-    /* bo tròn dạng pill */
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-
 /* --- SLOGAN --- */
 .slogan {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-
+  margin: 0 auto 48px;
+  text-align: center;
+  padding: 24px 0;
 }
 
 .slogan img {
-    width: 20%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 20px;
+  width: 200px;
+  height: 200px;
 }
 
-.slogan__text {
-    text-align: center;
-    margin-top: 20px;
-    font-family: 'Luckiest Guy', cursive;
-    font-weight: 900;
-    font-size: 2vw;
-    line-height: 1.1;
-    color: #f6863b;
-    margin-bottom: 30px;
+.slogan h1 {
+  font-size: 64px;
+  color: #2E1800;
+  font-family: "Sigmar", sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-top: 16px;
 }
-
 
 /* Khối CHỨA CÁC NÚT */
 .menu_nav {
@@ -62,128 +47,58 @@ body {
 
 /* --- Kiểu dáng Chung cho Nút (Đảm bảo đồng bộ) --- */
 .filter-button {
-    padding: 10px 20px;
+    padding: 16px 40px;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 30px; 
+    border-radius: 999px;
     background-color: white;
-    border: none; 
     border: 1px solid #000;
-    /* Box-shadow đồng bộ: Viền trắng (inner shadow) + đổ bóng xám nhạt (outer shadow) */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-               
+    transition: all 0.3s ease;     
 }
-/* Kiểu dáng Nút ACTIVE (Nếu có) */
-/* Kiểu dáng Nút HOVER (Active) */
+
 .filter-button:hover {
-    background-color: black; 
-    color: white;
-    
-    /* Đổ bóng cam phải có độ lớn TƯƠNG ĐƯƠNG với bóng tĩnh */
-    
+    background-color: #2E1800; 
+    color: #FFF7EB;    
 }
 
-.filter-button a.active {
-    background-color: #F87D39; /* Màu cam nổi bật */
-    color: white;             /* Màu chữ trắng */
-    border-color: #F87D39;    /* Viền cùng màu nền */
-    font-weight: bold;        /* Chữ đậm hơn */
-}
-/* FOOTER */
-footer {
-    background-color: #FEF3E2; 
-    color: #333333; 
-    padding: 40px 0;
-    border-top: 2px dashed #FF6C0A; /* Đường viền cam đứt nét */
-    font-size: 15px;
+.filter-button.active {
+  background-color: #2E1800; 
+  color: #FFF7EB;
 }
 
-.footer__container {
-    width:1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Cho phép các cột xuống hàng trên màn hình nhỏ */
-    gap: 20px; 
-}
-
-.footer__column {
-    flex: 1; /* Giúp các cột chia đều không gian */
-    min-width: 150px; 
-}
-
-.footer__column h2,
-.footer__column h3 {
-    color: #FF6C0A; 
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.footer__column p {
-    margin: 0 0 15px;
-    line-height: 24px;
-}
-
-.footer__links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer__links li {
-    margin-bottom: 10px;
-}
-
-.footer__links a, .footer__links span {
-    color: #333333; 
-    text-decoration: none;
-    transition: color 0.3s;
-    align-items: center; 
-}
-
-.footer__links a:hover {
-    color: #FF6C0A; 
-}
-
-.footer__links i {
-    margin-right: 10px; 
-    width: 15px; 
-    text-align: center;
-}
-
-.footer__icon a {
-    color: #333333;
-    margin-right: 15px;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.footer__icon a:hover {
-    color: #FF6C0A;
-}
 /* --- PRODUCT LIST --- */
 /* Toàn bộ khối sản phẩm */
 .products-grid {
     display: grid; /* Sử dụng CSS Grid để tạo lưới */
-    grid-template-columns: repeat(3, minmax(360px, 400px)); /* 3 cột, mỗi cột tối thiểu 300px, tối đa 360px */
-    
-    /* Căn giữa 3 cột bên trong container */
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center; 
     max-width: 1300px; 
     margin: 0 auto; 
-    
-    /* Khoảng cách giữa các card */
-    gap: 18px; 
-
+    gap: 18px;
     padding: 30px;
-    background-color: #fdf2e9; 
-    
-    /* Có thể bỏ qua: justify-items: center; */
 }
+
+/* TABLET (768px - 992px): 2 Cột */
+@media (max-width: 992px) {
+  .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE (< 768px): 1 Cột */
+@media (max-width: 768px) {
+  .products-grid {
+      grid-template-columns: 1fr;
+  }
+
+  /* Đảm bảo card không bị quá to hoặc quá nhỏ */
+  .product-card {
+      max-width: 100%; 
+  }
+}
+
 /* Mỗi thẻ sản phẩm */  
 .product-card {
     background: #fff;
@@ -247,48 +162,64 @@ footer {
 /* Nút Add to cart */
 .add-to-cart-btn {
     width: 100%;
-    /**background-color: #00a5a5;*/
-    color: #fff;
-    border: none;
-    border-radius: 40px;
+    color: #FFF7EB;
+    border-radius: 999px;
     padding: 14px 0;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 6px 12px rgba(0, 165, 165, 0.3);
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    border: 1px solid #000;
+    transition: all 0.3s ease;
     margin-top: 15px;
 }
+
+.add-to-cart-btn i {
+  margin-left: 8px;
+}
+
 .btn1 {
-    background-color: rgb(232, 121, 10);
+    background-color: #FF6C0A;
+    border: 1.5px solid #C85E11;
+}
+
+.btn1:hover {
+  box-shadow: 0 6px 0 #C85E11;
+  transform: scale(1.02);
+}
+
+.btn2 {
+  background-color: #6A09C7;
+  border: 1.5px solid #4C1085;
+}
+
+.btn2:hover {
+  box-shadow: 0 6px 0 #4C1085;
+  transform: scale(1.02);
 }
 
 .btn3 {
      background-color: #00a5a5;
+     border: 1.5px solid #008484;
 }
 
-.btn2 {
-    background-color: #660a60;
+.btn3:hover {
+  box-shadow: 0 6px 0 #008484;
+  transform: scale(1.02);
 }
+
 
 .product-info1 {
-   background-color: #FCEFE2;  /* xanh nhạt giống Webflow mẫu */ 
+  background-color: #FFE8D1;  
   padding: 20px 22px 26px;
-}   
+}
+
 .product-info2 {
-  background-color: #ead2e8; /* xanh nhạt giống Webflow mẫu */ 
+  background-color: #ead2e8; 
   padding: 20px 22px 26px;
 }  
 
 .product-info3 {
   background-color: #d9f4f4; /* xanh nhạt giống Webflow mẫu */ 
   padding: 20px 22px 26px;
-}
-
-.add-to-cart-btn:hover {
-  background-color: #d2dcde;
-  transform: scale(1.02);
 }
 
 /* Đảm bảo mô tả và điều khiển số lượng nằm ngang hàng và giãn ra */
@@ -495,23 +426,27 @@ footer {
 /* NÚT ORDER NOW                 */
 /* ============================= */
 .btn-order {
-  margin-top: 28px;              /* Khoảng cách trên nút với đoạn văn */
-  background: linear-gradient(180deg,#FF8A3D 0%,#f75b07 100%); /* Hiệu ứng chuyển màu cam */
-  color: #fff;                   /* Chữ màu trắng */
-  border: 0;                     /* Bỏ viền */
-  padding: 16px 34px;            /* Đệm bên trong nút (cao & rộng) */
-  border-radius: 999px;          /* Bo tròn tối đa — tạo nút hình viên thuốc */
-  font-size: 18px;               /* Kích thước chữ nút */
-  font-weight: 800;              /* Chữ đậm */
-  cursor: pointer;               /* Khi di chuột vào biến thành bàn tay */
-  box-shadow: 0 10px 24px rgba(247, 91, 7, .35); /* Tạo bóng giúp nút nổi lên */
-  transition: transform .15s ease, filter .15s ease; /* Hiệu ứng mượt khi hover */
+  margin-top: 30px;
+  padding: 16px 40px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  background: #FF6C0A;
+  cursor: pointer;
+  color: #FFF7EB;
+  border: 1.5px solid #C85E11;
+  transition: all 0.3s ease;
 }
 
-/* Hiệu ứng khi rê chuột vào nút */
 .btn-order:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 28px rgba(247,91,7,0.45);
+  box-shadow: 0 6px 0 #C85E11;
+  transform: scale(1.02);
+}
+
+/* icon spacing */
+.btn-order i {
+  margin-left: 8px;
 }
 
 /* ============================= */

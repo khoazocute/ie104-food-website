@@ -9,116 +9,135 @@
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap"
+        rel="stylesheet">
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <!--../assets/css/style.css-->
     <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/menu_list.css">
 
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__left">
-            <a href="#" class="header__logo"><img src="../imgs/main-logo.png" alt="logo"></a><a href="#" class="header__cart"><i class="fa-solid fa-cart-shopping"></i></a></div>
-        <!-- MENU -->
-        <nav class="header__nav">
-            <ul class="nav-links">
-                <li><a href="../homepage.html">Trang Chủ</a></li>
-                <li><a href="../about.html">Giới Thiệu</a></li>
-                <li><a href="../menu_list.html">Thực Đơn</a></li>
-                <li><a href="../contact.html">Liên Hệ</a></li>
-                <li><a href="../faq.html">Câu Hỏi Thường Gặp</a></li>
-            </ul>
-        </nav>
-        <!-- RIGHT SIDE -->
-        <div class="header__right"><a href="#" class="header__item"><i class="fa-solid fa-location-dot"></i><span>Cửa hàng</span></a><a href="" class="header__item"><i class="fa-solid fa-user"></i><span>Đăng nhập</span></a></div>
-    </header>
-    <main>
-        <section class="contact-box">
-            <div class="contact-header">
-                <img src="../imgs/HereToHelp.avif" alt="Logo" class="contact-logo">
-                <h1>Luôn Sẵn Sàng Hỗ Trợ Bạn</h1>
-                <p>Nguyên liệu tươi ngon, công thức hấp dẫn và niềm đam mê mang đến món ăn tuyệt vời<br> được giao tận nơi hoặc sẵn sàng cho bạn đến nhận.</p>
-            </div>
-            <section class="contact-container">
-                <div class="contact-form">
-                    <form class="form-list">
-                        <div class="form-group"><label for="first-name">Họ*</label><input type="text" id="first-name" placeholder="Nhập họ của bạn" required></div>
-                        <div class="form-group"><label for="last-name">Tên</label><input type="text" id="last-name" placeholder="Nhập tên của bạn"></div>
-                        <div class="form-group"><label for="email">Địa chỉ Email*</label><input type="email" id="email" placeholder="Nhập địa chỉ email" required></div>
-                        <div class="form-group"><label for="company">Tên công ty</label><input type="text" id="company" placeholder="Tên công ty hoặc tổ chức"></div>
-                        <div class="form-group"><label for="state">Tỉnh/Thành phố</label><select id="state"><option>Chọn tỉnh/thành</option><option>Hà Nội</option><option>TP. Hồ Chí Minh</option><option>Đà Nẵng</option><option>Cần Thơ</option></select></div>
-                        <div class="form-group"><label for="country">Quốc gia*</label><select id="country" required><option>Chọn quốc gia</option><option>Việt Nam</option><option>Nhật Bản</option><option>Hoa Kỳ</option><option>Pháp</option></select></div>
-                        <div class="form-group full"><textarea placeholder="Nhập nội dung tin nhắn của bạn..."></textarea></div>
-                        <div class="form-group full"><button type="submit" class="submit-btn">GỬI TIN NHẮN →</button></div>
-                    </form>
-                    <div class="contact-info">
-                        <img src="../imgs/burger3.avif" alt="Liên hệ Food Dash" style="width: 100%; height: 100%;  border-radius: 15px; object-fit: cover;">
-                    </div>
-                </div>
-            </section>
-        </section>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
 
-        <section class="contact-info-cards">
-            <div class="info-card email"><i class="fa-solid fa-envelope"></i>
+    <section class="contact-container">
+        <div class="contact-header">
+            <img src="../imgs/contact__title.png" alt="Logo" class="contact-logo">
+            <h1>Liên hệ với chúng tôi</h1>
+        </div>
+        <div class="contact-form">
+
+            <form class="form-list">
+                <div class="form-flexbox">
+                    <div class="form-group"><label for="first-name">Họ*</label><input type="text" id="first-name"
+                            placeholder="Nhập họ của bạn" required></div>
+                    <div class="form-group"><label for="last-name">Tên</label><input type="text" id="last-name"
+                            placeholder="Nhập tên của bạn"></div>
+                </div>
+
+                <div class="form-flexbox">
+                    <div class="form-group"><label for="email">Địa chỉ Email*</label><input type="email" id="email"
+                            placeholder="Nhập địa chỉ email" required></div>
+                    <div class="form-group"><label for="company">Tên công ty</label><input type="text" id="company"
+                            placeholder="Tên công ty hoặc tổ chức"></div>
+                </div>
+
+                <div class="form-flexbox">
+                    <div class="form-group"><label for="state">Tỉnh/Thành phố</label><select id="state">
+                            <option>Chọn tỉnh/thành</option>
+                            <option>Hà Nội</option>
+                            <option>TP. Hồ Chí Minh</option>
+                            <option>Đà Nẵng</option>
+                            <option>Cần Thơ</option>
+                        </select></div>
+
+                    <div class="form-group"><label for="country">Quốc gia*</label><select id="country" required>
+                            <option>Chọn quốc gia</option>
+                            <option>Việt Nam</option>
+                            <option>Nhật Bản</option>
+                            <option>Hoa Kỳ</option>
+                            <option>Pháp</option>
+                        </select></div>
+                </div>
+
+                <div class="form-group full">
+                    <label for="message">Nội dung tin nhắn</label>
+                    <textarea id="message" name="message" placeholder="Nhập nội dung tin nhắn của bạn..."></textarea>
+                </div>
+
+                <div class="form-group full"><button type="submit" class="submit-btn">Gửi tin nhắn</button></div>
+            </form>
+
+            <img src="../imgs/contact__form.png" alt="Liên hệ Food Dash">
+        </div>
+
+        <div class="contact-info">
+            <div class="info-card email">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
                 <h3>Email</h3>
                 <p><a href="mailto:hello@example.com">hello@example.com</a></p>
             </div>
-            <div class="info-card location"><i class="fa-solid fa-location-dot"></i>
+
+            <div class="info-card call">
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <h3>Số điện thoại</h3>
+                <p><a href="tel:+16035550123">(603)-555-0123</a></p>
+            </div>
+
+            <div class="info-card location">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
                 <h3>Địa chỉ</h3>
                 <p><a href="#">Xem trên Google Map</a></p>
             </div>
-            <div class="info-card call"><i class="fa-solid fa-phone"></i>
-                <h3>Gọi cho chúng tôi</h3>
-                <p><a href="tel:+16035550123">(603) 555–0123</a></p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer__container">
-            <div class="footer__column">
-                <h2>FOOD DASH</h2>
-                <p>Food Dash &copy; 2025 All Rights Reserved</p>
-                <p>By - Your Name</p>
-                <h3>Follow Us On</h3>
-                <div class="footer__icon"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href=""><i class="fa-brands fa-tiktok"></i></a></div>
-            </div>
-            <div class="footer__column">
-                <h3>Menu</h3>
-                <ul class="footer__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Offers</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
-            </div>
-            <div class="footer__column">
-                <h3>Information</h3>
-                <ul class="footer__links">
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Quality</a></li>
-                    <li><a href="#">Make A Choice</a></li>
-                    <li><a href="#">Fast Delivery</a></li>
-                </ul>
-            </div>
-            <div class="footer__column">
-                <h3>Contact</h3>
-                <ul class="footer__links">
-                    <li><a href="tel:+123456789"><i class="fas fa-phone"></i><span>+123456789</span></a></li>
-                    <li><a href="mailto:info@fooddash.com"><i class="fas fa-envelope"></i><span>info@fooddash.com</span></a></li>
-                    <li><span><i class="fas fa-map-marker-alt"></i><span>12,
-            Maharashtra,
-            Indian</span></span>
-                    </li>
-                </ul>
-            </div>
+
         </div>
-    </footer>
+    </section>
+
+    <!-- ====================== HERO SECTION ================-->
+    <section class="hero-section banner-section">
+        <div class="hero-image left-image">
+            <img src="../imgs/mini_banner.avif"alt="">
+            </div>
+
+        <div class="hero-content">
+            <div class="logo-text">
+                <img src="../imgs/icon2.jpg" alt="">
+        
+            </div>
+            <h2>Don't Wait - Order Now!</h2>
+            <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready for pick-up.</p>
+            <button class="btn-order" onclick="window.location.href='./menu_list.html'">
+                Đặt Ngay<i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <div class="hero-image right-image">
+            <img src="../imgs/mini_banner2.avif" alt="">
+
+            </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/auth-guard.js"></script>
+    <script src="../assets/js/auth.js"></script>   
 </body>
 
 </html>

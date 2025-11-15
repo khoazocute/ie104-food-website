@@ -50,7 +50,48 @@
             </a>
         
         </div>
+
+        <!-- MOBILE -->
+        <button class="header__menu-btn" id="mobileMenuBtn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
     </header>
+
+<!-- MENU MOBILE -->
+<nav class="mobile-nav" id="mobileNav">
+    <ul class="mobile-nav__list">
+      <li><a href="./homepage.html">Trang Chủ</a></li>
+      <li><a href="./about.html">Giới Thiệu</a></li>
+      <li><a href="./menu_list.html">Thực Đơn</a></li>
+      <li><a href="./contact.html">Liên Hệ</a></li>
+      <li><a href="./faq.html">Câu Hỏi Thường Gặp</a></li>
+    </ul>
+  
+    <div class="mobile-nav__actions">
+      <a href="#" class="mobile-nav__btn mobile-nav__btn--outline">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Cửa hàng</span>
+      </a>
+      <a href="./auth.html" class="mobile-nav__btn mobile-nav__btn--filled">
+        <i class="fa-solid fa-user"></i>
+        <span>Đăng nhập</span>
+      </a>
+    </div>
+  </nav>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var mobileBtn = document.getElementById('mobileMenuBtn');
+      var mobileNav = document.getElementById('mobileNav');
+  
+      if (mobileBtn && mobileNav) {
+        mobileBtn.addEventListener('click', function () {
+          mobileNav.classList.toggle('is-open');
+        });
+      }
+    });
+  </script>
+
     <script src="../assets/js/cart.js"></script>
 </body>
 </html>
