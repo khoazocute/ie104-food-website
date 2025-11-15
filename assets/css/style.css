@@ -271,8 +271,6 @@ body {
     color: #1F1000;
 }
 
-.deal .discount__title {
-    width: 40%;
 .deal .deal__title {
     margin: 0 auto 24px;
     text-align: center;
@@ -856,41 +854,23 @@ body {
 
 
 
-
 /* ========================= TESTIMONIAL ========================= */
 .testimonials {
-    text-align: center;
-    padding: 80px 20px;
-    font-family: "Poppins", sans-serif;
-    overflow: hidden;
-    background: var(--bg);
-    color: var(--text);
+    width: 100%;
+    margin: 10px auto;
+    padding: 32px 0;
 }
 
-.testimonials__header {
-    max-width: 800px;
-    margin: 0 auto 40px;
-}
-
-/* ảnh icon trong header */
-.testimonials__header img {
-    margin-bottom: 10px;
-}
-
-/* tiêu đề giữ nguyên */
 .testimonials__title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: var(--dark);
+    margin: 0 auto 24px;
+    text-align: center;
+    width: 55%; 
 }
 
-/* đoạn mô tả ngay dưới title trong header */
-.testimonials__header>p {
-    color: var(--text);
-    opacity: 0.9;
-    font-size: 1rem;
-    line-height: 1.6;
+.testimonials__title p {
+    color: #2E1800;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .testimonials__carousel {
@@ -1025,7 +1005,6 @@ body {
 .testimonials__track.animate {
     animation: scroll 60s linear infinite;
 }
-
 /* Khi rê chuột thì dừng lại */
 .testimonials__track:hover {
     animation-play-state: paused;
@@ -1044,6 +1023,8 @@ body {
     /* Tạo khoảng trống bên trong: trên 96px, hai bên 24px, dưới 140px */
     background: #FEF3E2;
     /* Màu nền be sáng nhẹ */
+}
+
 footer {
     background-color: #2E1800;    
     color: #FFF7EB;
@@ -1122,6 +1103,8 @@ footer {
 .btn-order:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 28px rgba(247, 91, 7, 0.45);
+}
+
 .footer__column {
     flex: 1; 
     min-width: 190px; 
@@ -1668,3 +1651,4 @@ footer {
         font-size: 16px;
     }
 }
+
