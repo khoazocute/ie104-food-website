@@ -109,11 +109,13 @@ h2 {
     color: #444;
     font-weight: 600;
     font-size: 16px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .header__nav a:hover {
     color: #FF6C0A;
+    letter-spacing: 1px;
+    transform: translateX(2px);
 }
 
 .header__nav .active a {
@@ -564,9 +566,8 @@ h2 {
 
 /* ===== NÚT “XEM TẤT CẢ” Ở CUỐI ===== */
 .menu__footer {
-    display: flex;
-    justify-content: center;
-    margin: 16px 0 8px;
+    text-align: center;
+    margin: 16px auto 8px;
 }
 
 .menu__footer a {
@@ -808,6 +809,7 @@ h2 {
 }
 
 
+/* ===================================== FOOTER ========================================== */
 footer {
     background-color: #2E1800;
     color: #FFF7EB;
@@ -879,11 +881,10 @@ footer {
     gap: 20px;
 }
 
-/* Khối bọc các icon, dùng flex để dàn hàng ngang */
+/* Các icon */
 .footer__icon {
     display: flex;
     flex-wrap: wrap;
-    /* Cho phép rớt hàng nếu không đủ chỗ */
     gap: 12px;
 }
 
@@ -905,7 +906,7 @@ footer {
 
 /* Hiệu ứng hover cho nút tròn */
 .footer__socials a:hover {
-    background: #FA812F;
+    background: #FF6C0A;
     transform: scale(1.1) translateY(-2px);
     box-shadow: 0 0 16px 4px rgba(250, 129, 47, 0.65);
 }
@@ -929,7 +930,6 @@ footer {
     font-size: 16px;
     position: relative;
     transition: all 0.3s ease;
-    /* Yêu cầu của bạn */
 }
 
 /* Căn icon trong list */
@@ -941,15 +941,11 @@ footer {
 
 .footer__links a:hover,
 .footer__contact a:hover {
-    color: #FA812F;
-    letter-spacing: 0.04em;
+    color: #FF6C0A;
+    letter-spacing: 1px;
     transform: translateX(2px);
 }
 
-/* Các dòng không phải link (Địa chỉ, Giờ mở cửa) */
-.footer__contact li>span {
-    cursor: default;
-}
 
 .footer__bottom {
     width: 100%;
