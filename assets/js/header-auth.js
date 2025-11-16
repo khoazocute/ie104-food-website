@@ -22,22 +22,19 @@
         const user = getCurrentUser();
         if (user && user.username) {
             textEl.textContent = user.username;
-            // Khi đang đăng nhập, bạn có thể đổi liên kết tới trang profile hoặc làm chức năng đăng xuất.
-            // Ở đây ta để liên kết dẫn tới auth.html (hoặc có thể đổi thành '#')
-            // Thêm behavioral: bấm Ctrl+Click sẽ mở trang auth (giữ nguyên href)
-            // Thêm: khi đang đăng nhập, đổi click thành hành động ĐĂNG XUẤT (xác nhận) — thay vì điều hướng
-            linkEl.setAttribute('href', '#');
-            linkEl.setAttribute('title', 'Nhấn để đăng xuất');
-            // thay handler cũ (nếu có) bằng handler mới
-            linkEl.onclick = function (e) {
-                e.preventDefault();
-                const ok = confirm('Bạn có muốn đăng xuất không?');
-                if (!ok) return;
-                try { localStorage.removeItem(CURRENT_USER_KEY); } catch (e) {}
-                try { sessionStorage.removeItem(CURRENT_USER_KEY); } catch (e) {}
-                // reload để cập nhật giao diện
-                window.location.reload();
-            };
+            // Khi đang đăng nhập, dẫn tới trang Profile khi bấm vào tên
+            linkEl.setAttribute('href', './profile.html');
+            linkEl.setAttribute('title', 'Xem trang cá nhân');
+            linkEl.onclick = null;
+
+            // Mobile auth button (nếu có) cũng dẫn về profile
+            const mobileBtn = document.getElementById('mobile-auth-btn');
+            const mobileText = document.getElementById('mobile-auth-text');
+            if (mobileBtn) {
+                mobileBtn.setAttribute('href', './profile.html');
+                mobileBtn.onclick = null;
+            }
+            if (mobileText) mobileText.textContent = user.username;
         } else {
             textEl.textContent = 'Đăng nhập';
             // đảm bảo href dẫn tới trang đăng nhập
@@ -46,6 +43,10 @@
             linkEl.setAttribute('href', './auth.html');
             linkEl.setAttribute('title', 'Đăng nhập');
             linkEl.onclick = null;
+            const mobileBtn = document.getElementById('mobile-auth-btn');
+            const mobileText = document.getElementById('mobile-auth-text');
+            if (mobileBtn) mobileBtn.setAttribute('href', './auth.html');
+            if (mobileText) mobileText.textContent = 'Đăng nhập';
         }
         return true;
     }

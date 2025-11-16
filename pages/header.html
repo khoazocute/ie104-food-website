@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junk Food Shop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junk Food Shop</title>
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/cart.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/cart.css">
 
 </head>
+
 <body>
-    <header class="header">
+  <header class="header">
 
-        <div class="header__left">
-            <a href="./homepage.html" class="header__logo">
-                <img src="../imgs/main-logo.png" alt="logo">
-            </a>
-            <a href="#" class="header__cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-        </div>
-    
-        <!-- MENU -->
-        <nav class="header__nav">
-            <ul class="nav-links">
-                <li><a href="./homepage.html">Trang Chủ</a></li>
-                <li><a href="./about.html">Giới Thiệu</a></li>
-                <li><a href="./menu_list.html">Thực Đơn</a></li>
-                <li><a href="./contact.html">Liên Hệ</a></li>
-                <li><a href="./faq.html">Câu Hỏi Thường Gặp</a></li>
-            </ul>
-        </nav>
-    
-        <!-- RIGHT SIDE -->
-        <div class="header__right">
+    <div class="header__left">
 
-            <a href="#" class="header__item">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Cửa hàng</span>
-            </a>
-        
-            <a href="./auth.html" class="header__item" id="auth-link">
-                <i class="fa-solid fa-user"></i>
-                <span id="auth-text">Đăng nhập</span>
-            </a>
-        
-        </div>
+      <a href="./homepage.html" class="header__logo">
+        <img src="../imgs/main-logo.png" alt="logo">
+      </a>
 
-        <!-- MOBILE -->
-        <button class="header__menu-btn" id="mobileMenuBtn">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-    </header>
+      <form class="header__search">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" class="header__search-input" placeholder="Bạn muốn mua gì...">
+      </form>
+      
+    </div>
+    <!-- MENU -->
+    <nav class="header__nav">
+      <ul class="nav-links">
+        <li><a href="./homepage.html">Trang Chủ</a></li>
+        <li><a href="./about.html">Giới Thiệu</a></li>
+        <li><a href="./menu_list.html">Thực Đơn</a></li>
+        <li><a href="./contact.html">Liên Hệ</a></li>
+        <li><a href="./faq.html">Câu Hỏi Thường Gặp</a></li>
+      </ul>
+    </nav>
 
-<!-- MENU MOBILE -->
-<nav class="mobile-nav" id="mobileNav">
+    <!-- RIGHT SIDE -->
+    <div class="header__right">
+
+      <a href="#" class="header__cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+
+      <a href="./auth.html" class="header__item" id="auth-link">
+        <i class="fa-solid fa-user"></i>
+        <span id="auth-text">Đăng nhập</span>
+      </a>
+
+    </div>
+
+
+    <button class="header__menu-btn" id="mobileMenuBtn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- MOBILE NAV (được hiển thị ở màn hình nhỏ) -->
+  <nav class="mobile-nav" id="mobileNav">
     <ul class="mobile-nav__list">
       <li><a href="./homepage.html">Trang Chủ</a></li>
       <li><a href="./about.html">Giới Thiệu</a></li>
@@ -66,15 +70,10 @@
       <li><a href="./contact.html">Liên Hệ</a></li>
       <li><a href="./faq.html">Câu Hỏi Thường Gặp</a></li>
     </ul>
-  
-    <div class="mobile-nav__actions">
-      <a href="#" class="mobile-nav__btn mobile-nav__btn--outline">
-        <i class="fa-solid fa-location-dot"></i>
-        <span>Cửa hàng</span>
-      </a>
-      <a href="./auth.html" class="mobile-nav__btn mobile-nav__btn--filled">
+    <div class="mobile-nav__btn" id="auth-link">
+      <a href="./auth.html" class="mobile-nav__btn">
         <i class="fa-solid fa-user"></i>
-        <span>Đăng nhập</span>
+        <span id="auth-text">Đăng nhập</span>
       </a>
     </div>
   </nav>
@@ -83,7 +82,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       var mobileBtn = document.getElementById('mobileMenuBtn');
       var mobileNav = document.getElementById('mobileNav');
-  
+
       if (mobileBtn && mobileNav) {
         mobileBtn.addEventListener('click', function () {
           mobileNav.classList.toggle('is-open');
@@ -92,6 +91,7 @@
     });
   </script>
 
-    <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/cart.js"></script>
 </body>
+
 </html>
