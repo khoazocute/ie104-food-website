@@ -1,0 +1,138 @@
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 20px;
+}
+
+.auth-card {
+    display: flex;
+    width: 900px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-left {
+    flex: 1;
+    background: linear-gradient(to bottom, #d9c7a5, #b8b4ac);
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.auth-left h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.auth-left p {
+    margin: 5px 0 15px;
+}
+
+.auth-left button {
+    background-color: #ff7b00;
+    border: none;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.auth-right {
+    flex: 1;
+    padding: 40px;
+    position: relative;
+}
+
+.auth-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-logo img {
+    width: 90px;
+    height: auto;
+}
+
+.auth-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.auth-tabs button {
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    margin: 0 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #f7f1e8;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.auth-tabs button.active {
+    background-color: #ff7b00;
+    color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form label {
+    font-size: 14px;
+    color: #333;
+}
+
+.form input {
+    padding: 10px 15px;
+    border: 1.5px solid #ff7b00;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+}
+
+.auth-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.auth-actions a {
+    color: #ff7b00;
+    text-decoration: none;
+}
+
+.auth-actions input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.auth-btn {
+    background-color: #ff7b00;
+    border: none;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+    background-color: #e56d00;
+}

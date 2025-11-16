@@ -19,14 +19,17 @@
   <header class="header">
 
     <div class="header__left">
+
       <a href="./homepage.html" class="header__logo">
         <img src="../imgs/main-logo.png" alt="logo">
       </a>
-      <a href="#" class="header__cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </a>
-    </div>
 
+      <form class="header__search">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" class="header__search-input" placeholder="Bạn muốn mua gì...">
+      </form>
+      
+    </div>
     <!-- MENU -->
     <nav class="header__nav">
       <ul class="nav-links">
@@ -41,9 +44,8 @@
     <!-- RIGHT SIDE -->
     <div class="header__right">
 
-      <a href="#" class="header__item">
-        <i class="fa-solid fa-location-dot"></i>
-        <span>Cửa hàng</span>
+      <a href="#" class="header__cart">
+        <i class="fa-solid fa-cart-shopping"></i>
       </a>
 
       <a href="./auth.html" class="header__item" id="auth-link">
@@ -68,10 +70,10 @@
       <li><a href="./contact.html">Liên Hệ</a></li>
       <li><a href="./faq.html">Câu Hỏi Thường Gặp</a></li>
     </ul>
-    <div class="mobile-nav__btn">
+    <div class="mobile-nav__btn" id="auth-link">
       <a href="./auth.html" class="mobile-nav__btn">
         <i class="fa-solid fa-user"></i>
-        <span>Đăng nhập</span>
+        <span id="auth-text">Đăng nhập</span>
       </a>
     </div>
   </nav>
