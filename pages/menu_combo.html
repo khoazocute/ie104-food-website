@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/menu_list.css">
     <link rel="stylesheet" href="../assets/css/cart.css">
-    
+
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap"
+        rel="stylesheet">
 
-        <!-- FONT AWESOME -->
+    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Menu_Combo</title>
 </head>
+
 <body>
     <!-- HEADER -->
     <div id="header-placeholder"></div> <!-- Kế thừa header -->
@@ -27,39 +31,46 @@
         </h1>
     </section>
 
-     <section class="menu-items-section">
-        
+    <section class="menu-items-section">
+
         <div class="category-filter-menu Menu_Container Menu_List">
             <div class="menu_nav">
-                <button class="filter-button filter-button1" onclick="window.location.href='menu_list.html'">Full Menu</button>
-                <button class="filter-button filter-button2" onclick="window.location.href='menu_burgers.html'">Burger</button>
-                <button class="filter-button filter-button3" onclick="window.location.href='menu_pizza.html'">Pizza</button>
-                <button class="filter-button filter-button4" onclick="window.location.href='menu_monankem.html'">Ăn kèm</button>
-                <button class="filter-button filter-button5 active" onclick="window.location.href='menu_combo.html'">Combo</button>
+                <button class="filter-button filter-button1" onclick="window.location.href='menu_list.html'">Full
+                    Menu</button>
+                <button class="filter-button filter-button2"
+                    onclick="window.location.href='menu_burgers.html'">Burger</button>
+                <button class="filter-button filter-button3"
+                    onclick="window.location.href='menu_pizza.html'">Pizza</button>
+                <button class="filter-button filter-button4" onclick="window.location.href='menu_monankem.html'">Ăn
+                    kèm</button>
+                <button class="filter-button filter-button5 active"
+                    onclick="window.location.href='menu_combo.html'">Combo</button>
             </div>
         </div>
 
         <div class="products-grid">
-            
-           <div class="product-card ">
-            <img src="../imgs/combo6.jpg" alt="Cheesy Delight">
-            <div class="product-info product-info1">
-                <div class="name-price">
-                    <h3>Pizza Combo Gia Đình</h3>
-                    <span class="price">220.000 VND</span>
-                </div>
-                
-                <div class="desc-and-control">
-                    <p class="description">Gồm 2 chiếc pizza cỡ vừa (xúc xích hoặc thập cẩm), 1 món ăn kè và 1 cookie tráng miệng lớn.</p>
-                    
-                    <div class="quantity-control">
-                        <button class="quantity-btn minus-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
-                        <button class="quantity-btn plus-btn">+</button>
+
+            <div class="product-card ">
+                <img src="../imgs/combo6.jpg" alt="Cheesy Delight">
+                <div class="product-info product-info1">
+                    <div class="name-price">
+                        <h3>Pizza Combo Gia Đình</h3>
+                        <span class="price">220.000 VND</span>
                     </div>
-                </div>
-                
-                <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i></button>
+
+                    <div class="desc-and-control">
+                        <p class="description">Gồm 2 chiếc pizza cỡ vừa (xúc xích hoặc thập cẩm), 1 món ăn kè và 1
+                            cookie tráng miệng lớn.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
+                    </div>
+
+                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </div>
 
@@ -71,15 +82,17 @@
                         <span class="price">160.000 VND</span>
                     </div>
                     <div class="desc-and-control">
-                    <p class="description"> 1 burger bò/gà, 1 pizza cỡ vừa (thịt, phô mai và hành tây), và một phần khoai tây chiên.</p>
-                    
-                    <div class="quantity-control">
-                        <button class="quantity-btn minus-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
-                        <button class="quantity-btn plus-btn">+</button>
+                        <p class="description"> 1 burger bò/gà, 1 pizza cỡ vừa (thịt, phô mai và hành tây), và một phần
+                            khoai tây chiên.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
                     </div>
-                    </div>
-                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i></button>
+                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </div>
 
@@ -87,41 +100,45 @@
                 <img src="../imgs/combo7.jpg" alt="BBQ Bliss">
                 <div class="product-info product-info1">
                     <div class="name-price">
-                        <h3>Burger Bò Phô Mai</h3>  
+                        <h3>Burger Bò Phô Mai</h3>
                         <span class="price">120.000 VND</span>
                     </div>
                     <div class="desc-and-control">
-                    <p class="description">1 Burger bò phô mai, xà lách tươi và cà chua, 2 khoai tây chiên, gà miếng, 1 nước ngọt lớn.</p>
-                    
-                    <div class="quantity-control">
-                        <button class="quantity-btn minus-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
-                        <button class="quantity-btn plus-btn">+</button>
+                        <p class="description">1 Burger bò phô mai, xà lách tươi và cà chua, 2 khoai tây chiên, gà
+                            miếng, 1 nước ngọt lớn.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
                     </div>
-                    </div>
-                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i></button>
+                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </div>
 
             <div class="product-card">
-            <img src="../imgs/combo4.jpg" alt="Cheesy Delight">
-            <div class="product-info product-info1">
-                <div class="name-price">
-                    <h3>Combo 1 Người </h3>
-                    <span class="price">150.000 VND</span>
-                </div>
-                
-                <div class="desc-and-control">
-                    <p class="description">1 miếng gà rán giòn, 1 burger gà/bò cỡ vừa, khoai tây chiên, salad bắp cải và 1 ly nước ngọt lớn.</p>
-                    
-                    <div class="quantity-control">
-                        <button class="quantity-btn minus-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
-                        <button class="quantity-btn plus-btn">+</button>
+                <img src="../imgs/combo4.jpg" alt="Cheesy Delight">
+                <div class="product-info product-info1">
+                    <div class="name-price">
+                        <h3>Combo 1 Người </h3>
+                        <span class="price">150.000 VND</span>
                     </div>
-                </div>
-                
-                <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i></button>
+
+                    <div class="desc-and-control">
+                        <p class="description">1 miếng gà rán giòn, 1 burger gà/bò cỡ vừa, khoai tây chiên, salad bắp
+                            cải và 1 ly nước ngọt lớn.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
+                    </div>
+
+                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </div>
 
@@ -141,7 +158,8 @@
                         <button class="quantity-btn plus-btn">+</button>
                     </div>
                     </div>
-                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i></button>
+                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </div>
 
@@ -149,27 +167,30 @@
                 <img src="../imgs/combo3.jpg" alt="BBQ Bliss">
                 <div class="product-info product-info1">
                     <div class="name-price">
-                        <h3>Combo Tiệc Gà & Mì Ý</h3>  
+                        <h3>Combo Tiệc Gà & Mì Ý</h3>
                         <span class="price">190.000 VND</span>
                     </div>
                     <div class="desc-and-control">
-                    <p class="description">Suất ăn lớn gồm 2 miếng gà rán giòn, 1-2 burger cỡ lớn, 1 suất mì Ý xốt thịt, khoai tây chiên, 3 ly nước ngọt (Pepsi).</p>
-                    
-                    <div class="quantity-control">
-                        <button class="quantity-btn minus-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
-                        <button class="quantity-btn plus-btn">+</button>
+                        <p class="description">Suất ăn lớn gồm 2 miếng gà rán giòn, 1-2 burger cỡ lớn, 1 suất mì Ý xốt
+                            thịt, khoai tây chiên, 3 ly nước ngọt (Pepsi).</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
                     </div>
-                    </div>
-                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i></button>
+                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
                 </div>
-            </div>      
+            </div>
+        </div>
     </section>
 
     <!-- ========================= TESTIMONIAL ========================= -->
     <section class="testimonials">
         <div class="testimonials__title">
-            <img src="../imgs/homepage__testimonials-love.svg" alt="Love Icon" />
+            <img src="../imgs/homepage__testimonials-love.svg" alt="Love Icon">
             <h2>Đánh Giá Từ Khách Hàng</h2>
             <p>Menu cân bằng giữa quen thuộc và đột phá, mang lại trải nghiệm vị giác khó quên. Tươi ngon mỗi ngày, thêm
                 một chút yêu thương.
@@ -181,11 +202,11 @@
                 <div class="testimonials__card testimonials__card--orange">
                     <span>⭐⭐⭐⭐☆</span>
                     <h3 class="testimonials__heading">Hương vị khó quên</h3>
-                    <p>Mỗi miếng đều bùng nổ hương vị — một trong những bữa ăn ngon nhất tôi có trong thời gian dài!</p>
+                    <p>Mỗi miếng ăn đều mang lại hương vị không quên được, nhân viên phục vụ chu đáo, nhiệt tình.</p>
                     <div class="testimonials__author">
-                        <img src="../imgs/homepage__user1.jpg" alt="Larry" />
+                        <img src="../imgs/homepage__user1.jpg" alt="Larry">
                         <div>
-                            <strong>Larry Alexander</strong>
+                            <strong>Lee Chong Wei</strong>
                             <p>Khách hàng Vàng</p>
                         </div>
                     </div>
@@ -196,9 +217,9 @@
                     <h3 class="testimonials__heading">Ngon chuẩn vị</h3>
                     <p>Hương vị đậm đà, ấm lòng. Cảm nhận được sự chăm chút trong từng món.</p>
                     <div class="testimonials__author">
-                        <img src="../imgs/homepage__user2.webp" alt="Daniel" />
+                        <img src="../imgs/homepage__user2.webp" alt="Daniel">
                         <div>
-                            <strong>Daniel Cormir</strong>
+                            <strong>LinDan</strong>
                             <p>Khách hàng Bạc</p>
                         </div>
                     </div>
@@ -209,7 +230,7 @@
                     <h3 class="testimonials__heading">Quán ruột của chúng tôi</h3>
                     <p>Gần như cuối tuần nào chúng tôi cũng ghé. Món ăn và phục vụ luôn xuất sắc, ổn định.</p>
                     <div class="testimonials__author">
-                        <img src="../imgs/homepage__user3.jpg" alt="Amanda" />
+                        <img src="../imgs/homepage__user3.jpg" alt="Amanda">
                         <div>
                             <strong>Amanda Nunez</strong>
                             <p>Khách hàng Vàng</p>
@@ -222,7 +243,7 @@
                     <h3 class="testimonials__heading">Dịch vụ đỉnh cao</h3>
                     <p>Nhân viên thân thiện, chu đáo. Không gian dễ chịu, món ăn còn tuyệt hơn!</p>
                     <div class="testimonials__author">
-                        <img src="../imgs/homepage__user4.jpg" alt="Mark" />
+                        <img src="../imgs/homepage__user4.jpg" alt="Mark">
                         <div>
                             <strong>Mark Velasquez</strong>
                             <p>Khách hàng Cao cấp</p>
@@ -233,36 +254,37 @@
         </div>
     </section>
 
-        
+
 
     <section class="gallery-section">
         <img src="../imgs/chef-hat.png" alt="Chef Hat" class="chef-icon">
         <h2>A Feast for Your Eyes</h2>
         <div class="gallery">
             <div class="gallery-item">
-            <img src="../imgs/slider4.jpg" alt="Salad dish">
+                <img src="../imgs/slider4.jpg" alt="Salad dish">
             </div>
             <div class="gallery-item">
-            <img src="../imgs/slider2.avif" alt="Couple eating">
+                <img src="../imgs/slider2.avif" alt="Couple eating">
             </div>
             <div class="gallery-item">
-            <img src="../imgs/slider3.webp" alt="Green dish">
+                <img src="../imgs/slider3.webp" alt="Green dish">
             </div>
         </div>
     </section>
 
     <section class="hero-section banner-section">
         <div class="hero-image left-image">
-            <img src="../imgs/mini_banner.avif"alt="">
-            </div>
+            <img src="../imgs/mini_banner.avif" alt="">
+        </div>
 
         <div class="hero-content">
             <div class="logo-text">
                 <img src="../imgs/icon2.jpg" alt="">
-        
+
             </div>
             <h2>Don't Wait - Order Now!</h2>
-            <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready for pick-up.</p>
+            <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready
+                for pick-up.</p>
             <button class="btn-order" onclick="window.location.href='./menu_list.html'">
                 Đặt Ngay<i class="fas fa-arrow-right"></i>
             </button>
@@ -271,7 +293,7 @@
         <div class="hero-image right-image">
             <img src="../imgs/mini_banner2.avif" alt="">
 
-            </div>
+        </div>
     </section>
     <!-- FOOTER -->
     <div id="footer-placeholder"></div>
@@ -281,4 +303,5 @@
     <script src="../assets/js/auth.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
+
 </html>
