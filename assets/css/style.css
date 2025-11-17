@@ -588,67 +588,6 @@ h2 {
 }
 
 
-/* ========================= GALLERY ========================= */
-
-.gallery-section {
-    padding: 40px 0;
-}
-
-.chef-icon {
-    display: block;
-    margin: 0 auto 10px auto;
-    width: 80px;
-    height: auto;
-    filter: invert(57%) sepia(91%) saturate(1864%) hue-rotate(0deg) brightness(101%) contrast(102%);
-}
-
-/* --- Dãy ảnh --- */
-.gallery {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 20px;
-    width: 90%;
-    margin: 0 auto;
-    transition: all 0.4s ease;
-}
-
-/* --- Ảnh cơ bản --- */
-.gallery-item {
-    flex: 1;
-    /* các ảnh chia đều */
-    height: 400px;
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: all 0.5s ease;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-/* --- Khi di chuột vào ảnh nào --- */
-.gallery-item:hover {
-    flex: 3;
-    /* ảnh này dài ra (chiếm gấp 3 không gian) */
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-    /* phóng nhẹ nhưng vẫn đúng tỉ lệ */
-}
-
-/* --- Các ảnh khác sẽ tự thu nhỏ lại --- */
-.gallery-item:not(:hover) {
-    flex: 0.8;
-}
-
-
 
 
 /* ========================= TESTIMONIAL ========================= */
@@ -1099,7 +1038,6 @@ footer {
 
     /* === TRANG CHỦ (HOMEPAGE) === */
     .banner__content {
-        max-width: 90%;
         left: 5%;
         text-align: left;
         transform: none;
@@ -1224,29 +1162,32 @@ footer {
         width: 90%;
         left: 50%;
         transform: translateX(-50%);
-        text-align: center;
-        align-items: center;
     }
 
+    
+    /* Cỡ chữ H1 mobile */
     .banner__content h1 {
         font-size: 40px;
-        /* Cỡ chữ H1 mobile */
         line-height: 1.2;
+    }
+    /* Cỡ chữ H2*/
+    h2 {
+        font-size: 24px;
     }
 
     .banner__content p {
-        font-size: 15px;
+        font-size: 14px;
     }
 
-    .banner__nav {
-        flex-direction: column;
-        /* Stack 2 nút banner */
-        gap: 12px;
-        width: 100%;
+    /* Chỉnh kích thước các nút */
+    .banner__nav a {
+        padding: 12px 20px; 
+        font-size: 14px;   
     }
 
     .hero__badge {
-        font-size: 13px;
+        overflow: hidden;
+        font-size: 14px;
     }
 
     .deal .deal__title p,
