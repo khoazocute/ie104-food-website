@@ -96,60 +96,6 @@
         </div>
     </section>
 
-    <script>
-        // COUNTDOWN: +2 ngày 14 giờ 30 phút 45 giây kể từ hiện tại
-        document.addEventListener('DOMContentLoaded', function () {
-            const target = Date.now()
-                + (2 * 24 * 60 * 60 * 1000)
-                + (14 * 60 * 60 * 1000)
-                + (30 * 60 * 1000)
-                + (45 * 1000);
-
-            const box = document.getElementById('dealCountdown');
-            const pad = n => (n < 10 ? '0' + n : '' + n);
-
-            function render(dist) {
-                const d = Math.floor(dist / (1000 * 60 * 60 * 24));
-                const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
-                const s = Math.floor((dist % (1000 * 60)) / 1000);
-
-                box.innerHTML = `
-                  <div class="deal__timebox">
-                    <span class="deal__time">${pad(d)}</span>
-                    <span class="deal__label">Ngày</span>
-                  </div>
-                  <div class="deal__timebox">
-                    <span class="deal__time">${pad(h)}</span>
-                    <span class="deal__label">Giờ</span>
-                  </div>
-                  <div class="deal__timebox">
-                    <span class="deal__time">${pad(m)}</span>
-                    <span class="deal__label">Phút</span>
-                  </div>
-                  <div class="deal__timebox">
-                    <span class="deal__time">${pad(s)}</span>
-                    <span class="deal__label">Giây</span>
-                  </div>
-                `;
-            }
-
-            function tick() {
-                const dist = target - Date.now();
-                if (dist <= 0) {
-                    clearInterval(tmr);
-                    box.innerHTML = '<strong style="color:#E53935">KHUYẾN MÃI ĐÃ KẾT THÚC</strong>';
-                    return;
-                }
-                render(dist);
-            }
-
-            const tmr = setInterval(tick, 1000);
-            tick();
-        });
-    </script>
-
-
     <!-- ========================= MENU ========================= -->
     <section class="menu">
         <div class="menu__title">
@@ -205,14 +151,14 @@
             </div>
 
             <div class="product-card">
-                <img src="../imgs/mon_an_kem2.jpg" alt="Spicy Crunch">
+                <img src="../imgs/mon_an_kem4.jpg" alt="Spicy Crunch">
                 <div class="product-info product-info3">
                     <div class="name-price">
-                        <h3>Mỳ Ý Bò</h3>
+                        <h3>Gà Miếng</h3>
                         <span class="price">30.000 VND</span>
                     </div>
                     <div class="desc-and-control">
-                        <p class="description">Mì ý cổ điển, phủ đầy xốt thịt bò bằm đậm đà kết hợp phô mai bào.</p>
+                        <p class="description">Những miếng gà tẩm bột và chiên giòn, thích hợp món ăn kèm.</p>
 
                         <div class="quantity-control">
                             <button class="quantity-btn minus-btn">-</button>
@@ -222,7 +168,7 @@
                     </div>
                     <button class="add-to-cart-btn btn3">Thêm vào giỏ hàng<i
                             class="fa-solid fa-cart-shopping"></i></button>
-                </div>  
+                </div>
             </div>
 
         </div>
@@ -357,6 +303,60 @@
     </section>
 
     <div id="footer-placeholder"></div>
+
+    <!-- ============================ JS =========================== -->
+    <!-- // COUNTDOWN: +2 ngày 14 giờ 30 phút 45 giây kể từ hiện tại -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const target = Date.now()
+                + (2 * 24 * 60 * 60 * 1000)
+                + (14 * 60 * 60 * 1000)
+                + (30 * 60 * 1000)
+                + (45 * 1000);
+
+            const box = document.getElementById('dealCountdown');
+            const pad = n => (n < 10 ? '0' + n : '' + n);
+
+            function render(dist) {
+                const d = Math.floor(dist / (1000 * 60 * 60 * 24));
+                const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((dist % (1000 * 60)) / 1000);
+
+                box.innerHTML = `
+                  <div class="deal__timebox">
+                    <span class="deal__time">${pad(d)}</span>
+                    <span class="deal__label">Ngày</span>
+                  </div>
+                  <div class="deal__timebox">
+                    <span class="deal__time">${pad(h)}</span>
+                    <span class="deal__label">Giờ</span>
+                  </div>
+                  <div class="deal__timebox">
+                    <span class="deal__time">${pad(m)}</span>
+                    <span class="deal__label">Phút</span>
+                  </div>
+                  <div class="deal__timebox">
+                    <span class="deal__time">${pad(s)}</span>
+                    <span class="deal__label">Giây</span>
+                  </div>
+                `;
+            }
+
+            function tick() {
+                const dist = target - Date.now();
+                if (dist <= 0) {
+                    clearInterval(tmr);
+                    box.innerHTML = '<strong style="color:#E53935">KHUYẾN MÃI ĐÃ KẾT THÚC</strong>';
+                    return;
+                }
+                render(dist);
+            }
+
+            const tmr = setInterval(tick, 1000);
+            tick();
+        });
+    </script>
     <script src="../assets/js/include.js"></script>
     <script src="../assets/js/cart.js"></script>
     <script src="../assets/js/search.js"></script>
