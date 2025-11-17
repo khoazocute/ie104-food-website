@@ -211,40 +211,37 @@ body {
 }
 
 
-/* --- RESPONSIVE --- */
-/* 
-@media (max-width: 768px) {
-    .contact-content {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
+/* RESPONSIVE */
+@media (max-width: 992px) {
+       /* === TRANG LIÊN HỆ (CONTACT) === */
+       .contact-container {
+        padding: 0 20px;
     }
-    .form-row {
-        flex-direction: column;
-    }
-    .contact-image img {
-        max-width: 80%;
-    }
+
     .contact-form {
         flex-direction: column;
+        /* Stack form và ảnh */
+        padding: 25px;
     }
+
+    .contact-form img {
+        width: 100%;
+        /* Ảnh chiếm 100% chiều rộng */
+        max-width: 400px;
+        align-self: center;
+    }
+
+    .contact-header {
+        width: 90%;
+    }
+
+    .contact-header h1 {
+        font-size: 48px;
+    }
+
     .contact-info {
-        margin-top: 20px;
-        aspect-ratio: 4 / 3;
-    }
-    .form-list {
-        padding-right: 0;
+        flex-direction: column;
+        gap: 20px;
+        margin: 0 auto;
     }
 }
-
-@media (max-width: 400px) {
-    .contact-header h1 {
-        font-size: 26px;
-    }
-    .contact-header p {
-        font-size: 14px;
-    }
-    .info-card {
-        min-width: 100%;
-    }
-} */

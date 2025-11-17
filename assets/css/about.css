@@ -123,12 +123,8 @@ html {
 .hero__badge {
     display: inline-flex;
     align-items: center;
-
     gap: 10px;
-
     width: auto;
-    /* (mặc định) */
-    inline-size: fit-content;
     /* hiện đại */
 
     white-space: nowrap;
@@ -241,53 +237,6 @@ html {
 .collage:hover .collage__img--back {
     transform: rotate(5deg) translateY(2px);
 }
-
-/* ========== Responsive cho cột phải ========== */
-@media (max-width: 1024px) {
-    .hero__content {
-        grid-template-columns: 1fr;
-    }
-
-    .collage {
-        padding-top: 66%;
-    }
-
-    .collage__img--top {
-        width: 82%;
-        right: 2%;
-    }
-
-    .collage__img--back {
-        width: 88%;
-        right: -2%;
-        bottom: -10%;
-    }
-}
-
-@media (max-width: 560px) {
-    .collage {
-        padding-top: 70%;
-    }
-
-    .collage__img--top {
-        width: 88%;
-        right: 1%;
-    }
-
-    .collage__img--back {
-        width: 92%;
-        right: -4%;
-    }
-
-    .collage__sticker {
-        width: 18%;
-        left: 6%;
-    }
-}
-
-
-
-
 
 /* ---------- WHY CHOOSE US (two-side + center) ---------- */
 .about-features {

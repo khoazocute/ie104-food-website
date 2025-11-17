@@ -43,7 +43,7 @@ h2 {
 .header__left {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
 }
 
 .header__logo img {
@@ -482,11 +482,6 @@ h2 {
 }
 
 /* ===== BUTTONS ===== */
-.deal__nav {
-    display: flex;
-    gap: 12px;
-}
-
 .deal__nav a {
     padding: 16px 40px;
     border-radius: 999px;
@@ -495,51 +490,22 @@ h2 {
     text-decoration: none;
 }
 
-.deal__nav>a:first-of-type {
+.deal__nav a {
     background: #FF6C0A;
     color: #FFF7EB;
     border: 1.5px solid #C85E11;
     transition: all 0.3s ease;
 }
 
-.deal__nav>a:first-of-type i {
+.deal__nav a i {
     margin-left: 8px;
 }
 
-.deal__nav>a:first-of-type:hover {
+.deal__nav a:hover {
     box-shadow: 0 6px 0 #C85E11;
     transform: scale(1.02);
 }
 
-/* nút 2 = viền cam */
-.deal__nav>a:last-of-type {
-    border: 1.5px solid #FF6C0A;
-    color: #FF6C0A;
-    transition: all 0.3s ease;
-}
-
-.deal__nav>a:last-of-type:hover {
-    background: #FF6C0A;
-    color: #FFF7EB;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-    .deal .deal__title {
-        width: 90%;
-    }
-
-    .deal .content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .deal__desc {
-        max-width: none;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
 
 /* ================================== MENU ========================================== */
 /* --- SLOGAN --- */
@@ -938,6 +904,9 @@ footer {
    BREAKPOINT 1: TABLET (<= 992px)
    ------------------------------------------ */
 @media (max-width: 992px) {
+    h2 {
+        font-size: 32px;
+    }
 
     .header__nav,
     .header__right {
@@ -1050,18 +1019,11 @@ footer {
     }
 
     .deal .content {
-        flex-direction: column;
-        /* Stack ảnh và nội dung deal */
-        text-align: center;
-        gap: 30px;
+        gap: 20px;
     }
-
+    
     .deal__left {
         padding-left: 0;
-    }
-
-    .deal__cright {
-        align-items: center;
     }
 
     .deal__nav {
@@ -1105,40 +1067,6 @@ footer {
     }
 
 
-    /* === TRANG LIÊN HỆ (CONTACT) === */
-    .contact-container {
-        padding: 0 20px;
-    }
-
-    .contact-form {
-        flex-direction: column;
-        /* Stack form và ảnh */
-        padding: 25px;
-    }
-
-    .contact-form img {
-        width: 100%;
-        /* Ảnh chiếm 100% chiều rộng */
-        max-width: 400px;
-        align-self: center;
-    }
-
-    .contact-header {
-        width: 90%;
-    }
-
-    .contact-header h1 {
-        font-size: 48px;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        /* Stack các card thông tin */
-        gap: 20px;
-        width: 90%;
-        margin: 0 auto;
-    }
-
 }
 
 
@@ -1170,10 +1098,6 @@ footer {
         font-size: 40px;
         line-height: 1.2;
     }
-    /* Cỡ chữ H2*/
-    h2 {
-        font-size: 24px;
-    }
 
     .banner__content p {
         font-size: 14px;
@@ -1186,8 +1110,15 @@ footer {
     }
 
     .hero__badge {
-        overflow: hidden;
-        font-size: 14px;
+        display: none;
+    }
+
+    .deal .content{
+        flex-direction: column;
+    }
+
+    .deal__right {
+        align-items: center;
     }
 
     .deal .deal__title p,
