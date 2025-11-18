@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,6 +12,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/cart.css">
+  <link rel="stylesheet" href="../assets/css/search.css">
 
 </head>
 
@@ -21,14 +22,19 @@
     <div class="header__left">
 
       <a href="./homepage.html" class="header__logo">
-        <img src="../imgs/main-logo.png" alt="logo">
+        <img src="../assets/imgs/main-logo.png" alt="logo">
       </a>
 
-      <form class="header__search">
+      <!-- SEARCH -->
+      <div class="header__search">
         <i class="fa-solid fa-search"></i>
-        <input type="text" class="header__search-input" placeholder="Bạn muốn mua gì...">
-      </form>
-      
+
+        <input type="text" id="searchInput" class="header__search-input" placeholder="Bạn muốn mua gì...">
+
+        <!-- Pop-up kết quả -->
+        <div id="searchResults" class="search-results"></div>
+      </div>
+
     </div>
     <!-- MENU -->
     <nav class="header__nav">
@@ -92,6 +98,7 @@
   </script>
 
   <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/search.js"></script>
 </body>
 
 </html>

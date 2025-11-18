@@ -1,0 +1,153 @@
+/* SEARCH BOX */
+.header__search {
+  position: relative;
+}
+
+.header__search:focus-within {
+  border-color: #ff6c0a;
+  box-shadow: 0 0 0 3px rgba(255,108,10,.1);
+}
+
+.header__search i {
+  color: #999;
+  margin-right: 8px;
+  font-size: .95rem;
+}
+.header__search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font: .9rem "Plus Jakarta Sans", sans-serif;
+  color: #333;
+}
+.header__search-input::placeholder {
+  color: #999;
+}
+
+/* POPUP RESULTS */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 300px;
+  margin: -1px 0 0 50px; /* Kết hợp margin-top và margin-left */
+  max-height: 400px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  z-index: 1000;
+  display: none;
+}
+.search-results-list {
+  display: flex;
+  flex-direction: column;
+}
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color .2s ease;
+}
+.search-result-item:last-child {
+  border-bottom: none;
+}
+.search-result-item:hover {
+  background-color: #fef3e2;
+}
+.search-result-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.search-result-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.search-result-info {
+  flex: 1;
+  min-width: 0;
+}
+.search-result-info h4 {
+  margin: 0 0 4px;
+  font-size: .9rem;
+  color: #1f1000;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-result-category {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: .75rem;
+  background: #ff6c0a;
+  color: #fff;
+}
+.search-result-price {
+  font-size: .85rem;
+  color: #ff6c0a;
+  font-weight: 600;
+}
+.search-result-item i {
+  color: #999;
+  font-size: .8rem;
+  flex-shrink: 0;
+}
+
+/* NO RESULTS */
+.search-no-results {
+  padding: 30px 20px;
+  text-align: center;
+  color: #666;
+}
+.search-no-results i {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #ddd;
+}
+.search-no-results p {
+  margin: 10px 0;
+  font-size: .9rem;
+}
+.search-no-results small {
+  display: block;
+  font-size: .8rem;
+  color: #999;
+}
+.search-no-results a {
+  color: #ff6c0a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.search-no-results a:hover {
+  text-decoration: underline;
+}
+
+/* SCROLLBAR */
+.search-results::-webkit-scrollbar {
+  width: 6px;
+}
+.search-results::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+.search-results::-webkit-scrollbar-thumb {
+  background: #ff6c0a;
+  border-radius: 10px;
+}
+.search-results::-webkit-scrollbar-thumb:hover {
+  background: #e55a00;
+}

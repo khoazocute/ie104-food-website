@@ -9,9 +9,6 @@ body {
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: #FEF3E2;
     color: #333;
-    margin: 0;
-    padding: 5px;
-    justify-content: center;
 }
 
 /* --- SLOGAN --- */
@@ -297,40 +294,20 @@ body {
     border-left: 1px solid #e0e0e0; 
 }
 
-/* Responsive cho màn nhỏ */
-@media (max-width: 600px) {
-  .product-card img {
-    height: 200px;
-  }
-  .name-price h3 {
-    font-size: 20px;
-  }
-}
 
 /* --- GALLERY SECTION --- */   
-
-
 .gallery-section {
   padding: 40px 0;
+  text-align: center;
 }
 
-.chef-icon {
+.party-time {
     display: block;
     margin: 0 auto 10px auto;
-    width: 80px;
+    width: 150px;
     height: auto;
-    filter: invert(57%) sepia(91%) saturate(1864%) hue-rotate(0deg) brightness(101%) contrast(102%);
 }
-.gallery-section h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-family: 'Luckiest Guy', cursive;
-    font-weight: 900;
-    font-size: 3vw;
-    line-height: 1.1;
-    color: #f6863b;
-    margin-bottom: 50px;
-}
+
 
 /* --- Dãy ảnh --- */
 .gallery {
@@ -339,7 +316,7 @@ body {
   align-items: stretch;
   gap: 20px;
   width: 90%;
-  margin: 0 auto;
+  margin: 40px auto 0;
   transition: all 0.4s ease;
 }
 
@@ -403,15 +380,6 @@ body {
   font-weight: 700;              /* Độ đậm chữ */
   color: #1d1d1d;                /* Màu chữ đen nhạt */
   font-size: 18px;               /* Cỡ chữ */
-}
-
-/* Tiêu đề lớn chính giữa */
-.hero-content h2 {
-  font-size: 3rem;               /* Kích thước chữ lớn (~48px) */
-  line-height: 1.1;              /* Giảm khoảng cách giữa các dòng tiêu đề */
-  color: #2c160f;                /* Màu nâu đậm, dễ đọc trên nền be */
-  margin: 10px 0 18px;           /* Khoảng cách trên/dưới tiêu đề */
-  font-weight: 900;              /* Chữ rất đậm để tạo điểm nhấn */
 }
 
 /* Đoạn mô tả nhỏ dưới tiêu đề */
@@ -484,19 +452,4 @@ body {
 .hero-image:hover img {
   transform: translateY(-8px) scale(1.05);
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
-}
-
-/* ============================= */
-/* RESPONSIVE BANNER (TỰ THU NHỎ) */
-/* ============================= */
-@media (max-width: 1200px) {
-  .hero-image img { width: 240px; height: 240px; } /* Khi màn hình nhỏ hơn 1200px: ảnh to hơn */
-  .left-image { left: 2%; }  /* Dịch ảnh trái vào gần giữa hơn */
-  .right-image { right: 2%; } /* Dịch ảnh phải vào gần giữa hơn */
-}
-
-@media (max-width: 900px) {
-  .hero-section { padding-bottom: 80px; }  /* Giảm khoảng cách dưới để banner gọn hơn */
-  .hero-image { opacity: .15; }            /* Làm mờ ảnh để không che chữ */
-  .hero-image img { width: 200px; height: 200px; } /* Giữ ảnh nhỏ gọn trên mobile */
 }

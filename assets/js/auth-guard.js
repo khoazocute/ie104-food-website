@@ -12,7 +12,7 @@ function getCurrentUser() {
     return null;
   }
 }
-
+/*
 // Hàm kiểm tra đã đăng nhập chưa
 function isLoggedIn() {
   return !!getCurrentUser();
@@ -24,7 +24,7 @@ function requireLogin(loginPage = "./pages/auth.html") {
     window.location.href = loginPage;
   }
 }
-
+*/
 // Hàm đăng xuất
 function logout(redirectTo = "./pages/auth.html") {
   localStorage.removeItem(CURRENT_USER_KEY);

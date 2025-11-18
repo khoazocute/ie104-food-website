@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,9 @@
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap"
+        rel="stylesheet">
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -17,10 +19,13 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/menu_list.css">
+    <link rel="stylesheet" href="../assets/css/search.css">
 
 </head>
 
 <body>
+
+    <!-- ========================= HEADER========================= -->
     <div id="header-placeholder"></div>
 
 
@@ -43,9 +48,9 @@
 
             <div class="hero__badge">
                 <div class="badge-avatars">
-                    <img src="../imgs/homepage__user1.jpg" alt="" />
-                    <img src="../imgs/homepage__user2.webp" alt="" />
-                    <img src="../imgs/homepage__user3.jpg" alt="" />
+                    <img src="../assets/imgs/homepage__user1.jpg" alt="user1">
+                    <img src="../assets/imgs/homepage__user2.webp" alt="user2">
+                    <img src="../assets/imgs/homepage__user3.jpg" alt="user3">
                 </div>
                 <span>Hơn 2,6K người dùng yêu thích với lượt đánh giá 4.9 / 5✨</span>
             </div>
@@ -54,16 +59,17 @@
     </section>
 
     <section class="deal">
+        
         <div class="deal__title">
-            <img src="../imgs/homepage__deal.png" alt="icon">
+            <img src="../assets/imgs/homepage__deal.png" alt="icon">
             <h2>Chương Trình Khuyến Mãi</h2>
             <p>Thưởng thức hương vị tuyệt hảo với mức giá cực ưu đãi. Nhanh tay đặt món ngay hôm nay!</p>
         </div>
         <div class="content">
             <div class="deal__left">
-                <img src="../imgs/homepage__deal1.png" alt="hamburger hot deal">
+                <img src="../assets/imgs/homepage__deal1.png" alt="hamburger hot deal">
             </div>
-            <div class="deal__cright">
+            <div class="deal__right">
                 <!-- COUNTDOWN -->
                 <div class="deal__timer" id="dealCountdown"><!-- filled by JS --></div>
 
@@ -88,17 +94,222 @@
 
                 <div class="deal__nav">
                     <a href="./menu_list.html">Đặt Ngay<i class="fas fa-arrow-right"></i></a>
-                    <a href="#">Xem thêm</a>
                 </div>
             </div>
+        </div>
     </section>
-    </div>
 
+    <!-- ========================= MENU ========================= -->
+    <section class="menu">
+        <div class="menu__title">
+            <img src="../assets/imgs/menu.png" alt="icon menu">
+            <h2>Thực Đơn Fast Food</h2>
+            <p>Khám phá thực đơn đa dạng của chúng tôi nơi hương vị truyền thống hòa quyện cùng phong cách hiện đại,
+                mang đến trải nghiệm ẩm thực khó quên.</p>
+        </div>
+        <div class="products-grid">
 
+            <div class="product-card">
+                <img src="../assets/imgs/burger5.avif" alt="Spicy Crunch">
+                <div class="product-info product-info1">
+                    <div class="name-price">
+                        <h3>Burger Bò Nướng</h3>
+                        <span class="price">80.000 VND</span>
+                    </div>
+                    <div class="desc-and-control">
+                        <p class="description">Burger với thịt bò, phô mai, xà lách tươi, và đặc biệt là lớp salad bắp
+                            cải/rau củ.</p>
 
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../assets/imgs/pizzza1.avif" alt="Spicy Crunch">
+                <div class="product-info product-info2">
+                    <div class="name-price">
+                        <h3>Pizza Thập Cẩm</h3>
+                        <span class="price">100.000 VND</span>
+                    </div>
+                    <div class="desc-and-control">
+                        <p class="description">Pizza với lớp phô mai tan chảy, phủ nhiều loại topping đa dạng như xúc
+                            xích, ô-liu, các loại rau.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn btn2">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../assets/imgs/mon_an_kem4.jpg" alt="Spicy Crunch">
+                <div class="product-info product-info3">
+                    <div class="name-price">
+                        <h3>Gà Miếng</h3>
+                        <span class="price">30.000 VND</span>
+                    </div>
+                    <div class="desc-and-control">
+                        <p class="description">Những miếng gà tẩm bột và chiên giòn, thích hợp món ăn kèm.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn btn3">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="menu__footer">
+            <a href="./menu_list.html">Xem tất cả</a>
+        </div>
+    </section>
+
+    <!-- ========================= TESTIMONIAL ========================= -->
+    <section class="testimonials">
+        <div class="testimonials__title">
+            <img src="../assets/imgs/homepage__testimonials-love.svg" alt="Love Icon">
+            <h2>Đánh Giá Từ Khách Hàng</h2>
+            <p>Menu cân bằng giữa quen thuộc và đột phá, mang lại trải nghiệm vị giác khó quên. Tươi ngon mỗi ngày, thêm
+                một chút yêu thương.
+            </p>
+        </div>
+
+        <div class="testimonials__carousel">
+            <div class="testimonials__track" id="testimonials-track">
+                <div class="testimonials__card testimonials__card--orange">
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Hương vị khó quên</h3>
+                    <p>Mỗi miếng ăn đều mang lại hương vị không quên được, nhân viên phục vụ chu đáo, nhiệt tình.</p>
+                    <div class="testimonials__author">
+                        <img src="../assets/imgs/homepage__user1.jpg" alt="Larry">
+                        <div>
+                            <strong>Lee Chong Wei</strong>
+                            <p>Khách hàng Vàng</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--purple">
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Ngon chuẩn vị</h3>
+                    <p>Hương vị đậm đà, ấm lòng. Cảm nhận được sự chăm chút trong từng món.</p>
+                    <div class="testimonials__author">
+                        <img src="../assets/imgs/homepage__user2.webp" alt="Daniel">
+                        <div>
+                            <strong>LinDan</strong>
+                            <p>Khách hàng Bạc</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--green">
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Quán ruột của chúng tôi</h3>
+                    <p>Gần như cuối tuần nào chúng tôi cũng ghé. Món ăn và phục vụ luôn xuất sắc, ổn định.</p>
+                    <div class="testimonials__author">
+                        <img src="../assets/imgs/homepage__user3.jpg" alt="Amanda">
+                        <div>
+                            <strong>Amanda Nunez</strong>
+                            <p>Khách hàng Vàng</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials__card testimonials__card--pink">
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <h3 class="testimonials__heading">Dịch vụ đỉnh cao</h3>
+                    <p>Nhân viên thân thiện, chu đáo. Không gian dễ chịu, món ăn còn tuyệt hơn!</p>
+                    <div class="testimonials__author">
+                        <img src="../assets/imgs/homepage__user4.jpg" alt="Mark">
+                        <div>
+                            <strong>Mark Velasquez</strong>
+                            <p>Khách hàng Cao cấp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
-        // COUNTDOWN: +2 ngày 14 giờ 30 phút 45 giây kể từ hiện tại
+        const track = document.getElementById('testimonials-track');
+        track.innerHTML += track.innerHTML;
+
+        let pos = 0;
+        function animate() {
+            pos -= 5; // tốc độ
+            if (Math.abs(pos) >= track.scrollWidth / 2) {
+                pos = 0; // quay lại đầu
+            }
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
+    <!-- ========================= GALLERY ========================= -->
+    <section class="gallery-section">
+        <img src="../assets/imgs/party-time.png" alt="party-time" class="party-time">
+        <h2>A Feast for Your Eyes</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../assets/imgs/slider4.jpg" alt="Salad dish">
+            </div>
+            <div class="gallery-item">
+                <img src="../assets/imgs/slider2.avif" alt="Couple eating">
+            </div>
+            <div class="gallery-item">
+                <img src="../assets/imgs/slider3.webp" alt="Green dish">
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-section banner-section">
+        <div class="hero-image left-image">
+            <img src="../assets/imgs/mini_banner.avif" alt="">
+        </div>
+
+        <div class="hero-content">
+            <div class="logo-text">
+                <img src="../assets/imgs/icon2.jpg" alt="">
+
+            </div>
+            <h2>Don't Wait - Order Now!</h2>
+            <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready
+                for pick-up.</p>
+            <button class="btn-order" onclick="window.location.href='./menu_list.html'">
+                Đặt Ngay<i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <div class="hero-image right-image">
+            <img src="../assets/imgs/mini_banner2.avif" alt="">
+
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- ============================ JS =========================== -->
+    <!-- // COUNTDOWN: +2 ngày 14 giờ 30 phút 45 giây kể từ hiện tại -->
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             const target = Date.now()
                 + (2 * 24 * 60 * 60 * 1000)
@@ -149,226 +360,21 @@
             tick();
         });
     </script>
-
-
-    <!-- ========================= MENU ========================= -->
-    <section class="menu">
-        <div class="menu__title">
-            <img src="../imgs/menu.png" alt="icon menu">
-            <h2>Thực Đơn Fast Food</h2>
-            <p>Khám phá thực đơn đa dạng của chúng tôi nơi hương vị truyền thống hòa quyện cùng phong cách hiện đại,
-                mang đến trải nghiệm ẩm thực khó quên.</p>
-        </div>
-        <div class="products-grid">
-
-            <div class="product-card">
-                <img src="../imgs/burger5.avif" alt="Spicy Crunch">
-                <div class="product-info product-info1">
-                    <div class="name-price">
-                        <h3>Burger Bò Nướng</h3>
-                        <span class="price">80.000 VND</span>
-                    </div>
-                    <div class="desc-and-control">
-                        <p class="description">Burger với thịt bò, phô mai, xà lách tươi, và đặc biệt là lớp salad bắp
-                            cải/rau củ.</p>
-
-                        <div class="quantity-control">
-                            <button class="quantity-btn minus-btn">-</button>
-                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
-                            <button class="quantity-btn plus-btn">+</button>
-                        </div>
-                    </div>
-                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i></button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="../imgs/pizzza1.avif" alt="Spicy Crunch">
-                <div class="product-info product-info2">
-                    <div class="name-price">
-                        <h3>Pizza Thập Cẩm</h3>
-                        <span class="price">100.000 VND</span>
-                    </div>
-                    <div class="desc-and-control">
-                        <p class="description">Pizza với lớp phô mai tan chảy, phủ nhiều loại topping đa dạng như xúc
-                            xích, ô-liu, các loại rau.</p>
-
-                        <div class="quantity-control">
-                            <button class="quantity-btn minus-btn">-</button>
-                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
-                            <button class="quantity-btn plus-btn">+</button>
-                        </div>
-                    </div>
-                    <button class="add-to-cart-btn btn2">Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i></button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="../imgs/mon_an_kem2.jpg" alt="Spicy Crunch">
-                <div class="product-info product-info3">
-                    <div class="name-price">
-                        <h3>Mỳ Ý Bò</h3>
-                        <span class="price">30.000 VND</span>
-                    </div>
-                     <div class="desc-and-control">
-                    <p class="description">Mì ý cổ điển, phủ đầy xốt thịt bò bằm đậm đà và phô mai bào.</p>
-                    
-                    <div class="quantity-control">
-                        <button class="quantity-btn minus-btn">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
-                        <button class="quantity-btn plus-btn">+</button>
-                    </div>
-                    </div>
-                    <button class="add-to-cart-btn btn3">Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i></button>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="menu__footer">
-            <a href="./menu_list.html">Xem tất cả</a>
-        </div>
-    </section>
-
-    <!-- ========================= TESTIMONIAL ========================= -->
-    <section class="testimonials">
-        <div class="testimonials__title">
-            <img src="../imgs/homepage__testimonials-love.svg" alt="Love Icon" />
-            <h2>Đánh Giá Từ Khách Hàng</h2>
-            <p>Menu cân bằng giữa quen thuộc và đột phá, mang lại trải nghiệm vị giác khó quên. Tươi ngon mỗi ngày, thêm
-                một chút yêu thương.
-            </p>
-        </div>
-
-        <div class="testimonials__carousel">
-            <div class="testimonials__track" id="testimonials-track">
-                <div class="testimonials__card testimonials__card--orange">
-                    <span>⭐⭐⭐⭐☆</span>
-                    <h3 class="testimonials__heading">Hương vị khó quên</h3>
-                    <p>Mỗi miếng ăn đều mang lại hương vị không quên được, nhân viên phục vụ chu đáo, nhiệt tình.</p>
-                    <div class="testimonials__author">
-                        <img src="../imgs/homepage__user1.jpg" alt="Larry" />
-                        <div>
-                            <strong>Lee Chong Wei</strong>
-                            <p>Khách hàng Vàng</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonials__card testimonials__card--purple">
-                    <span>⭐⭐⭐⭐☆</span>
-                    <h3 class="testimonials__heading">Ngon chuẩn vị</h3>
-                    <p>Hương vị đậm đà, ấm lòng. Cảm nhận được sự chăm chút trong từng món.</p>
-                    <div class="testimonials__author">
-                        <img src="../imgs/homepage__user2.webp" alt="Daniel" />
-                        <div>
-                            <strong>LinDan</strong>
-                            <p>Khách hàng Bạc</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonials__card testimonials__card--green">
-                    <span>⭐⭐⭐⭐☆</span>
-                    <h3 class="testimonials__heading">Quán ruột của chúng tôi</h3>
-                    <p>Gần như cuối tuần nào chúng tôi cũng ghé. Món ăn và phục vụ luôn xuất sắc, ổn định.</p>
-                    <div class="testimonials__author">
-                        <img src="../imgs/homepage__user3.jpg" alt="Amanda" />
-                        <div>
-                            <strong>Amanda Nunez</strong>
-                            <p>Khách hàng Vàng</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonials__card testimonials__card--pink">
-                    <span>⭐⭐⭐⭐⭐</span>
-                    <h3 class="testimonials__heading">Dịch vụ đỉnh cao</h3>
-                    <p>Nhân viên thân thiện, chu đáo. Không gian dễ chịu, món ăn còn tuyệt hơn!</p>
-                    <div class="testimonials__author">
-                        <img src="../imgs/homepage__user4.jpg" alt="Mark" />
-                        <div>
-                            <strong>Mark Velasquez</strong>
-                            <p>Khách hàng Cao cấp</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        const track = document.getElementById('testimonials-track');
-        track.innerHTML += track.innerHTML;
-
-        let pos = 0;
-        function animate() {
-            pos -= 5; // tốc độ
-            if (Math.abs(pos) >= track.scrollWidth / 2) {
-                pos = 0; // quay lại đầu
-            }
-            track.style.transform = `translateX(${pos}px)`;
-            requestAnimationFrame(animate);
-        }
-        animate();
-    </script>
-
-    <!-- ========================= GALLERY ========================= -->
-    <section class="gallery-section">
-        <img src="../imgs/chef-hat.png" alt="Chef Hat" class="chef-icon">
-        <h2>A Feast for Your Eyes</h2>
-        <div class="gallery">
-            <div class="gallery-item">
-            <img src="../imgs/slider4.jpg" alt="Salad dish">
-            </div>
-            <div class="gallery-item">
-            <img src="../imgs/slider2.avif" alt="Couple eating">
-            </div>
-            <div class="gallery-item">
-            <img src="../imgs/slider3.webp" alt="Green dish">
-            </div>
-        </div>
-    </section>
-
-    <section class="hero-section banner-section">
-        <div class="hero-image left-image">
-            <img src="../imgs/mini_banner.avif"alt="">
-            </div>
-
-        <div class="hero-content">
-            <div class="logo-text">
-                <img src="../imgs/icon2.jpg" alt="">
-        
-            </div>
-            <h2>Don't Wait - Order Now!</h2>
-            <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready for pick-up.</p>
-            <button class="btn-order" onclick="window.location.href='./menu_list.html'">
-                Đặt Ngay<i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
-
-        <div class="hero-image right-image">
-            <img src="../imgs/mini_banner2.avif" alt="">
-
-            </div>
-    </section>
-
-     <div id="footer-placeholder"></div>
-    <script src="../assets/js/include.js"></script>  
+    <script src="../assets/js/include.js"></script>
     <script src="../assets/js/cart.js"></script>
-
+    <script src="../assets/js/search.js"></script>
     <script src="../assets/js/auth-guard.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/auth.js"></script>
-<script>
-  // Kiểm tra đăng nhập: chỉ redirect nếu chưa đăng nhập
-  // Chạy trong window.onload để đảm bảo mọi script đều đã load xong
-  window.addEventListener("load", () => {
-    if (!isLoggedIn()) {
-      window.location.href = "./auth.html";
-    }
-  });
-</script>
+    <script>
+        // Kiểm tra đăng nhập: chỉ redirect nếu chưa đăng nhập
+        // Chạy trong window.onload để đảm bảo mọi script đều đã load xong
+        window.addEventListener("load", () => {
+            if (!isLoggedIn()) {
+                window.location.href = "./auth.html";
+            }
+        });
+    </script>
 </body>
 
 </html>
