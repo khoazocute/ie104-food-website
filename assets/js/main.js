@@ -45,4 +45,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // ========================= REVEAL ON SCROLL =========================
+    // Observe elements with class `reveal` or attribute `data-reveal-delay`
+    try {
+        const revealSelector = '[data-reveal-delay], .reveal';
+        const revealEls = Array.from(document.querySelectorAll(revealSelector));
+        if (revealEls.length && 'IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    const el = entry.target;
+                    const delay = parseInt(el.dataset.revealDelay || 0, 10) || 0;
+                    if (delay) el.style.transitionDelay = `${delay}ms`;
+                    el.classList.add('show');
+                    obs.unobserve(el);
+                });
+            }, { threshold: 0.08 });
+
+            revealEls.forEach(e => revealObserver.observe(e));
+        } else if (revealEls.length) {
+            // Fallback: reveal immediately if IntersectionObserver not supported
+            revealEls.forEach(e => e.classList.add('show'));
+        }
+    } catch (err) {
+        console.error('[reveal] init error', err);
+    }
+
 }); 

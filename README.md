@@ -30,4 +30,4 @@ Trang web mô phỏng một cửa hàng đồ ăn nhanh trực tuyến, nơi ng�
     ├── order-history.html (Lịch sử đơn hàng) 
     │ 
     ├── header.html (Phần đầu trang - được nhúng) 
-    │ └── footer.html (Phần chân trang - được nhúng) │ ├── /assets/ │ ├── /css/ (Chứa tất cả các file CSS) │ ├── /js/ (Chứa tất cả các file JavaScript) │ └── /imgs/ (Chứa tất cả hình ảnh) │ └──
+    │ └── footer.html (Phần chân trang - được nhúng) │ ├── /assets/ │ ├── /css/ (Chứa tất cả các file CSS) │ ├── /js/ (Chứa tất cả các file JavaScript) │ └── /assets/imgs/ (Chứa tất cả hình ảnh) │ └──

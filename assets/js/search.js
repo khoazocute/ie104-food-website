@@ -10,23 +10,23 @@ const ProductsDB = {
     loadProducts() {
         this.products = [
             // Burgers
-            { id: 1, name: 'Burger Phô Mai', price: 45000, category: 'Burger', image: '../imgs/burger1.avif' },
-            { id: 2, name: 'Burger Bò Nướng', price: 50000, category: 'Burger', image: '../imgs/burger2.avif' },
-            { id: 3, name: 'Burger Gà Giòn', price: 48000, category: 'Burger', image: '../imgs/burger3.avif' },
-            { id: 4, name: 'Burger Double Beef', price: 65000, category: 'Burger', image: '../imgs/burger4.avif' },
-            { id: 5, name: 'Burger Cá Tươi', price: 52000, category: 'Burger', image: '../imgs/burger5.avif' },
-            { id: 6, name: 'Burger Combo Tiệt Kiệm', price: 55000, category: 'Burger', image: '../imgs/burger6.avif' },
+            { id: 1, name: 'Burger Phô Mai', price: 45000, category: 'Burger', image: '../assets/imgs/burger1.avif' },
+            { id: 2, name: 'Burger Bò Nướng', price: 50000, category: 'Burger', image: '../assets/imgs/burger2.avif' },
+            { id: 3, name: 'Burger Gà Giòn', price: 48000, category: 'Burger', image: '../assets/imgs/burger3.avif' },
+            { id: 4, name: 'Burger Double Beef', price: 65000, category: 'Burger', image: '../assets/imgs/burger4.avif' },
+            { id: 5, name: 'Burger Cá Tươi', price: 52000, category: 'Burger', image: '../assets/imgs/burger5.avif' },
+            { id: 6, name: 'Burger Combo Tiệt Kiệm', price: 55000, category: 'Burger', image: '../assets/imgs/burger6.avif' },
             
             // Pizzas
-            { id: 7, name: 'Pizza Xúc Xích', price: 80000, category: 'Pizza', image: '../imgs/pizza6.avif' },
-            { id: 8, name: 'Pizza Hải Sản', price: 90000, category: 'Pizza', image: '../imgs/pizza22.avif' },
-            { id: 9, name: 'Pizza Thịt Bò Hầm', price: 90000, category: 'Pizza', image: '../imgs/pizza3.avif' },
-            { id: 10, name: 'Pizza Margherita', price: 75000, category: 'Pizza', image: '../imgs/pizzza1.avif' },
+            { id: 7, name: 'Pizza Xúc Xích', price: 80000, category: 'Pizza', image: '../assets/imgs/pizza6.avif' },
+            { id: 8, name: 'Pizza Hải Sản', price: 90000, category: 'Pizza', image: '../assets/imgs/pizza22.avif' },
+            { id: 9, name: 'Pizza Thịt Bò Hầm', price: 90000, category: 'Pizza', image: '../assets/imgs/pizza3.avif' },
+            { id: 10, name: 'Pizza Margherita', price: 75000, category: 'Pizza', image: '../assets/imgs/pizzza1.avif' },
             
             // Combos
-            { id: 14, name: 'Combo Gia Đình 2', price: 180000, category: 'Combo', image: '../imgs/burger7.avif' },
-            { id: 15, name: 'Combo Tiệc Gà & Mì Ý', price: 190000, category: 'Combo', image: '../imgs/burger8.avif' },
-            { id: 16, name: 'Pizza Combo Gia Đình', price: 220000, category: 'Combo', image: '../imgs/burger9.avif' },
+            { id: 14, name: 'Combo Gia Đình 2', price: 180000, category: 'Combo', image: '../assets/imgs/burger7.avif' },
+            { id: 15, name: 'Combo Tiệc Gà & Mì Ý', price: 190000, category: 'Combo', image: '../assets/imgs/burger8.avif' },
+            { id: 16, name: 'Pizza Combo Gia Đình', price: 220000, category: 'Combo', image: '../assets/imgs/burger9.avif' },
         ];
     },
 
@@ -105,7 +105,7 @@ const SearchUI = {
             html += `
                 <a href="./menu_list.html" class="search-result-item" data-product-id="${product.id}">
                     <div class="search-result-image">
-                        <img src="${product.image}" alt="${product.name}" onerror="this.src='../imgs/burger1.avif'">
+                        <img src="${product.image}" alt="${product.name}" onerror="this.src='../assets/imgs/burger1.avif'">
                     </div>
                     <div class="search-result-info">
                         <h4>${product.name}</h4>
