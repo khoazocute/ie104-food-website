@@ -171,7 +171,7 @@ h2 {
 /* ============================ BANNER ============================= */
 .banner {
     position: relative;
-    background-image: url('/imgs/homepage__banner1.jpg');
+    background-image: url('../../imgs/homepage__banner1.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
