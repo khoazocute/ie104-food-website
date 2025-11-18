@@ -616,14 +616,17 @@ html {
 }
 
 /* ---------- Mobile ---------- */
-@media (max-width:980px) {
+@media (max-width:992px) {
+    .hero__content h1 {
+        font-size: 56px;
+    }
+
     .features-wrap {
         grid-template-columns: 1fr;
         text-align: left;
     }
 
     .feature-center {
-        order: -1;
         display: flex;
         justify-content: center;
     }
@@ -665,6 +668,11 @@ html {
     .milestone .dot {
         left: 14px !important;
         right: auto !important;
+    }
+
+    .team__content {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
     }
 }
 

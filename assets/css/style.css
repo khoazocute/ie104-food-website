@@ -1015,7 +1015,6 @@ footer {
 
     .banner__content h1 {
         font-size: 56px;
-        /* Giảm cỡ chữ */
     }
 
     .deal .content {
@@ -1055,17 +1054,6 @@ footer {
     .gallery-item:hover img {
         transform: none;
     }
-
-
-    /* === TRANG GIỚI THIỆU (ABOUT) === */
-    /* (about.css đã tự xử lý hero và features ở 1024px/980px) */
-
-    .team__content {
-        /* Chuyển từ 3 cột -> 2 cột */
-        grid-template-columns: repeat(2, 1fr);
-        width: 90%;
-    }
-
 
 }
 
@@ -1129,9 +1117,7 @@ footer {
 
 
     /* === TRANG GIỚI THIỆU (ABOUT) === */
-    /* (about.css đã tự xử lý hero và features ở 560px) */
     .team__content {
-        /* Chuyển từ 2 cột -> 1 cột */
         grid-template-columns: 1fr;
         width: 80%;
         max-width: 380px;
@@ -1144,7 +1130,7 @@ footer {
 
     .stats-hero-section .stat-card h4 {
         font-size: 3rem;
-        /* Giảm cỡ chữ số */
+        /* Giảm cỡ chữ số*/
     }
 
 
@@ -1170,7 +1156,7 @@ footer {
 
     /* === TRANG MENU (CHUNG) === */
     .slogan h1 {
-        font-size: 40px;
+        font-size: 36px;
         /* Giảm cỡ chữ slogan */
     }
 
