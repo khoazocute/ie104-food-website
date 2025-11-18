@@ -89,10 +89,7 @@ html {
 
 /* CTA group */
 .hero__nav {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
+    margin: 16px 0 20px;
 }
 
 .hero__nav a {
@@ -123,12 +120,8 @@ html {
 .hero__badge {
     display: inline-flex;
     align-items: center;
-
     gap: 10px;
-
     width: auto;
-    /* (mặc định) */
-    inline-size: fit-content;
     /* hiện đại */
 
     white-space: nowrap;
@@ -242,53 +235,6 @@ html {
     transform: rotate(5deg) translateY(2px);
 }
 
-/* ========== Responsive cho cột phải ========== */
-@media (max-width: 1024px) {
-    .hero__content {
-        grid-template-columns: 1fr;
-    }
-
-    .collage {
-        padding-top: 66%;
-    }
-
-    .collage__img--top {
-        width: 82%;
-        right: 2%;
-    }
-
-    .collage__img--back {
-        width: 88%;
-        right: -2%;
-        bottom: -10%;
-    }
-}
-
-@media (max-width: 560px) {
-    .collage {
-        padding-top: 70%;
-    }
-
-    .collage__img--top {
-        width: 88%;
-        right: 1%;
-    }
-
-    .collage__img--back {
-        width: 92%;
-        right: -4%;
-    }
-
-    .collage__sticker {
-        width: 18%;
-        left: 6%;
-    }
-}
-
-
-
-
-
 /* ---------- WHY CHOOSE US (two-side + center) ---------- */
 .about-features {
     padding: 70px 0;
@@ -387,7 +333,7 @@ html {
 /* ========== SECTION 3: CẬP NHẬT STORY / NUMBERS ========== */
 .stats-hero-section {
     padding: 80px 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imgs/contact__form.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../imgs/contact__form.png');
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -686,34 +632,6 @@ html {
 .team__socials i:nth-child(3):hover {
     color: #1DA1F2;
     border-color: #1DA1F2;
-}
-
-/* ---------- Reveal helpers ---------- */
-.section-title.reveal,
-.reveal {
-    opacity: 0;
-    filter: blur(2px);
-    transform: translateY(30px);
-    transition: opacity .8s ease-out, transform .8s cubic-bezier(.25, .1, .25, 1), filter .8s ease-out;
-}
-
-.reveal.visible {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
-}
-
-.reveal-left {
-    transform: translateX(-40px);
-}
-
-.reveal-right {
-    transform: translateX(40px);
-}
-
-.reveal-left.visible,
-.reveal-right.visible {
-    transform: translateX(0);
 }
 
 /* ---------- Mobile ---------- */
