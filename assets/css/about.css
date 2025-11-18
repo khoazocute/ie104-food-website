@@ -7,8 +7,7 @@
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: #FCEFE2;
-    color: #333;
-    color: var(--text);
+    color: #2E1800;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -358,9 +357,7 @@ html {
 
 .stats-hero-section .stat-card {
     background: transparent;
-    /* Nền trong suốt */
     box-shadow: none;
-    /* Không bóng đổ */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -373,33 +370,20 @@ html {
 /* Style cho icon */
 .stats-hero-section .stat-card .stat-icon {
     font-size: 3rem;
-    /* Kích thước icon lớn */
-    color: var(--white);
-    /* Màu icon trắng */
     margin-bottom: 20px;
-    /* Khoảng cách dưới icon */
 }
 
-/* Style cho chữ mô tả (ví dụ: Món ăn độc đáo) */
 .stats-hero-section .stat-card p {
     font-size: 1.1rem;
-    /* Mô tả lớn hơn */
     opacity: 1;
-    /* Đảm bảo nhìn rõ */
     color: #f58332;
-    /* Màu cam cho mô tả */
     font-weight: 600;
-    /* In đậm hơn */
     margin-bottom: 10px;
-    /* Khoảng cách giữa mô tả và số */
-    order: 2;
-    /* Đặt P sau ICON */
 }
 
 /* Style cho số liệu */
 .stats-hero-section .stat-card h4 {
     font-size: 60px;
-    /* Số lớn hơn nữa */
     font-weight: 800;
 }
 
@@ -408,7 +392,6 @@ html {
 /* ---------- SECTION: HÀNH TRÌNH MỞ CỬA HÀNG (TIMELINE) ---------- */
 .journey {
     padding: 70px 0;
-    position: relative;
 }
 
 .journey-title {
@@ -476,7 +459,6 @@ html {
 }
 
 .mile-card {
-    background: var(--bg-light);
     border: 1px solid rgba(249, 132, 4, .35);
     border-radius: 16px;
     padding: 14px 16px;
@@ -501,7 +483,6 @@ html {
 }
 
 .mile-meta i {
-    color: var(--orange-2);
     font-size: 32px;
 }
 
@@ -559,7 +540,7 @@ html {
     width: 100%;
     padding: 25px;
     opacity: 1;
-    transition: all .5s;
+    transition: all 0.5s;
     border-radius: 0 0 30px 30px;
 }
 
@@ -687,81 +668,3 @@ html {
     }
 }
 
-/* ---------- Keyframes ---------- */
-@keyframes floating {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes floating-mobile {
-
-    0%,
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
-
-    50% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-}
-
-.btn .ripple {
-    position: absolute;
-    border-radius: 50%;
-    transform: scale(0);
-    animation: ripple-anim .6s linear;
-    background-color: rgba(255, 255, 255, .6);
-}
-
-@keyframes ripple-anim {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-
-.about-cta .btn.pulse-animation {
-    animation: pulse 2.5s infinite ease-out;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, .7);
-    }
-
-    70% {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
-    }
-}
-
-/* ========================= REVEAL ON SCROLL ========================= */
-/* Elements with class `reveal` or attribute `data-reveal-delay` will fade/slide in */
-[data-reveal-delay], .reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity .6s ease, transform .6s ease;
-    will-change: opacity, transform;
-}
-
-[data-reveal-delay].show, .reveal.show {
-    opacity: 1;
-    transform: none;
-}
-
-.reveal-left { transform: translateX(-24px); }
-.reveal-right { transform: translateX(24px); }
-
-@media (prefers-reduced-motion: reduce) {
-    [data-reveal-delay], .reveal { transition: none !important; }
-}
