@@ -1,4 +1,4 @@
-/* ===== CƠ BẢN ===== */
+/* ===== GLOBAL ===== */
 * {
     margin: 0;
     padding: 0;
@@ -162,7 +162,6 @@ body {
     border-radius: 12px;
     padding: 8px 10px;
     font-size: 14px;
-    font-family: inherit;
     background-color: #ffffff;
 }
 
