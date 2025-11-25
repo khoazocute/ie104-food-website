@@ -29,7 +29,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 85%;
+    width: 90%;
     height: 68px;
     padding: 10px 12px;
     margin: 15px auto 45px;
@@ -172,10 +172,11 @@ h2 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    width: 98%;
     min-height: 700px;
-    padding: 35px 15px;
     border-radius: 28px;
+    overflow: hidden;
+    width: 98%; 
+    margin: 0 auto; 
 }
 
 .banner__content {
@@ -226,26 +227,26 @@ h2 {
     text-decoration: none;
 }
 
-.banner__nav>a:first-of-type {
+.banner__nav a:first-of-type {
     background: #FF6C0A;
     color: #FFF7EB;
     border: 1.5px solid #C85E11;
     transition: all 0.3s ease;
 }
 
-.banner__nav>a:first-of-type:hover {
+.banner__nav a:first-of-type:hover {
     box-shadow: 0 6px 0 #C85E11;
     transform: scale(1.02);
 }
 
-.banner__nav>a:last-of-type {
+.banner__nav a:last-of-type {
     background-color: #1F1000;
     color: #FFF7EB;
     border: 1.5px solid #481d00;
     transition: all 0.3s ease;
 }
 
-.banner__nav>a:last-of-type:hover {
+.banner__nav a:last-of-type:hover {
     box-shadow: 0 6px 0 #481d00;
     transform: scale(1.02);
 }
@@ -373,6 +374,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
 }
 
 /* ===== COUNTDOWN ===== */
@@ -461,7 +463,6 @@ h2 {
 
 .deal__list {
     list-style: none;
-    margin-bottom: 22px;
 }
 
 .deal__list li {
@@ -479,7 +480,8 @@ h2 {
 }
 
 /* ===== BUTTONS ===== */
-.deal__nav a {
+.deal__nav a{
+    display: inline-block;
     padding: 16px 40px;
     border-radius: 999px;
     font-weight: 700;
@@ -494,16 +496,14 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.deal__nav a i {
-    margin-left: 8px;
-}
-
 .deal__nav a:hover {
     box-shadow: 0 6px 0 #C85E11;
     transform: scale(1.02);
 }
 
-
+.deal__nav a i {
+    margin-left: 8px;
+}
 /* ================================== MENU ========================================== */
 /* --- SLOGAN --- */
 .menu {
@@ -534,6 +534,7 @@ h2 {
 }
 
 .menu__footer a {
+    display: inline-block;
     padding: 16px 40px;
     border-radius: 999px;
     font-weight: 700;
@@ -894,7 +895,7 @@ footer {
     }
 
     .header__nav,
-    .header__right {
+    .header__item {
         display: none;
         /* Ẩn menu ngang và nút bên phải */
     }
@@ -905,7 +906,7 @@ footer {
     }
 
     .header {
-        width: 90%;
+        width: 95%;
         margin-bottom: 10px;
     }
 
@@ -992,10 +993,8 @@ footer {
 
     /* === TRANG CHỦ (HOMEPAGE) === */
     .banner__content {
-        left: 5%;
         text-align: left;
         transform: none;
-        padding-top: 40px;
     }
 
     .banner__content h1 {
@@ -1014,32 +1013,9 @@ footer {
         justify-content: center;
     }
 
-    /* Ẩn ảnh trang trí ở mini banner (hero-section) */
-    .hero-section .hero-image {
-        display: none;
-    }
-
-    .gallery {
-        flex-direction: column;
-        /* Stack gallery ảnh */
-        width: 95%;
-        gap: 15px;
-    }
-
     .gallery-item {
         height: 300px;
-        flex: 1 !important;
-        /* Tắt hiệu ứng zoom */
     }
-
-    .gallery-item:hover {
-        flex: 1 !important;
-    }
-
-    .gallery-item:hover img {
-        transform: none;
-    }
-
 }
 
 
@@ -1098,6 +1074,14 @@ footer {
     .menu__title p,
     .testimonials__title p {
         font-size: 15px;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery-item img {
+        transform: scale(1.05);
     }
 
     /* === TRANG LIÊN HỆ (CONTACT) === */
