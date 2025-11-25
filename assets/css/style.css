@@ -74,9 +74,6 @@ h2 {
     border: none;
     outline: none;
     background: transparent;    
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
 }
 
 .header__search-input::placeholder {
@@ -106,7 +103,7 @@ h2 {
 
 .header__nav a {
     text-decoration: none;
-    color: #444;
+    color: #2E1800;
     font-weight: 600;
     font-size: 16px;
     transition: all 0.3s ease;
@@ -177,7 +174,7 @@ h2 {
     background-size: cover;
     width: 98%;
     min-height: 700px;
-    margin: 35px auto 15px;
+    padding: 35px 15px;
     border-radius: 28px;
 }
 
@@ -1102,25 +1099,6 @@ footer {
     .testimonials__title p {
         font-size: 15px;
     }
-
-
-    /* === TRANG GIỚI THIỆU (ABOUT) === */
-    .team__content {
-        grid-template-columns: 1fr;
-        width: 80%;
-        max-width: 380px;
-    }
-
-    .stats-hero-section .stats {
-        gap: 30px;
-        /* Giảm khoảng cách các stat */
-    }
-
-    .stats-hero-section .stat-card h4 {
-        font-size: 3rem;
-        /* Giảm cỡ chữ số*/
-    }
-
 
     /* === TRANG LIÊN HỆ (CONTACT) === */
     .contact-header h1 {

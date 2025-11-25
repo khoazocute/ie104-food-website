@@ -9,7 +9,6 @@ body {
     background-color: #FCEFE2;
     color: #2E1800;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 h2 {
@@ -650,7 +649,6 @@ html {
     .hero-tag {
         left: 50%;
         transform: translateX(-50%);
-        animation: floating-mobile 3.5s ease-in-out infinite;
     }
 
     .timeline::before {
@@ -676,3 +674,22 @@ html {
     }
 }
 
+
+/*===================== RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .team__content {
+        grid-template-columns: 1fr;
+        width: 80%;
+        max-width: 380px;
+    }
+
+    .stats-hero-section .stats {
+        gap: 30px;
+        /* Giảm khoảng cách các stat */
+    }
+
+    .stats-hero-section .stat-card h4 {
+        font-size: 3rem;
+        /* Giảm cỡ chữ số*/
+    }
+}
