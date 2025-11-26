@@ -2,7 +2,7 @@
   --bg: #fff7ec;
   --ink: #2f2b1f;
   --ring: #f4c27d;
-  --accent: #f87d39;
+  --accent: #FF6C0A;
 }
 /*Định nghĩa root*/
 
@@ -20,7 +20,7 @@
   min-width: 20px;
   height: 20px;
   padding: 0 6px;
-  background: #ff6b00;
+  background: #FF6C0A;
   color: #fff;
   border-radius: 999px;
   font-size: 12px;

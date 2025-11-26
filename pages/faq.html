@@ -39,9 +39,7 @@
                     <span class="arrow">▼</span>
                 </button>
                 <div class="faq-answer">
-                    Thời gian giao hàng trung bình từ 30-45 phút, tùy theo vị trí của bạn. Chúng tôi luôn đóng gói cẩn
-                    thận để món ăn giữ được độ nóng và ngon. Mục tiêu của chúng tôi là giao đến bạn nhanh chóng mà vẫn
-                    đảm bảo chất lượng. Hãy thưởng thức món ăn yêu thích ngay tại nhà!
+                    <p>Thời gian giao hàng trung bình từ 30-45 phút, tùy theo vị trí của bạn. Chúng tôi luôn đóng gói cẩn thận để món ăn giữ được độ nóng và ngon. Mục tiêu của chúng tôi là giao đến bạn nhanh chóng mà vẫn đảm bảo chất lượng. Hãy thưởng thức món ăn yêu thích ngay tại nhà!</p>
                 </div>
             </div>
 
@@ -51,8 +49,7 @@
                     <span class="arrow">▼</span>
                 </button>
                 <div class="faq-answer">
-                    Có! Chúng tôi hợp tác với các trang trại và nhà cung cấp uy tín tại địa phương để đảm bảo tất cả
-                    nguyên liệu đều tươi mới, sạch và có nguồn gốc rõ ràng.
+                    <p>Có! Chúng tôi hợp tác với các trang trại và nhà cung cấp uy tín tại địa phương để đảm bảo tất cả nguyên liệu đều tươi mới, sạch và có nguồn gốc rõ ràng.</p>
                 </div>
             </div>
 
@@ -62,8 +59,7 @@
                     <span class="arrow">▼</span>
                 </button>
                 <div class="faq-answer">
-                    Hoàn toàn có thể! Bạn có thể chọn thêm hoặc bỏ bớt topping, sốt, hoặc điều chỉnh khẩu phần tùy ý
-                    trước khi đặt hàng.
+                    <p>Hoàn toàn có thể! Bạn có thể chọn thêm hoặc bỏ bớt topping, sốt, hoặc điều chỉnh khẩu phần tùy ý trước khi đặt hàng.</p>
                 </div>
             </div>
 
@@ -73,8 +69,7 @@
                     <span class="arrow">▼</span>
                 </button>
                 <div class="faq-answer">
-                    Chúng tôi chấp nhận thanh toán bằng thẻ tín dụng, ví điện tử, và tiền mặt khi nhận hàng. Bạn có thể
-                    chọn hình thức phù hợp khi thanh toán.
+                    <p>Chúng tôi chấp nhận thanh toán bằng thẻ tín dụng, ví điện tử, và tiền mặt khi nhận hàng. Bạn có thể chọn hình thức phù hợp khi thanh toán.</p>
                 </div>
             </div>
 
@@ -84,8 +79,7 @@
                     <span class="arrow">▼</span>
                 </button>
                 <div class="faq-answer">
-                    Sau khi đặt hàng, bạn sẽ nhận được đường dẫn theo dõi qua email hoặc tin nhắn SMS. Bạn có thể xem
-                    trạng thái đơn hàng theo thời gian thực cho đến khi giao thành công.
+                    <p>Sau khi đặt hàng, bạn sẽ nhận được đường dẫn theo dõi qua email hoặc tin nhắn SMS. Bạn có thể xem trạng thái đơn hàng theo thời gian thực cho đến khi giao thành công.</p>
                 </div>
             </div>
         </section>
@@ -95,12 +89,12 @@
     <section class="hero-section banner-section">
         <div class="hero-image left-image">
             <img src="../assets/imgs/mini_banner.avif" alt="">
-            </div>
+        </div>
 
         <div class="hero-content">
             <div class="logo-text">
                 <img src="../assets/imgs/icon2.jpg" alt="">
-        
+
             </div>
             <h2>Don't Wait - Order Now!</h2>
             <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready for pick-up.</p>
@@ -112,7 +106,7 @@
         <div class="hero-image right-image">
             <img src="../assets/imgs/mini_banner2.avif" alt="">
 
-            </div>
+        </div>
     </section>
 
     <!-- FOOTER -->
@@ -122,24 +116,21 @@
     <script src="../assets/js/cart.js"></script>
 
     <script>
-        window.addEventListener("load", function () {
-            const faqItems = document.querySelectorAll(".faq-item");
+        const getFAQItems = document.querySelectorAll(".faq-item");
 
-            faqItems.forEach(item => {
-                const button = item.querySelector(".faq-question");
+        getFAQItems.forEach(item => {
+            const button = item.querySelector(".faq-question");
 
-                button.addEventListener("click", () => {
-                    const isActive = item.classList.contains("active");
+            button.addEventListener("click", () => {
+                const isActive = item.classList.contains("active");
 
-                    if (isActive) {
-                        item.classList.remove("active");
-                    }
+                if (isActive) {
+                    item.classList.remove("active");
+                }
 
-                    // Mở lại nếu chưa mở
-                    if (!isActive) {
-                        item.classList.add("active");
-                    }
-                });
+                if (!isActive) {
+                    item.classList.add("active");
+                }
             });
         });
     </script>
