@@ -9,7 +9,7 @@
 
 /* ========================= HERO ========================= */
 .hero {
-    padding: clamp(40px, 6vw, 80px) 18px;
+    padding: 32px;
 }
 
 .hero__content {
@@ -37,7 +37,7 @@
     font-weight: 700;
     letter-spacing: .2px;
     color: #C85E11;
-    background: var(--bg-soft);
+    background: #FFEEDB;
     border: 1.5px solid #FAB12F;
     border-radius: 999px;
     padding: 8px 12px;
@@ -65,28 +65,8 @@
 }
 
 .hero__nav a {
-    padding: 16px 40px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 18px;
-    text-decoration: none;
-    background: #FF6C0A;
-    color: #FFF7EB;
-    border: 1.5px solid #C85E11;
-    transition: all 0.3s ease;
+    display: inline-block;
 }
-
-/* Nút chính – cam + bóng đặc rơi xuống */
-.hero__nav a:hover {
-    box-shadow: 0 6px 0 #C85E11;
-    transform: scale(1.02);
-}
-
-/* icon spacing */
-.hero__nav i {
-    margin-left: 8px;
-}
-
 
 /* badge */
 .hero__badge {

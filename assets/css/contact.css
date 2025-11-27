@@ -84,22 +84,8 @@
     line-height: 1.4;
 }
 
-.submit-btn {
-    padding: 16px 40px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 18px;
+.submit {
     cursor: pointer;
-    text-decoration: none;
-    background: #FF6C0A;
-    color: #FFF7EB;
-    border: 1.5px solid #C85E11;
-    transition: all 0.3s ease;
-}
-
-.submit-btn:hover {
-    box-shadow: 0 6px 0 #C85E11;
-    transform: scale(1.02);
 }
 
 .contact-form img {

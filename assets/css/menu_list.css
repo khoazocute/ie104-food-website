@@ -381,28 +381,9 @@
 /* ============================= */
 /* NÚT ORDER NOW                 */
 /* ============================= */
-.btn-order {
+.hero-btn a {
+  display: inline-block;
   margin-top: 30px;
-  padding: 16px 40px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 18px;
-  text-decoration: none;
-  background: #FF6C0A;
-  cursor: pointer;
-  color: #FFF7EB;
-  border: 1.5px solid #C85E11;
-  transition: all 0.3s ease;
-}
-
-.btn-order:hover {
-  box-shadow: 0 6px 0 #C85E11;
-  transform: scale(1.02);
-}
-
-/* icon spacing */
-.btn-order i {
-  margin-left: 8px;
 }
 
 /* ============================= */
@@ -463,6 +444,15 @@
 /* ========================== RESPONSIVE ============================ */
 /* TABLET (768px - 992px): 2 Cột */
 @media (max-width: 992px) {
+  .slogan h1 {
+    font-size: 48px;
+  }
+
+  .menu_nav {
+    /* Cho phép các nút filter xuống hàng */
+    flex-wrap: wrap;
+  }
+
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
@@ -483,5 +473,20 @@
   /* Đảm bảo card không bị quá to hoặc quá nhỏ */
   .product-card {
     max-width: 100%;
+  }
+
+  .slogan h1 {
+    font-size: 36px;
+    /* Giảm cỡ chữ slogan */
+  }
+
+  .menu_nav {
+    /* Chỉnh lại margin cho filter */
+    margin: 30px auto;
+  }
+
+  .filter-button {
+    padding: 12px 25px;
+    font-size: 16px;
   }
 }

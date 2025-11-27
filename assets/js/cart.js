@@ -164,6 +164,11 @@
       openCart();
     });
 
+    document.querySelector(".mobile-cart")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      openCart();
+    });
+
     // Thêm sản phẩm vào giỏ khi bấm nút .add-to-cart-btn
     document.addEventListener("click", (e) => {
       const btn = e.target.closest(".add-to-cart-btn");

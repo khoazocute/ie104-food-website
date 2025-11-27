@@ -12,10 +12,32 @@ body {
 
 h2 {
     font-family: "Sigmar", sans-serif;
-    font-size: 45px;
+    font-size: 46px;
     margin-top: 15px;
     letter-spacing: 2px;
     color: #2E1800;
+}
+
+.btn-primary {
+    padding: 16px 40px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    background: #FF6C0A;
+    color: #FFF7EB;
+    border: 1.5px solid #C85E11;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 0 #C85E11;
+    transform: scale(1.02);
+}
+
+/* icon spacing */
+.btn-primary i {
+    margin-left: 8px;
 }
 
 /* ========================= HEADER ========================= */
@@ -50,48 +72,49 @@ h2 {
     width: 68px;
     height: 60px;
 }
+
 /* ========================= SEARCH BAR ========================= */
 
 .header__search {
     display: flex;
-    align-items: center; 
+    align-items: center;
     width: 70%;
-    height: 42px; 
-    padding: 0 15px; 
+    height: 42px;
+    padding: 0 15px;
     gap: 12px;
     font-size: 15px;
-    color: #2E1800; 
-    background-color: #FFF7EB; 
-    border: 1.5px solid #FAB12F; 
-    border-radius: 999px; 
+    color: #2E1800;
+    background-color: #FFF7EB;
+    border: 1.5px solid #FAB12F;
+    border-radius: 999px;
     outline: none;
     transition: all 0.3s ease;
 }
 
 .header__search-input {
-    flex: 1; 
-    width: 100%; 
+    flex: 1;
+    width: 100%;
     border: none;
     outline: none;
-    background: transparent;    
+    background: transparent;
 }
 
 .header__search-input::placeholder {
-    color: #b07a3b; 
+    color: #b07a3b;
     opacity: 0.8;
 }
 
 /* 4. icon search */
 .header__search i {
     font-size: 18px;
-    color: #FF6C0A; 
+    color: #FF6C0A;
     transition: all 0.3s ease;
-    
+
 }
 
-.header__search:focus-within { 
-    border-color: #FF6C0A; 
-    box-shadow: 0 0 0 3px rgba(255, 108, 10, 0.2); 
+.header__search:focus-within {
+    border-color: #FF6C0A;
+    box-shadow: 0 0 0 3px rgba(255, 108, 10, 0.2);
 }
 
 /* NAV */
@@ -132,11 +155,11 @@ h2 {
     color: #2E1800;
     font-size: 30px;
     text-decoration: none;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
 .header__cart:hover {
-    transform: scale(1.15); 
+    transform: scale(1.15);
 }
 
 .header__item {
@@ -175,8 +198,8 @@ h2 {
     min-height: 700px;
     border-radius: 28px;
     overflow: hidden;
-    width: 98%; 
-    margin: 0 auto; 
+    width: 98%;
+    margin: 0 auto;
 }
 
 .banner__content {
@@ -219,27 +242,12 @@ h2 {
     margin: 10px 0;
 }
 
-.banner__nav a {
+.banner__nav a:last-of-type {
     padding: 16px 40px;
     border-radius: 999px;
     font-weight: 700;
     font-size: 18px;
     text-decoration: none;
-}
-
-.banner__nav a:first-of-type {
-    background: #FF6C0A;
-    color: #FFF7EB;
-    border: 1.5px solid #C85E11;
-    transition: all 0.3s ease;
-}
-
-.banner__nav a:first-of-type:hover {
-    box-shadow: 0 6px 0 #C85E11;
-    transform: scale(1.02);
-}
-
-.banner__nav a:last-of-type {
     background-color: #1F1000;
     color: #FFF7EB;
     border: 1.5px solid #481d00;
@@ -480,30 +488,10 @@ h2 {
 }
 
 /* ===== BUTTONS ===== */
-.deal__nav a{
-    display: inline-block;
-    padding: 16px 40px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 18px;
-    text-decoration: none;
-}
-
 .deal__nav a {
-    background: #FF6C0A;
-    color: #FFF7EB;
-    border: 1.5px solid #C85E11;
-    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-.deal__nav a:hover {
-    box-shadow: 0 6px 0 #C85E11;
-    transform: scale(1.02);
-}
-
-.deal__nav a i {
-    margin-left: 8px;
-}
 /* ================================== MENU ========================================== */
 /* --- SLOGAN --- */
 .menu {
@@ -528,31 +516,14 @@ h2 {
 }
 
 /* ===== NÚT “XEM TẤT CẢ” Ở CUỐI ===== */
-.menu__footer {
+.menu-footer {
     text-align: center;
     margin: 16px auto 8px;
 }
 
-.menu__footer a {
+.menu-footer a {
     display: inline-block;
-    padding: 16px 40px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 18px;
-    text-decoration: none;
-    background: #FF6C0A;
-    color: #FFF7EB;
-    border: 1.5px solid #C85E11;
-    transition: all 0.3s ease;
 }
-
-.menu__footer:hover a {
-    box-shadow: 0 6px 0 #C85E11;
-    transform: scale(1.02);
-}
-
-
-
 
 /* ========================= TESTIMONIAL ========================= */
 .testimonials {
@@ -860,8 +831,11 @@ footer {
 
 /* ========================= MOBILE MENU ========================= */
 /* Nút menu: ẩn trên desktop */
-.header__menu-btn {
+.right-mobile {
     display: none;
+}
+
+.header-mobile {
     border: none;
     outline: none;
     background-color: #1F1000;
@@ -876,9 +850,16 @@ footer {
     transition: all 0.3s ease;
 }
 
-.header__menu-btn:hover {
-    background-color: #3a2204;
-    transform: translateY(-1px);
+/* icon mobile cart */
+.mobile-cart {
+    color: #2E1800;
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mobile-cart:hover {
+    transform: scale(1.15);
 }
 
 /* Base mobile-nav: desktop thì tạm ẩn */
@@ -886,33 +867,35 @@ footer {
     display: none;
 }
 
+
 /* ------------------------------------------
    BREAKPOINT 1: TABLET (<= 992px)
    ------------------------------------------ */
 @media (max-width: 992px) {
     h2 {
-        font-size: 32px;
+        font-size: 30px;
     }
-
+    
+    /* Ẩn menu ngang và nút bên phải của giao diện desktop */
     .header__nav,
-    .header__item {
+    .header__right {
         display: none;
-        /* Ẩn menu ngang và nút bên phải */
     }
 
-    .header__menu-btn {
+    /* Hiển thị phần bên phải header mobile/tablet */
+    .right-mobile {
         display: flex;
-        /* Hiển thị nút hamburger */
+        gap: 8px;
     }
 
     .header {
         width: 95%;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     .mobile-nav {
         display: block;
-        width: 90%;
+        width: 92%;
         margin: 0 auto;
         padding: 20px;
         background-color: #FEF3E2;
@@ -924,7 +907,7 @@ footer {
         /* Hiệu ứng trượt xuống */
         max-height: 0;
         opacity: 0;
-        transform: translateY(-8px);
+        transform: translateY(-20px);
         transition: all 0.3s ease;
     }
 
@@ -935,7 +918,7 @@ footer {
     }
 
     /* Thanh navigation mobile */
-    .mobile-nav__list {
+    .mobile-nav ul {
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -944,7 +927,7 @@ footer {
         text-align: center;
     }
 
-    .mobile-nav__list a {
+    .mobile-nav a {
         border-radius: 999px;
         text-decoration: none;
         font-size: 16px;
@@ -954,25 +937,25 @@ footer {
     }
 
     /* Hover item (link thường) */
-    .mobile-nav__list a:hover {
+    .mobile-nav a:hover {
         background-color: rgba(255, 108, 10, 0.12);
         color: #FF6C0A;
         transform: translateY(-1px);
     }
 
     /* Active trang hiện tại (link thường) */
-    .mobile-nav__list li.active a {
+    .mobile-nav li.active a {
         background-color: rgba(255, 108, 10, 0.2);
         color: #FF6C0A;
     }
 
-    .mobile-nav__btn{
+    .btn-login {
         text-align: center;
         margin: 26px 0 12px;
     }
 
-    /* Chính là nút Đăng nhập */
-    .mobile-nav__btn a {
+    /* Nút Đăng nhập ở menu mobile */
+    .btn-login a {
         padding: 12px 16px;
         border-radius: 999px;
         border: 1.5px solid #1F1000;
@@ -985,10 +968,16 @@ footer {
         width: 100%;
     }
 
-    /* Hover nút Đăng nhập – giữ nguyên hiệu ứng */
-    .mobile-nav__btn a:hover {
-        box-shadow: 0 6px 0 #C85E11;
-        transform: scale(1.02);
+    /* icon spacing */
+    .btn-login i {
+        margin-right: 8px;
+    }
+
+    /* Hover nút Đăng nhập mobile*/
+    .btn-login a:hover {
+        background-color: #1F1000;
+        color: #FFF7EB;
+        box-shadow: 0 4px 10px rgba(31, 16, 0, 0.25);
     }
 
     /* === TRANG CHỦ (HOMEPAGE) === */
@@ -1004,7 +993,7 @@ footer {
     .deal .content {
         gap: 20px;
     }
-    
+
     .deal__left {
         padding-left: 0;
     }
@@ -1024,9 +1013,9 @@ footer {
    ------------------------------------------ */
 @media (max-width: 768px) {
 
+    /* Giảm cỡ chữ h2 */
     h2 {
         font-size: 32px;
-        /* Giảm cỡ chữ H2 chung */
     }
 
     /* === TRANG CHỦ (HOMEPAGE) === */
@@ -1041,7 +1030,7 @@ footer {
         transform: translateX(-50%);
     }
 
-    
+
     /* Cỡ chữ H1 mobile */
     .banner__content h1 {
         font-size: 40px;
@@ -1052,17 +1041,22 @@ footer {
         font-size: 14px;
     }
 
+    /* Giảm gap giữa các nút */
+    .banner__nav {
+        gap: 6px;
+    }
+
     /* Chỉnh kích thước các nút */
     .banner__nav a {
-        padding: 12px 20px; 
-        font-size: 14px;   
+        padding: 12px 20px;
+        font-size: 14px;
     }
 
     .hero__badge {
         display: none;
     }
 
-    .deal .content{
+    .deal .content {
         flex-direction: column;
     }
 
@@ -1101,24 +1095,5 @@ footer {
 
     .contact-form {
         padding: 20px;
-    }
-
-
-    /* === TRANG MENU (CHUNG) === */
-    .slogan h1 {
-        font-size: 36px;
-        /* Giảm cỡ chữ slogan */
-    }
-
-    .menu_nav {
-        /* Cho phép các nút filter xuống hàng */
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 30px auto;
-    }
-
-    .filter-button {
-        padding: 12px 25px;
-        font-size: 16px;
     }
 }
