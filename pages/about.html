@@ -24,41 +24,53 @@
 
 <body>
 
-    <!--Header-->
+    <!-- ============================== HEADER ========================= -->
     <div id="header-placeholder"></div>
 
     <!-- ============================== SLOGAN ========================= -->
-    <section class="hero">
-        <div class="hero__content">
-            <div class="hero__left">
+    <section class="about-slogan">
+        <div class="slogan-container">
+            <div class="slogan-left">
                 <span>✨ Nóng Hổi &amp; Tươi Ngon</span>
-                <h1>Đồ Ăn Tươi <br> Giao Nhanh <br> Ăn Là Thích</h1>
+                <h1>Giới thiệu cửa hàng</h1>
                 <p> Trải nghiệm ẩm thực tuyệt vời với những món ăn được chế biến từ nguyên liệu tươi ngon nhất, giao đến tận tay bạn.</p>
-                <div class="hero__nav">
+                <div class="slogan-nav">
                     <a href="../pages/menu_list.html" class="btn-primary">
                         Đặt Ngay<i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-
-                <div class="hero__badge">
-                    <div class="badge-avatars">
-                        <img src="../assets/imgs/homepage__user1.jpg" alt="user1">
-                        <img src="../assets/imgs/homepage__user2.webp" alt="user2">
-                        <img src="../assets/imgs/homepage__user3.jpg" alt="user3">
-                    </div>
-                    <span>Hơn 2,6K người dùng yêu thích với lượt đánh giá 4.9 / 5✨</span>
-                </div>
             </div>
 
             <!-- RIGHT: collage -->
-            <div class="hero__right">
-                <div class="collage">
-                    <!-- top image -->
-                    <img src="../assets/imgs/burger4.avif" alt="dish 1" class="collage__img collage__img--top">
-                    <!-- back image -->
-                    <img src="../assets/imgs/burger4.avif" alt="dish 2" class="collage__img collage__img--back">
-                    <!-- sticker -->
-                    <img class="collage__sticker" src="../assets/imgs/about__hero.png" alt="awesome">
+            <div class="slogan-right">
+                <div class="slider-wrapper">
+                    
+                    <div class="slider-track row-slow">
+                        <div class="slide-item"><img src="../assets/imgs/burger4.avif" alt="Burger 1"></div>
+                        <div class="slide-item"><img src="../assets/imgs/pizza3.avif" alt="Pizza 1"></div>
+                        <div class="slide-item"><img src="../assets/imgs/combo1.jpg" alt="Combo 1"></div>
+                        <div class="slide-item"><img src="../assets/imgs/slider1.avif" alt="Slider 1"></div>
+                        <div class="slide-item"><img src="../assets/imgs/burger8.avif" alt="Burger 2"></div>
+                        <div class="slide-item"><img src="../assets/imgs/burger4.avif" alt="Burger 1"></div>
+                        <div class="slide-item"><img src="../assets/imgs/pizza3.avif" alt="Pizza 1"></div>
+                        <div class="slide-item"><img src="../assets/imgs/combo1.jpg" alt="Combo 1"></div>
+                        <div class="slide-item"><img src="../assets/imgs/slider1.avif" alt="Slider 1"></div>
+                        <div class="slide-item"><img src="../assets/imgs/burger8.avif" alt="Burger 2"></div>
+                    </div>
+            
+                    <div class="slider-track row-fast">
+                        <div class="slide-item"><img src="../assets/imgs/pizza6.avif" alt="Pizza 2"></div>
+                        <div class="slide-item"><img src="../assets/imgs/combo3.jpg" alt="Combo 2"></div>
+                        <div class="slide-item"><img src="../assets/imgs/slider4.jpg" alt="Slider 2"></div>
+                        <div class="slide-item"><img src="../assets/imgs/burger5.avif" alt="Burger 3"></div>
+                        <div class="slide-item"><img src="../assets/imgs/pizza22.avif" alt="Pizza 3"></div>
+                        <div class="slide-item"><img src="../assets/imgs/pizza6.avif" alt="Pizza 2"></div>
+                        <div class="slide-item"><img src="../assets/imgs/combo3.jpg" alt="Combo 2"></div>
+                        <div class="slide-item"><img src="../assets/imgs/slider4.jpg" alt="Slider 2"></div>
+                        <div class="slide-item"><img src="../assets/imgs/burger5.avif" alt="Burger 3"></div>
+                        <div class="slide-item"><img src="../assets/imgs/pizza22.avif" alt="Pizza 3"></div>
+                    </div>
+            
                 </div>
             </div>
         </div>
@@ -74,21 +86,21 @@
             </div>
             <div class="features-wrap">
                 <div class="feature-col">
-                    <div class="feature-item" data-reveal-delay="0">
+                    <div class="feature-item">
                         <div class="feature-icon"><i class="fa-solid fa-burger"></i></div>
                         <div>
                             <h4>Ngon chuẩn vị</h4>
                             <p>Công thức riêng từ đầu bếp, giữ trọn độ ẩm và hương vị.</p>
                         </div>
                     </div>
-                    <div class="feature-item reveal reveal-left" data-reveal-delay="150">
+                    <div class="feature-item">
                         <div class="feature-icon"><i class="fa-solid fa-carrot"></i></div>
                         <div>
                             <h4>Nguyên liệu luôn tươi</h4>
                             <p>Chọn lọc kỹ mỗi ngày từ nhà cung cấp nội địa chất lượng.</p>
                         </div>
                     </div>
-                    <div class="feature-item" data-reveal-delay="300">
+                    <div class="feature-item">
                         <div class="feature-icon"><i class="fa-solid fa-helmet-safety"></i></div>
                         <div>
                             <h4>An toàn tuyệt đối</h4>
@@ -97,26 +109,29 @@
                     </div>
                 </div>
 
-                <div class="feature-center" data-reveal-delay="100">
+                <!-- <div class="feature-center">
                     <div class="product"></div>
+                </div> -->
+                <div class="feature-center">
+                    <img src="/assets/imgs/homepage__discount1.png" alt="discount1">
                 </div>
 
                 <div class="feature-col">
-                    <div class="feature-item" data-reveal-delay="0">
+                    <div class="feature-item">
                         <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
                         <div>
                             <h4>Giao nhanh 30 phút</h4>
                             <p>Đảm bảo giữ nhiệt tốt và hạn chế sốc khi vận chuyển.</p>
                         </div>
                     </div>
-                    <div class="feature-item" data-reveal-delay="150">
+                    <div class="feature-item">
                         <div class="feature-icon"><i class="fa-solid fa-certificate"></i></div>
                         <div>
                             <h4>Chứng nhận chất lượng</h4>
                             <p>Hệ thống kiểm tra định kỳ và giám sát chặt chẽ liên tục.</p>
                         </div>
                     </div>
-                    <div class="feature-item" data-reveal-delay="300">
+                    <div class="feature-item">
                         <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
                         <div>
                             <h4>Đóng gói thân thiện</h4>
@@ -159,14 +174,13 @@
 
 
     <!-- SECTION 3.5: HÀNH TRÌNH MỞ CỬA HÀNG -->
-    <section class="journey" id="journey">
-        <div class="container">
-            <div class="journey-title">
+    <section class="journey">
+        <div class="journey-title">
                 <h2>Hành Trình <br> Mở Cửa Hàng</h2>
                 <p>Từ một gian bếp nhỏ đến chuỗi cửa hàng thân thuộc khắp thành phố.</p>
-            </div>
+        </div>
 
-            <div class="timeline">
+        <div class="timeline">
                 <div class="milestone">
                     <span class="dot"></span>
                     <div class="mile-card">
@@ -175,8 +189,7 @@
                             <i class="fa-solid fa-location-dot"></i>
                             <span>Đông khách sinh viên</span>
                         </div>
-                        <p>Chúng tôi thử nghiệm công thức bánh mềm và sốt đặc trưng, bán hết trong 3 giờ đầu khai
-                            trương.</p>
+                        <p>Chúng tôi thử nghiệm công thức bánh mềm và sốt đặc trưng, bán hết trong 3 giờ đầu khai trương.</p>
                     </div>
                 </div>
 
@@ -215,7 +228,6 @@
                         <p>Mở rộng hợp tác cùng nhà đầu tư địa phương, đảm bảo chất lượng đồng nhất toàn hệ thống.</p>
                     </div>
                 </div>
-            </div>
         </div>
     </section>
 
