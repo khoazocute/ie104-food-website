@@ -511,9 +511,8 @@
 
 
 
-/*===================== Responsive ================= */
+/*===================== RESPONSIVE ================= */
 /* ---------- Tablet ---------- */
-/* --- RESPONSIVE MOBILE --- */
 @media (max-width: 992px) {
     .about-slogan {
         padding: 0;
