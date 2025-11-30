@@ -515,7 +515,10 @@
 /* ---------- Tablet ---------- */
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 992px) {
-
+    .about-slogan {
+        padding: 0;
+    }
+    
     .slogan-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -534,7 +537,7 @@
         mask-image: none;
         -webkit-mask-image: none;
     }
-
+    
     /* Bỏ xoay/scale trên mobile để nội dung thẳng hàng */
     .slider-wrapper {
         transform: rotate(0) scale(1);

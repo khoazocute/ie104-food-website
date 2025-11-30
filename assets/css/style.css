@@ -1010,6 +1010,10 @@ footer {
         justify-content: center;
     }
 
+    .menu__title {
+        width: 90%;
+    }
+    
     .gallery-item {
         height: 300px;
     }

@@ -483,7 +483,12 @@
     padding: 12px 20px;
     font-size: 14px;
   }
-  
+
+  /* Chỉnh độ rộng của mô tả món ăn */
+  .description {
+    max-width: 80%;
+  }
+
   .slogan h1 {
     font-size: 36px;
     /* Giảm cỡ chữ slogan */

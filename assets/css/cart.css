@@ -87,7 +87,7 @@
 }
 
 .cart-row {
-  border-bottom: 1px dashed #ead7bd;
+  border-bottom: 1.5px dashed rgba(200, 94, 17, 0.25);
 }
 
 .cart-cell {
@@ -153,28 +153,26 @@
 
 .total {
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 /* ----------- Checkout button ----------- */
-.cta {
-  padding: 16px 40px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 18px;
-  text-decoration: none;
-  background: #FF6C0A;
-  color: #FFF7EB;
-  border: 1.5px solid #C85E11;
-  transition: all 0.3s ease;
+.cart-footer button {
   cursor: pointer;
 }
 
-.cta:hover {
-  box-shadow: 0 6px 0 #C85E11;
-  transform: scale(1.02);
+/* --- Tùy chỉnh cuộn cho tbody trên Desktop --- */
+.cart-table tbody {
+  display: block;          /* Bắt buộc để chỉnh được chiều cao */
+  overflow-y: auto;        /* Hiện thanh cuộn dọc */
+  max-height: 50vh;        /* Chiều cao tối đa (khoảng 50% màn hình) */
+  padding-right: 5px;      
 }
 
-.cta i {
-  margin-left: 8px;
+/* Giữ cho tiêu đề và các dòng thẳng hàng nhau */
+.cart-table thead, 
+.cart-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;     /* Chia cột đều nhau để không bị lệch */
 }
