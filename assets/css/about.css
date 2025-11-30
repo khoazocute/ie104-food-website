@@ -134,42 +134,6 @@
     }
 }
 
-/* --- RESPONSIVE MOBILE --- */
-@media (max-width: 992px) {
-
-    .slogan-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .slogan-left {
-        align-items: center;
-    }
-
-    .slogan-left h1 {
-        font-size: 56px;
-    }
-
-    .slogan-right {
-        mask-image: none;
-        -webkit-mask-image: none;
-    }
-
-    /* Bỏ xoay/scale trên mobile để nội dung thẳng hàng */
-    .slider-wrapper {
-        transform: rotate(0) scale(1);
-        gap: 16px;
-        min-height: 160px;
-    }
-
-    .slide-item img {
-        height: 150px;
-        width: 200px;
-        border-radius: 12px;
-    }
-}
-
 /* ---------- WHY CHOOSE US ---------- */
 .about-features {
     padding: 70px 0;
@@ -180,7 +144,7 @@
 .features-title {
     margin: 0 auto 24px;
     text-align: center;
-    width: 55%;
+    width: 60%;
 }
 
 .features-title img {
@@ -422,25 +386,25 @@
 }
 
 /* ---------- CTA / TEAM ---------- */
-.about__title {
+.team-heading {
     margin: 0 auto 24px;
     text-align: center;
     width: 70%;
 }
 
-.about__title img {
+.team-heading img {
     width: 150px;
     height: 150px;
 }
 
-.about__title p {
+.team-heading p {
     color: #2E1800;
     font-size: 18px;
     font-weight: 400;
 }
 
 
-.team__content {
+.team-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -448,11 +412,11 @@
     margin: 0 auto;
 }
 
-.team__item {
+.team-item {
     position: relative;
 }
 
-.team__item img {
+.team-item img {
     width: 100%;
     display: block;
     border-radius: 30px;
@@ -460,7 +424,7 @@
 }
 
 
-.team__title {
+.team-author {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -473,20 +437,20 @@
     border-radius: 0 0 30px 30px;
 }
 
-.team__item:hover .team__title {
+.team-item:hover .team-author {
     opacity: 0;
 }
 
-.team__item h3 {
+.team-item h3 {
     font-size: 1.3rem;
 }
 
-.team__item p {
+.team-item p {
     font-size: 0.875rem;
     line-height: 28px;
 }
 
-.team__details {
+.team-details {
     position: absolute;
     top: 0;
     left: 0;
@@ -500,24 +464,24 @@
     transition: all 0.5s ease;
 }
 
-.team__item:hover .team__details {
+.team-item:hover .team-details {
     opacity: 1;
 }
 
-.team__details h3 {
+.team-details h3 {
     color: #FF6C0A;
 }
 
-.team__text {
+.team-text {
     margin: 8px;
     color: #FFEEDB;
 }
 
-.team__socials {
+.team-socials {
     margin-top: 24px;
 }
 
-.team__socials i {
+.team-socials i {
     width: 37px;
     height: 37px;
     border: 1.5px solid rgba(255, 255, 255, 0.5);
@@ -529,25 +493,63 @@
     cursor: pointer;
 }
 
-.team__socials i:first-child:hover {
+.team-socials i:first-child:hover {
     color: #1877F2;
     border-color: #1877F2;
 }
 
-.team__socials i:nth-child(2):hover {
+.team-socials i:nth-child(2):hover {
     color: #db4437;
     border-color: #db4437;
 }
 
-.team__socials i:nth-child(3):hover {
+.team-socials i:nth-child(3):hover {
     color: #1DA1F2;
     border-color: #1DA1F2;
 }
 
-/* ---------- Mobile ---------- */
-@media (max-width:992px) {
-    .hero__content h1 {
+
+
+
+/*===================== Responsive ================= */
+/* ---------- Tablet ---------- */
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 992px) {
+
+    .slogan-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .slogan-left {
+        align-items: center;
+    }
+
+    .slogan-left h1 {
         font-size: 56px;
+    }
+
+    .slogan-right {
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+
+    /* Bỏ xoay/scale trên mobile để nội dung thẳng hàng */
+    .slider-wrapper {
+        transform: rotate(0) scale(1);
+        gap: 16px;
+    }
+
+    .slide-item img {
+        height: 150px;
+        width: 200px;
+        border-radius: 12px;
+    }
+
+    /* Section why choose us */
+    .features-title {
+        width: 60%;
     }
 
     .features-wrap {
@@ -555,45 +557,41 @@
         text-align: left;
     }
 
-    .feature-center {
-        display: flex;
-        justify-content: center;
+    /* Giảm kích thước ảnh burger */
+    .feature-center img {
+        width: 300px;
+        height: auto;
     }
 
-    .hero-wrap {
-        text-align: center;
-    }
-
-    .hero-text p {
-        margin-inline: auto;
-    }
-
-    .hero-actions {
-        justify-content: center;
-    }
-
-    .hero-img .food {
-        max-width: 300px;
-    }
-
-    .hero-tag {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .team__content {
+    /* Chỉnh kích thước các card của team đầu bếp */
+    .team-content {
         grid-template-columns: repeat(2, 1fr);
         width: 90%;
     }
 }
 
 
-/*===================== RESPONSIVE ================= */
+/*===================== Mobile ================= */
 @media (max-width: 768px) {
-    .team__content {
+    .slogan-left h1 {
+        font-size: 40px;
+    }
+
+    /* Section why choose us */
+    .features-title {
+        width: 100%;
+    }
+
+    /* Giảm kích thước ảnh burger */
+    .feature-center img {
+        width: 220px;
+        height: auto;
+    }
+
+    .team-content {
         grid-template-columns: 1fr;
         width: 80%;
-        max-width: 380px;
+        max-width: 300px;
     }
 
     .timeline::before {
@@ -614,11 +612,10 @@
 
     .stats-hero-section .stats {
         gap: 30px;
-        /* Giảm khoảng cách các stat */
     }
 
     .stats-hero-section .stat-card h4 {
         font-size: 40px;
-        /* Giảm cỡ chữ số*/
     }
+
 }

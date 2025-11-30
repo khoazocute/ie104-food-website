@@ -548,15 +548,41 @@ h2 {
     overflow: hidden;
 }
 
+
+.testimonials__track {
+    display: flex;
+    gap: 20px;
+    padding: 30px 0;
+    animation: scroll 60s linear infinite;
+}
+
+/* Khi rê chuột thì dừng lại */
+.testimonials__track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+
 /* Cấu hình gốc */
 .testimonials__card {
     flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 30px;
     border-radius: 25px;
     text-align: left;
     transition: all 0.3s ease;
     transform: translateY(0);
-    position: relative;
     box-shadow: 0 10px 25px rgba(31, 16, 0, 0.06);
 }
 
@@ -566,45 +592,50 @@ h2 {
     cursor: pointer;
 }
 
-.testimonials__card--orange:hover {
+.testimonials__card:hover.orange {
     box-shadow: 0 6px 0 rgba(240, 138, 0, 0.5);
 }
 
-.testimonials__card--purple:hover {
+.testimonials__card:hover.purple {
     box-shadow: 0 6px 0 rgba(123, 97, 255, 0.55);
 }
 
-.testimonials__card--green:hover {
+.testimonials__card:hover.green {
     box-shadow: 0 6px 0 rgba(0, 165, 165, 0.4);
 }
 
-.testimonials__card--pink:hover {
+.testimonials__card:hover.pink {
     box-shadow: 0 6px 0 rgba(242, 128, 142, 0.55);
 }
 
 /* Nền từng thẻ (dịu, hợp tông nền kem) */
-.testimonials__card--orange {
+.testimonials__card.orange {
     background-color: #FFE8D1;
     border: 1px solid rgba(240, 138, 0, 0.5);
 }
 
-.testimonials__card--purple {
+.testimonials__card.purple {
     background-color: #ead2e8;
     border: 1px solid rgba(123, 97, 255, 0.55);
 }
 
-.testimonials__card--green {
+.testimonials__card.green {
     background-color: #d9f4f4;
     border: 1px solid rgba(0, 165, 165, 0.4);
 }
 
-.testimonials__card--pink {
+.testimonials__card.pink {
     background-color: #FFE4E8;
     border: 1px solid rgba(242, 128, 142, 0.55);
 }
 
+.testimonials__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-/* hàng sao: là <span> đầu trong card */
+/* Các ngôi sao bên trong card */
 .testimonials__card>span {
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -612,9 +643,9 @@ h2 {
 }
 
 /* heading giữ nguyên class */
-.testimonials__heading {
+.testimonials__card>h3 {
     font-style: italic;
-    font-size: 1.25rem;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
@@ -640,36 +671,13 @@ h2 {
 }
 
 .testimonials__author strong {
-    font-size: 0.95rem;
+    font-size: 16px;
 }
 
 .testimonials__author p {
-    font-size: 0.85rem;
+    font-size: 14px;
     color: rgba(61, 42, 26, 0.8);
 }
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-300%);
-    }
-}
-
-.testimonials__track {
-    display: flex;
-    gap: 20px;
-    padding: 25px 0;
-    animation: scroll 60s linear infinite;
-}
-
-/* Khi rê chuột thì dừng lại */
-.testimonials__track:hover {
-    animation-play-state: paused;
-}
-
 
 /* ===================================== FOOTER ========================================== */
 footer {
@@ -1018,13 +1026,23 @@ footer {
         font-size: 32px;
     }
 
-    /* === TRANG CHỦ (HOMEPAGE) === */
+    /* Chỉnh kích thước các nút */
+    .btn-primary {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .banner__nav a:last-of-type {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    /* === TRANG CHỦ === */
     .banner {
         min-height: 450px;
     }
 
     .banner__content {
-        /* Căn giữa toàn bộ banner trên mobile */
         width: 90%;
         left: 50%;
         transform: translateX(-50%);
@@ -1046,12 +1064,6 @@ footer {
         gap: 6px;
     }
 
-    /* Chỉnh kích thước các nút */
-    .banner__nav a {
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-
     .hero__badge {
         display: none;
     }
@@ -1064,10 +1076,23 @@ footer {
         align-items: center;
     }
 
-    .deal .deal__title p,
-    .menu__title p,
-    .testimonials__title p {
-        font-size: 15px;
+    /* Chỉnh các card của testimonial */
+    .testimonials__card {
+        flex: 0 0 250px;
+        height: 250px;
+    }
+
+    /* Chỉnh cỡ chữ bên trong card */
+    .testimonials__card>h3 {
+        font-size: 14px;
+    }
+
+    .testimonials__card>span {
+        font-size: 12px;
+    }
+
+    .testimonials__content p {
+        font-size: 14px;
     }
 
     .gallery {
@@ -1076,24 +1101,5 @@ footer {
 
     .gallery-item img {
         transform: scale(1.05);
-    }
-
-    /* === TRANG LIÊN HỆ (CONTACT) === */
-    .contact-header h1 {
-        font-size: 36px;
-    }
-
-    /* Stack các input Họ/Tên, Email/Công ty... */
-    .form-flexbox {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .form-list {
-        gap: 15px;
-    }
-
-    .contact-form {
-        padding: 20px;
     }
 }

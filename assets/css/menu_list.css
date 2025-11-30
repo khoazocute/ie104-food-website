@@ -456,7 +456,7 @@
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+  
   .quantity-input {
     text-align: center;
   }
@@ -478,6 +478,12 @@
     max-width: 100%;
   }
 
+  /* Chỉnh kích thước nút 'Thêm vào giỏ hàng' */
+  .add-to-cart-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
   .slogan h1 {
     font-size: 36px;
     /* Giảm cỡ chữ slogan */
