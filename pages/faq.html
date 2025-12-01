@@ -8,7 +8,7 @@
 
     <!-- FAV ICON -->
     <link rel="shortcut icon" href="../assets/imgs/icon2.jpg" type="image/x-icon">
-    
+
     <!-- FONT GOOGLE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -124,24 +124,22 @@
     <script src="../assets/js/include.js"></script>
     <script src="../assets/js/cart.js"></script>
 
+    <!-- Accordion -->
     <script>
-        const getFAQItems = document.querySelectorAll(".faq-item");
+        const faqItems = document.querySelectorAll(".faq-item");
 
-        getFAQItems.forEach(item => {
-            const button = item.querySelector(".faq-question");
-
-            button.addEventListener("click", () => {
+        faqItems.forEach((item) => {
+            item.addEventListener("click", () => {
                 const isActive = item.classList.contains("active");
-
-                if (isActive) {
-                    item.classList.remove("active");
-                }
-
                 if (!isActive) {
                     item.classList.add("active");
                 }
-            });
-        });
+                else {
+                    item.classList.remove("active");
+                }
+            })
+        }
+        )
     </script>
 </body>
 

@@ -337,7 +337,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .formgrid {
         grid-template-columns: 1fr;
     }

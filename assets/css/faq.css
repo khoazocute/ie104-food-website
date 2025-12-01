@@ -97,6 +97,7 @@
     display: none;
     padding: 20px 40px;
     border-top: 2px dashed rgba(200, 94, 17, 0.25);
+    cursor: pointer;
 }
 
 .faq-answer p {
