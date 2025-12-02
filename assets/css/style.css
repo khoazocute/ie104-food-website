@@ -737,7 +737,6 @@ footer {
     border-radius: 18px;
     background: rgba(34, 17, 0, 0.7);
     transition: all 0.3s ease;
-    /* Yêu cầu của bạn */
 }
 
 .footer__brand a:hover img {
