@@ -100,79 +100,8 @@
   <script src="../assets/js/cart.js"></script>
   <script src="../assets/js/auth-guard.js"></script>
   <script src="../assets/js/order-history.js"></script>
-  <script>
-    // Yêu cầu đăng nhập để checkout
-    window.addEventListener('load', () => {
-      if (!isLoggedIn()) window.location.href = './auth.html';
-    });
-
-    // Hiển thị tóm tắt giỏ hàng
-    document.addEventListener('DOMContentLoaded', () => {
-      const STORAGE_KEY = 'cart_items_v1'; //đọc dữ liệu từ giỏ hang
-      const raw = localStorage.getItem(STORAGE_KEY) || '[]';
-      let items = [];
-      try { items = JSON.parse(raw); } catch (e) { items = []; }
-      const list = document.getElementById('summaryList');
-      const totalEl = document.getElementById('summaryTotal');
-      const money = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND', currencyDisplay: 'code' });
-      let total = 0;
-      if (!list) return;
-      if (items.length === 0) list.innerHTML = '<div class="empty-cart-msg">Giỏ hàng của bạn đang trống.</div>';
-      items.forEach(it => {
-        total += (Number(it.price) || 0) * (it.qty || 1);
-        const row = document.createElement('div');
-        row.className = 'summary-item';
-        row.innerHTML = `
-          <span class="summary-item-name">${it.name}</span>
-          <span class="summary-item-qty">x${it.qty}</span>
-          <span class="summary-item-price">${money.format((Number(it.price) || 0) * (it.qty || 1))}</span>
-        `;
-        list.appendChild(row);
-      });
-      totalEl.textContent = money.format(total);
-
-      document.getElementById('placeOrderBtn').addEventListener('click', () => {
-        const fullname = document.getElementById('fullName').value.trim();
-        const address = document.getElementById('address').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        if (!fullname || !address || !phone) {
-          alert('Vui lòng điền Họ tên, Địa chỉ và Số điện thoại.');
-          return;
-        }
-        if (items.length === 0) {
-          alert('Giỏ hàng đang trống. Vui lòng thêm sản phẩm.');
-          return;
-        }
-        // Lưu đơn hàng vào localStorage (both old and new system for compatibility)
-        const order = {
-          items,
-          fullname,
-          address,
-          phone,
-          note: document.getElementById('note').value || '',
-          payment: document.querySelector('input[name="payment"]:checked').value,
-          ts: Date.now(),
-          id: 'ORD-' + Date.now(),
-          status: 'pending'
-        };
-        // Save to old system (for backward compatibility)
-        localStorage.setItem('last_order_demo', JSON.stringify(order));
-        // Save to new system
-        if (window.saveNewOrder) {
-          window.saveNewOrder(order);
-        } else {
-          // Fallback if order-history.js not loaded
-          const ORDERS_KEY = 'user_orders_v1';
-          const allOrders = JSON.parse(localStorage.getItem(ORDERS_KEY) || '[]');
-          allOrders.unshift(order);
-          localStorage.setItem(ORDERS_KEY, JSON.stringify(allOrders));
-        }
-        localStorage.removeItem(STORAGE_KEY);
-        alert('✓ Đặt hàng thành công! Cảm ơn bạn đã mua hàng.\nXem lịch sử đơn hàng trong tài khoản của bạn.');
-        window.location.href = './homepage.html';
-      });
-    });
-  </script>
+  <script src="../assets/js/checkout.js"></script>
+   
 </body>
 
 </html>

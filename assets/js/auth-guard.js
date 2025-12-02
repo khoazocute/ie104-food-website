@@ -12,23 +12,15 @@ function getCurrentUser() {
     return null;
   }
 }
-/*
-// Hàm kiểm tra đã đăng nhập chưa
-function isLoggedIn() {
-  return !!getCurrentUser();
-}
 
-// Hàm buộc đăng nhập (redirect nếu chưa đăng nhập)
-function requireLogin(loginPage = "./pages/auth.html") {
-  if (!isLoggedIn()) {
-    window.location.href = loginPage;
-  }
-}
-*/
+
+
 // Hàm đăng xuất
 function logout(redirectTo = "./pages/auth.html") {
+  // Xóa cả hai nơi lưu để chắc chắn phiên bị huỷ hoàn toàn
   localStorage.removeItem(CURRENT_USER_KEY);
   sessionStorage.removeItem(CURRENT_USER_KEY);
+  // Điều hướng (redirect) về trang được chỉ định - mặc định là trang đăng nhập
   window.location.href = redirectTo;
 }
 
@@ -37,3 +29,7 @@ window.getCurrentUser = getCurrentUser;
 window.isLoggedIn = isLoggedIn;
 window.requireLogin = requireLogin;
 window.logout = logout;
+
+// Ghi chú:
+// - `getCurrentUser` trả về object đã lưu (chỉ chứa username/email/ts theo cách lưu hiện tại).
+// - Nếu thay đổi cấu trúc session (ví dụ thêm userId), hãy cập nhật hàm này và nơi sử dụng.

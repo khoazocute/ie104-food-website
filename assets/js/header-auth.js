@@ -4,6 +4,14 @@
 (function () {
     const CURRENT_USER_KEY = 'currentUser';
 
+    // Mục đích chính của file này:
+    // - Khi header (được chèn động bởi include.js) đã có trong DOM, file này
+    //   cập nhật phần xác thực (auth) ở header để hiển thị "Đăng nhập" hoặc
+    //   tên người dùng đã đăng nhập.
+    // - File sử dụng hai phần tử DOM: `#auth-text` (nơi hiển thị chuỗi) và
+    //   `#auth-link` (thẻ <a> chứa/điều hướng). Ngoài ra có thể có `#mobile-auth-btn`
+    //   và `#mobile-auth-text` cho phiên bản mobile.
+
     function getCurrentUser() {
         let raw = localStorage.getItem(CURRENT_USER_KEY) || sessionStorage.getItem(CURRENT_USER_KEY);
         if (!raw) return null;
@@ -15,13 +23,13 @@
     }
 
     function updateHeader() {
-        const textEl = document.getElementById('auth-text');
+        const textEl = document.getElementById('auth-text'); 
         const linkEl = document.getElementById('auth-link');
         if (!textEl || !linkEl) return false;
 
         const user = getCurrentUser();
         if (user && user.username) {
-            textEl.textContent = user.username;
+            textEl.textContent = user.username;// Hiển thị tên người dùng
             // Khi đang đăng nhập, dẫn tới trang Profile khi bấm vào tên
             linkEl.setAttribute('href', './profile.html');
             linkEl.setAttribute('title', 'Xem trang cá nhân');

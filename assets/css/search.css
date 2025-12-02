@@ -1,6 +1,6 @@
 /* SEARCH BOX */
 .header__search {
-  position: relative;
+  position: relative;/* Đặt tương đối để chứa popup kết quả bên trong */
 }
 
 .header__search:focus-within {
@@ -26,7 +26,7 @@
 
 /* POPUP RESULTS */
 .search-results {
-  position: absolute;
+  position: absolute;/* Đặt tuyệt đối bên trong khối tìm kiếm */
   top: 100%;
   left: 0;
   width: 300px;
@@ -38,12 +38,12 @@
   border-radius: 0 0 8px 8px;
   overflow-y: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,.1);
-  z-index: 1000;
-  display: none;
+  z-index: 1000;/* Đảm bảo popup nằm trên các phần tử khác */
+  display: none;/* Mặc định ẩn popup */
 }
 .search-results-list {
-  display: flex;
-  flex-direction: column;
+  display: flex;/* Sử dụng flexbox để sắp xếp các mục */
+  flex-direction: column;/* Sắp xếp theo cột */
 }
 .search-result-item {
   display: flex;
