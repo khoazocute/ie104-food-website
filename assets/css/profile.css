@@ -1,16 +1,3 @@
-/* ===== CƠ BẢN ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    background-color: #FCEFE2;
-    color: #333;
-}
-
 /* ===== LAYOUT CHÍNH ===== */
 .account {
     max-width: 1200px;
@@ -162,7 +149,6 @@ body {
     border-radius: 12px;
     padding: 8px 10px;
     font-size: 14px;
-    font-family: inherit;
     background-color: #ffffff;
 }
 
@@ -351,7 +337,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .formgrid {
         grid-template-columns: 1fr;
     }

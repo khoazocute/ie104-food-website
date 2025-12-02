@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập / Đăng ký</title>
 
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="../assets/imgs/icon2.jpg" type="image/x-icon">
+    
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,28 +86,6 @@
     <!--Footer-->
     <div id="footer-placeholder"></div>
     <script src="../assets/js/include.js"></script>
-
-    <script>
-        // Đổi giữa 2 tab
-        const loginTab = document.getElementById("loginTab");
-        const registerTab = document.getElementById("registerTab");
-        const loginForm = document.getElementById("loginForm");
-        const registerForm = document.getElementById("registerForm");
-
-        loginTab.addEventListener("click", () => {
-            loginTab.classList.add("active");
-            registerTab.classList.remove("active");
-            loginForm.style.display = "flex";
-            registerForm.style.display = "none";
-        });
-
-        registerTab.addEventListener("click", () => {
-            registerTab.classList.add("active");
-            loginTab.classList.remove("active");
-            loginForm.style.display = "none";
-            registerForm.style.display = "flex";
-        });
-    </script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/cart.js"></script>
     <script src="../assets/js/auth.js"></script>

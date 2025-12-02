@@ -31,7 +31,7 @@
 
 .orders-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/* Sắp xếp các đơn hàng theo cột */
     gap: 20px;
 }
 
@@ -128,7 +128,7 @@
 
 .order-card-total-label {
     font-size: 0.9rem;
-    color: #666;
+    color: #666;    
 }
 
 .order-card-total-amount {
@@ -372,7 +372,7 @@
 .modal-actions {
     display: flex;
     gap: 10px;
-    justify-content: flex-end;
+    justify-content: flex-end;/* Đẩy các nút về bên phải */
     border-top: 1px solid #EEE;
     padding-top: 20px;
 }
@@ -488,7 +488,7 @@
     }
 
     .order-card-body {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;/* Chuyển sang một cột */
         gap: 12px;
     }
 
