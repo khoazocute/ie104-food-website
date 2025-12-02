@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junk Food Shop</title>
 
-    <!-- FAV ICON -->
-    <link rel="shortcut icon" href="../assets/imgs/icon2.jpg" type="image/x-icon">
-
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +38,7 @@
             <p> Trải nghiệm ẩm thực tuyệt vời với những món ăn được chế biến từ nguyên liệu tươi ngon nhất, giao đến tận
                 tay bạn.</p>
             <div class="banner__nav">
-                <a href="./menu_list.html" class="btn btn-primary">
+                <a href="./menu_list.html">
                     Đặt Ngay<i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="./about.html">
@@ -62,7 +59,7 @@
     </section>
 
     <section class="deal">
-
+        
         <div class="deal__title">
             <img src="../assets/imgs/homepage__deal.png" alt="icon">
             <h2>Chương Trình Khuyến Mãi</h2>
@@ -96,7 +93,7 @@
                 </ul>
 
                 <div class="deal__nav">
-                    <a href="./menu_list.html" class="btn-primary">Đặt Ngay<i class="fas fa-arrow-right"></i></a>
+                    <a href="./menu_list.html">Đặt Ngay<i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -120,14 +117,17 @@
                         <span class="price">80.000 VND</span>
                     </div>
                     <div class="desc-and-control">
-                        <p class="description">
-                            Burger với thịt bò, phô mai, xà lách tươi, và đặc biệt là lớp salad bắp cải/rau củ.
-                        </p>
-                        <input type="number" class="quantity-input quantity1" value="1" min="1" max="99">
+                        <p class="description">Burger với thịt bò, phô mai, xà lách tươi, và đặc biệt là lớp salad bắp
+                            cải/rau củ.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
                     </div>
-                    <button class="add-to-cart-btn btn1">
-                        Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i>
-                    </button>
+                    <button class="add-to-cart-btn btn1">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </div>
 
@@ -139,15 +139,17 @@
                         <span class="price">100.000 VND</span>
                     </div>
                     <div class="desc-and-control">
-                        <p class="description">
-                            Pizza với lớp phô mai tan chảy, phủ nhiều loại topping đa dạng như xúc xích, ô-liu, các loại
-                            rau.
-                        </p>
-                        <input type="number" class="quantity-input quantity2" value="1" min="1" max="99">
+                        <p class="description">Pizza với lớp phô mai tan chảy, phủ nhiều loại topping đa dạng như xúc
+                            xích, ô-liu, các loại rau.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
                     </div>
-                    <button class="add-to-cart-btn btn2">
-                        Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i>
-                    </button>
+                    <button class="add-to-cart-btn btn2">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </div>
 
@@ -159,21 +161,23 @@
                         <span class="price">30.000 VND</span>
                     </div>
                     <div class="desc-and-control">
-                        <p class="description">
-                            Những miếng gà tẩm bột và chiên giòn, thích hợp món ăn kèm.
-                        </p>
-                        <input type="number" class="quantity-input quantity3" value="1" min="1" max="99">
+                        <p class="description">Những miếng gà tẩm bột và chiên giòn, thích hợp món ăn kèm.</p>
+
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
                     </div>
-                    <button class="add-to-cart-btn btn3">
-                        Thêm vào giỏ hàng<i class="fa-solid fa-cart-shopping"></i>
-                    </button>
+                    <button class="add-to-cart-btn btn3">Thêm vào giỏ hàng<i
+                            class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </div>
 
         </div>
 
-        <div class="menu-footer">
-            <a href="./menu_list.html" class="btn-primary">Xem tất cả<i class="fas fa-arrow-right"></i></a>
+        <div class="menu__footer">
+            <a href="./menu_list.html">Xem tất cả</a>
         </div>
     </section>
 
@@ -189,12 +193,10 @@
 
         <div class="testimonials__carousel">
             <div class="testimonials__track" id="testimonials-track">
-                <div class="testimonials__card orange">
-                    <div class="testimonials__content">
-                        <span>⭐⭐⭐⭐☆</span>
-                        <h3>Hương vị khó quên</h3>
-                        <p>Mỗi miếng ăn đều mang lại hương vị không quên được, nhân viên phục vụ chu đáo.</p>
-                    </div>
+                <div class="testimonials__card testimonials__card--orange">
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Hương vị khó quên</h3>
+                    <p>Mỗi miếng ăn đều mang lại hương vị không quên được, nhân viên phục vụ chu đáo, nhiệt tình.</p>
                     <div class="testimonials__author">
                         <img src="../assets/imgs/homepage__user1.jpg" alt="Larry">
                         <div>
@@ -204,12 +206,10 @@
                     </div>
                 </div>
 
-                <div class="testimonials__card purple">
-                    <div class="testimonials__content">
-                        <span>⭐⭐⭐⭐☆</span>
-                        <h3>Ngon chuẩn vị</h3>
-                        <p>Hương vị đậm đà, ấm lòng. Cảm nhận được sự chăm chút trong từng món.</p>
-                    </div>
+                <div class="testimonials__card testimonials__card--purple">
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Ngon chuẩn vị</h3>
+                    <p>Hương vị đậm đà, ấm lòng. Cảm nhận được sự chăm chút trong từng món.</p>
                     <div class="testimonials__author">
                         <img src="../assets/imgs/homepage__user2.webp" alt="Daniel">
                         <div>
@@ -219,12 +219,10 @@
                     </div>
                 </div>
 
-                <div class="testimonials__card green">
-                    <div class="testimonials__content">
-                        <span>⭐⭐⭐⭐☆</span>
-                        <h3>Quán ruột nè</h3>
-                        <p>Gần như cuối tuần nào chúng tôi cũng ghé. Món ăn và phục vụ luôn xuất sắc.</p>
-                    </div>
+                <div class="testimonials__card testimonials__card--green">
+                    <span>⭐⭐⭐⭐☆</span>
+                    <h3 class="testimonials__heading">Quán ruột của chúng tôi</h3>
+                    <p>Gần như cuối tuần nào chúng tôi cũng ghé. Món ăn và phục vụ luôn xuất sắc, ổn định.</p>
                     <div class="testimonials__author">
                         <img src="../assets/imgs/homepage__user3.jpg" alt="Amanda">
                         <div>
@@ -234,12 +232,10 @@
                     </div>
                 </div>
 
-                <div class="testimonials__card pink">
-                    <div class="testimonials__content">
-                        <span>⭐⭐⭐⭐⭐</span>
-                        <h3>Dịch vụ đỉnh cao</h3>
-                        <p>Nhân viên thân thiện, chu đáo. Không gian dễ chịu, món ăn còn tuyệt hơn!</p>
-                    </div>
+                <div class="testimonials__card testimonials__card--pink">
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <h3 class="testimonials__heading">Dịch vụ đỉnh cao</h3>
+                    <p>Nhân viên thân thiện, chu đáo. Không gian dễ chịu, món ăn còn tuyệt hơn!</p>
                     <div class="testimonials__author">
                         <img src="../assets/imgs/homepage__user4.jpg" alt="Mark">
                         <div>
@@ -251,6 +247,22 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const track = document.getElementById('testimonials-track');
+        track.innerHTML += track.innerHTML;
+
+        let pos = 0;
+        function animate() {
+            pos -= 5; // tốc độ
+            if (Math.abs(pos) >= track.scrollWidth / 2) {
+                pos = 0; // quay lại đầu
+            }
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
 
     <!-- ========================= GALLERY ========================= -->
     <section class="gallery-section">
@@ -277,17 +289,19 @@
         <div class="hero-content">
             <div class="logo-text">
                 <img src="../assets/imgs/icon2.jpg" alt="">
+
             </div>
             <h2>Don't Wait - Order Now!</h2>
             <p>Fresh ingredients, mouth-watering recipes, and a passion for good food delivered to your door or ready
                 for pick-up.</p>
-            <div class="hero-btn">
-                <a href="./menu_list.html" class="btn-primary">Đặt Ngay<i class="fas fa-arrow-right"></i></a>
-            </div>
+            <button class="btn-order" onclick="window.location.href='./menu_list.html'">
+                Đặt Ngay<i class="fas fa-arrow-right"></i>
+            </button>
         </div>
 
         <div class="hero-image right-image">
             <img src="../assets/imgs/mini_banner2.avif" alt="">
+
         </div>
     </section>
 

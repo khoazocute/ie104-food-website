@@ -7,19 +7,19 @@ const USERS_KEY = "app_users_v1";      // danh sách tài khoản
 const CURRENT_USER_KEY = "currentUser"; // người dùng hiện tại
 
 // ====== HÀM TRỢ GIÚP (làm việc với localStorage) ======
-function getUsers() {
+function getUsers() { //Dùng để lấy tài khoản đã đăng ký
   try {
-    return JSON.parse(localStorage.getItem(USERS_KEY)) || [];
+    return JSON.parse(localStorage.getItem(USERS_KEY)) || []; //Nếu không có thì trả về mảng rỗng
   } catch {
     return [];
   }
 }
 
 function saveUsers(users) {
-  localStorage.setItem(USERS_KEY, JSON.stringify(users));
+  localStorage.setItem(USERS_KEY, JSON.stringify(users)); //Lưu mảng users vào localStorage, chuyển về chuỗi JSON trước khi lưu 
 }
 
-function usernameOrEmailExists(users, username, email) {
+function usernameOrEmailExists(users, username, email) { //Kiểm tra tên đăng nhập hoặc email đã tồn tại chưa
   const u = (username || "").trim().toLowerCase();
   const e = (email || "").trim().toLowerCase();
   return users.some(x =>
@@ -28,7 +28,7 @@ function usernameOrEmailExists(users, username, email) {
   );
 }
 
-function findUser(users, loginId) {
+function findUser(users, loginId) { //Tìm user theo username hoặc email (không phân biệt hoa thường)
   const key = (loginId || "").trim().toLowerCase();
   return users.find(x =>
     (x.username && x.username.trim().toLowerCase() === key) ||
@@ -44,14 +44,27 @@ function storeSession(userObj, remember) {
     ts: Date.now(),
   });
   if (remember) {
-    localStorage.setItem(CURRENT_USER_KEY, payload);
+    localStorage.setItem(CURRENT_USER_KEY, payload);// Lưu lâu dài
   } else {
-    sessionStorage.setItem(CURRENT_USER_KEY, payload);
+    sessionStorage.setItem(CURRENT_USER_KEY, payload);// Lưu tạm thời
   }
 }
 
+// Ghi chú an toàn: mật khẩu được lưu plaintext trong `localStorage` ở demo này.
+// Trong môi trường thực tế cần gửi lên server và hash mật khẩu trước khi lưu.
+
+// -------------------------------
+// CHÚ THÍCH HÀM TIỆN ÍCH
+// - `getUsers()` trả về mảng user từ `localStorage` hoặc mảng rỗng.
+// - `saveUsers(users)` serialize mảng user và lưu lại.
+// - `usernameOrEmailExists(...)` dùng để tránh trùng tên/email khi đăng ký.
+// - `findUser(users, loginId)` tìm user theo username hoặc email (không phân biệt hoa thường).
+// - `storeSession(userObj, remember)` lưu thông tin phiên. Nếu `remember` = true
+//    sẽ lưu vào `localStorage` để giữ login lâu dài, ngược lại dùng `sessionStorage`.
+
+
 // ====== XỬ LÝ SAU KHI TRANG LOAD XONG ======
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { // chờ DOM sẵn sàng
   // Lấy các phần tử giao diện
   const loginTab = document.getElementById("loginTab");
   const registerTab = document.getElementById("registerTab");
@@ -94,7 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const users = getUsers();
+    const users = getUsers();// Lấy danh sách user đã đăng ký
+
+    // Kiểm tra trùng tên đăng nhập hoặc email  
     if (usernameOrEmailExists(users, username, email)) {
       alert("Tên đăng nhập hoặc Email đã tồn tại.");
       return;

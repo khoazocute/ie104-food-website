@@ -5,12 +5,15 @@ const OrderManager = {
     ORDERS_KEY: 'user_orders_v1',
     OLD_ORDER_KEY: 'last_order_demo',
 
-    // Initialize - migrate old order format to new
     init() {
         const oldOrder = localStorage.getItem(this.OLD_ORDER_KEY);
-        const allOrders = this.getAllOrders();
+        const allOrders = this.getAllOrders();//
         
-        // If old order exists and not in new system, migrate it
+        //
+        // Nếu tồn tại order cũ (định dạng demo) và hệ thống chưa có order nào,
+        // thực hiện migrate sang định dạng mới.
+        // Nếu có dữ liệu cũ (key OLD_ORDER_KEY) và hệ thống chưa có order nào,
+        // thực hiện migrate sang cấu trúc mới để người dùng không mất dữ liệu.
         if (oldOrder && allOrders.length === 0) {
             try {
                 const order = JSON.parse(oldOrder);
@@ -27,12 +30,12 @@ const OrderManager = {
                 };
                 this.addOrder(migratedOrder);
             } catch (e) {
-                console.log('Could not migrate old order');
+                console.log('Không thể chuyển đổi đơn hàng cũ');
             }
         }
     },
 
-    // Get all orders for current user
+    //Lấy tất cả đơn hàng
     getAllOrders() {
         const raw = localStorage.getItem(this.ORDERS_KEY) || '[]';
         try {
@@ -42,8 +45,9 @@ const OrderManager = {
         }
     },
 
-    // Add new order
+    //Thêm đơn hàng mới
     addOrder(order) {
+        // Thêm một order mới vào đầu mảng (để hiển thị gần nhất trước)
         const allOrders = this.getAllOrders();
         const newOrder = {
             id: order.id || 'ORD-' + Date.now(),
@@ -56,18 +60,18 @@ const OrderManager = {
             items: order.items || [],
             status: order.status || 'pending'
         };
-        allOrders.unshift(newOrder); // Add to beginning
+        allOrders.unshift(newOrder); //thêm vào đầu mảng
         localStorage.setItem(this.ORDERS_KEY, JSON.stringify(allOrders));
         return newOrder;
     },
 
-    // Get single order by ID
+    // Lấy chi tiết đơn hàng theo ID
     getOrder(orderId) {
         const allOrders = this.getAllOrders();
         return allOrders.find(o => o.id === orderId);
     },
 
-    // Update order status
+    // Cập nhật trạng thái đơn hàng
     updateOrderStatus(orderId, status) {
         const allOrders = this.getAllOrders();
         const order = allOrders.find(o => o.id === orderId);
@@ -78,7 +82,7 @@ const OrderManager = {
         return order;
     },
 
-    // Get status badge info
+    // Lấy badge trạng thái đơn hàng
     getStatusBadge(status) {
         const badges = {
             'pending': { text: 'Đang xử lý', class: 'info' },
@@ -90,7 +94,7 @@ const OrderManager = {
         return badges[status] || { text: 'Không xác định', class: 'info' };
     },
 
-    // Get payment method name
+    // Lấy tên phương thức thanh toán
     getPaymentName(method) {
         const methods = {
             'cod': 'Thanh toán khi nhận hàng',
@@ -101,14 +105,14 @@ const OrderManager = {
     }
 };
 
-// Initialize order system on page load
+// Thực thi khi DOM sẵn sàng
 document.addEventListener('DOMContentLoaded', () => {
     OrderManager.init();
     renderOrders();
     setupModalHandlers();
 });
 
-// Render all orders
+// Thiết lập và hiển thị danh sách đơn hàng
 function renderOrders() {
     const container = document.getElementById('ordersContainer');
     const orders = OrderManager.getAllOrders();
@@ -126,7 +130,7 @@ function renderOrders() {
 
     container.innerHTML = orders.map(order => createOrderCard(order)).join('');
     
-    // Attach click handlers
+    // Liên kết sự kiện click
     document.querySelectorAll('.order-card').forEach(card => {
         card.addEventListener('click', (e) => {
             if (!e.target.closest('button')) {
@@ -136,7 +140,7 @@ function renderOrders() {
         });
     });
 
-    // Attach button handlers
+    // Liên kết nút chức năng
     document.querySelectorAll('.view-details-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -154,7 +158,7 @@ function renderOrders() {
     });
 }
 
-// Create order card HTML
+// Tao thẻ đơn hàng
 function createOrderCard(order) {
     const statusInfo = OrderManager.getStatusBadge(order.status);
     const date = new Date(order.ts).toLocaleDateString('vi-VN');
@@ -201,7 +205,7 @@ function createOrderCard(order) {
     `;
 }
 
-// Show order detail modal
+// Hiển thị chi tiết đơn hàng trong modal
 function showOrderDetail(orderId) {
     const order = OrderManager.getOrder(orderId);
     if (!order) return;
@@ -218,7 +222,7 @@ function showOrderDetail(orderId) {
     const total = calculateOrderTotal(order.items);
     const money = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND', currencyDisplay: 'code' });
 
-    // Fill modal data
+    // Lấp dữ liệu vào modal
     document.getElementById('modalOrderId').textContent = order.id;
     document.getElementById('modalOrderDate').textContent = date;
     document.getElementById('modalOrderStatus').textContent = statusInfo.text;
@@ -228,7 +232,7 @@ function showOrderDetail(orderId) {
     document.getElementById('modalPhone').textContent = order.phone;
     document.getElementById('modalPayment').textContent = OrderManager.getPaymentName(order.payment);
     
-    // Handle note
+    //  xử lý note
     if (order.note && order.note.trim()) {
         document.getElementById('modalNoteSection').style.display = 'block';
         document.getElementById('modalNote').textContent = order.note;
@@ -248,14 +252,14 @@ function showOrderDetail(orderId) {
 
     document.getElementById('modalTotal').textContent = money.format(total);
 
-    // Set reorder button
+    // Thêm orderId vào nút reorder
     document.getElementById('reorderBtn').dataset.orderId = orderId;
 
-    // Show modal
+    // Hiển thị modal
     modal.classList.add('active');
 }
 
-// Setup modal handlers
+// Thiết lập xử lý modal
 function setupModalHandlers() {
     const modal = document.getElementById('orderModal');
     const closeBtn = document.querySelector('.modal-close');
@@ -281,7 +285,7 @@ function setupModalHandlers() {
     });
 }
 
-// Reorder - add items back to cart
+// Thêm lại các mặt hàng từ đơn hàng vào giỏ hàng
 function reorderItems(orderId) {
     const order = OrderManager.getOrder(orderId);
     if (!order) return;
@@ -289,7 +293,7 @@ function reorderItems(orderId) {
     const CART_KEY = 'cart_items_v1';
     const currentCart = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
 
-    // Add all items from order to cart
+    // Thêm hoặc cập nhật số lượng
     order.items.forEach(item => {
         const existingItem = currentCart.find(ci => ci.id === item.id);
         if (existingItem) {
@@ -301,23 +305,25 @@ function reorderItems(orderId) {
 
     localStorage.setItem(CART_KEY, JSON.stringify(currentCart));
 
-    // Close modal and show confirmation
+    // Đóng modal và thông báo
     document.getElementById('orderModal').classList.remove('active');
     alert(`✓ Đã thêm ${order.items.length} mặt hàng vào giỏ hàng. Bạn có thể đi tới trang menu để hoàn tất.`);
     
-    // Optional: redirect to checkout
-    // setTimeout(() => {
-    //     window.location.href = './checkout.html';
-    // }, 1000);
+  
 }
 
-// Calculate order total
+// Tinh tổng đơn hàng
 function calculateOrderTotal(items) {
     return items.reduce((sum, item) => sum + (Number(item.price) || 0) * (item.qty || 1), 0);
 }
 
-// Integration with checkout - update this when orders are created
-// This function should be called from checkout.html after order is placed
+
 window.saveNewOrder = function(order) {
     OrderManager.addOrder(order);
 };
+
+// Ghi chú cuối:
+// - Dữ liệu đơn hàng đang được lưu cục bộ (localStorage) phù hợp cho demo.
+//   Ở môi trường thực tế, dữ liệu đơn hàng cần lưu trên server theo user.
+// - `reorderItems` sẽ hợp nhất số lượng nếu đã tồn tại item trong giỏ. Nếu
+

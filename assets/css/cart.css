@@ -2,14 +2,14 @@
   --bg: #fff7ec;
   --ink: #2f2b1f;
   --ring: #f4c27d;
-  --accent: #FF6C0A;
+  --accent: #f87d39;
 }
 /*Định nghĩa root*/
 
 /* ----------- Header cart icon ----------- */
 .header__cart {
   position: relative;
-  display: inline-flex;
+  display: inline-flex;/* Sử dụng inline-flex để căn giữa biểu tượng giỏ hàng */
   align-items: center;
 }
 
@@ -20,7 +20,7 @@
   min-width: 20px;
   height: 20px;
   padding: 0 6px;
-  background: #FF6C0A;
+  background: #ff6b00;
   color: #fff;
   border-radius: 999px;
   font-size: 12px;
@@ -30,38 +30,40 @@
 
 /* ----------- Modal background ----------- */
 .cart-modal {
-  position: fixed;
-  inset: 0;
+  position: fixed;/* Sử dụng fixed để che phủ toàn bộ màn hình */
+  inset: 0;/* Top, right, bottom, left = 0 */
   background: rgba(0, 0, 0, 0.45);
-  display: none;
-  z-index: 9999;
+  display: none;/* Ẩn cart mặc định */
+  z-index: 9999;/* Đảm bảo modal nằm trên cùng */
+  overflow-y: auto;/* Cho phép cuộn nếu nội dung vượt quá chiều cao màn hình */
 }
 
 .cart-modal.show {
-  display: block;
+  display: block;/* Hiển thị cart khi có lớp 'show' */
+/*Việc thay đổi display từ none thành block (hoặc flex) làm popup hiện ra.*/
 }
 
 /* ----------- Cart popup box ----------- */
 .cart-sheet {
   width: min(920px, 92vw);
-  margin: 5vh auto;
-  background: var(--bg);
+  margin: 5vh auto;/* Căn giữa theo chiều ngang và cách đỉnh 5vh */
+  background: var(--bg);/* Sử dụng biến CSS cho màu nền, đã định nghĩa ở root */
   color: var(--ink);
   border-radius: 18px;
   border: 2px solid var(--ring);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   padding: 22px 22px 26px;
-  position: relative;
+  position: relative;/* Để đặt nút đóng bên trong */  
 }
 
 /* ----------- Close button ----------- */
 .cart-close {
-  position: absolute;
+  position: absolute;/* Đặt nút đóng ở góc trên bên phải */
   top: 12px;
   right: 16px;
   font-size: 26px;
   border: none;
-  background: transparent;
+  background: transparent;/* Nền trong suốt */
   cursor: pointer;
 }
 
@@ -75,7 +77,7 @@
 /* ----------- Table ----------- */
 .cart-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse;/* Loại bỏ khoảng cách giữa các ô */
 }
 
 .cart-table thead th {
@@ -87,12 +89,12 @@
 }
 
 .cart-row {
-  border-bottom: 1.5px dashed rgba(200, 94, 17, 0.25);
+  border-bottom: 1px dashed #ead7bd;/* Đường kẻ dưới dạng nét đứt nhẹ */
 }
 
 .cart-cell {
   padding: 14px 10px;
-  vertical-align: middle;
+  vertical-align: middle;/* Căn giữa theo chiều dọc */
 }
 
 /* ----------- Product info ----------- */
@@ -113,10 +115,7 @@
   font-weight: 800;
 }
 
-.sku {
-  font-size: 12px;
-  opacity: 0.7;
-}
+
 
 /* ----------- Quantity ----------- */
 .qty {
@@ -153,26 +152,28 @@
 
 .total {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 /* ----------- Checkout button ----------- */
-.cart-footer button {
+.cta {
+  padding: 16px 40px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  background: #FF6C0A;
+  color: #FFF7EB;
+  border: 1.5px solid #C85E11;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-/* --- Tùy chỉnh cuộn cho tbody trên Desktop --- */
-.cart-table tbody {
-  display: block;          /* Bắt buộc để chỉnh được chiều cao */
-  overflow-y: auto;        /* Hiện thanh cuộn dọc */
-  max-height: 50vh;        /* Chiều cao tối đa (khoảng 50% màn hình) */
-  padding-right: 5px;      
+.cta:hover {
+  box-shadow: 0 6px 0 #C85E11;
+  transform: scale(1.02);
 }
 
-/* Giữ cho tiêu đề và các dòng thẳng hàng nhau */
-.cart-table thead, 
-.cart-table tbody tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;     /* Chia cột đều nhau để không bị lệch */
+.cta i {
+  margin-left: 8px;
 }

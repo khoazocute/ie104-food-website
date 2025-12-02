@@ -35,6 +35,7 @@ const ProductsDB = {
         
         const q = query.toLowerCase();
         return this.products
+// filter hàm có sẵn trong js
             .filter(p => 
                 p.name.toLowerCase().includes(q) || 
                 p.category.toLowerCase().includes(q)
@@ -42,6 +43,16 @@ const ProductsDB = {
             .slice(0, 8); // giới hạn 8 kết quả
     }
 };
+
+// Ghi chú:
+// - `ProductsDB` giữ danh sách mẫu các sản phẩm để demo tính năng tìm kiếm.
+
+// CHI TIẾT HOẠT ĐỘNG SEARCH
+// - `ProductsDB.search(query)` trả về mảng kết quả (tối đa 8 items) khớp với
+//   tên sản phẩm hoặc category, không phân biệt hoa thường.
+// - Hiện tại tìm kiếm được thực hiện trên mảng tĩnh trong bộ nhớ. Khi dữ liệu
+//   lớn hơn vài trăm item hoặc cần dữ liệu mới, chuyển sang gọi API phía server
+//   và áp dụng debounce (ví dụ 200-300ms) để tránh gọi quá nhiều lần khi gõ.
 
 // 2. Quản lý UI của search
 const SearchUI = {
@@ -55,12 +66,12 @@ const SearchUI = {
         this.hideResults(); // ban đầu ẩn
     },
 
-    attachListeners() {
+    attachListeners() {  
         // Gõ tới đâu search tới đó
         this.searchInput.addEventListener('input', (e) => {
             const query = e.target.value;
             if (query.trim().length === 0) {
-                this.hideResults();
+                this.hideResults(); 
                 return;
             }
             this.performSearch(query);
@@ -81,7 +92,7 @@ const SearchUI = {
         }
     },
 
-    performSearch(query) {
+    performSearch(query) { // Thực hiện tìm kiếm
         const results = ProductsDB.search(query);
         
         if (results.length === 0) {
@@ -120,6 +131,10 @@ const SearchUI = {
         html += '</div>';
         this.resultsContainer.innerHTML = html;
         this.showResults();
+
+        // LƯU Ý: link hiện trỏ đến `menu_list.html` chung. Nếu muốn mở chi tiết
+        // sản phẩm trực tiếp, có thể thay href thành `./product.html?id=${product.id}`
+        // và đọc `location.search` ở trang đích để hiển thị sản phẩm tương ứng.
     },
 
     showNoResults(query) {
